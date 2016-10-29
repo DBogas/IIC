@@ -1,16 +1,19 @@
 package bus;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.google.gson.JsonArray;
 
 class MyScanner {
 
@@ -59,28 +62,63 @@ class MyScanner {
 		return result;
 	}
 
-	static List<String> getLine(String l, String d) throws Exception {
+	/**
+	 * method to get a line l in a direction d.
+	 * 
+	 * @param l
+	 *            is the line's code
+	 * @param d
+	 *            is the direction we want
+	 * @return a list of all stops
+	 * @throws Exception
+	 */
+	static List<JSONObject> getLine(String l, String d) throws Exception {
 
 		String URLpart1 = "http://www.stcp.pt/pt/itinerarium/callservice.php?action=linestops&lcode=";
 		String URLpart2 = "&ldir=";
 		String completeURL = URLpart1 + l + URLpart2 + d;
 		String readFromURL = readUrl(completeURL);
 
-		List<String> result = new LinkedList<String>();
+		List<JSONObject> result = new LinkedList<JSONObject>();
 		JSONObject jo = new JSONObject(readFromURL);
 		JSONArray ja = jo.getJSONArray("records");
 		for (int i = 0; i < ja.length(); i++) {
 			JSONObject obj = ja.getJSONObject(i);
-			result.add(obj.toString());
+			result.add(obj);
 		}
 
 		return result;
 	}
-
-	public static void main(String args[]) throws Exception {
-
+	
+	static void getAllStops() throws Exception{
+		HashMap<String, Stop> AllStops = new HashMap<String, Stop>();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
+		List<String> allLineNumbers = getAllLineNumbers(readFromURL);
 		
-
+		// iterate all the lines
+		for(String s : allLineNumbers){
+			
+			//we have to do this twice, for direction 0
+			List<JSONObject> aux = getLine(s,"0");
+			for(JSONObject o : aux){
+				Stop stop = new Stop(o.get("code").toString(),o.get("address").toString(),o.get("zone").toString(),o.get("name").toString());
+				if(!AllStops.containsKey(stop.code)) AllStops.put(stop.code, stop);
+			}
+			// and for direction 1
+			aux = getLine(s,"1");
+			for(JSONObject o : aux){
+				Stop stop = new Stop(o.get("code").toString(),o.get("address").toString(),o.get("zone").toString(),o.get("name").toString());
+				if(!AllStops.containsKey(stop.code)) AllStops.put(stop.code, stop);
+			}
+			// test print
+			for(String auxS : AllStops.keySet()){
+				AllStops.get(auxS).printStop();
+			}
+			
+		}
+		System.out.println(AllStops.size());
+	}
+	public static void main(String args[]) throws Exception {
+		
 	}// end main
 }// end class
