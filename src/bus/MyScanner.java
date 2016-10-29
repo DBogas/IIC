@@ -40,7 +40,15 @@ class MyScanner {
 		}
 	}
 
-	static List<String> getAllLines(String info) {
+	/**
+	 * this method gives us a list of strings that represent the codes of the
+	 * bus stops we want.
+	 * 
+	 * @param info
+	 *            is a string of parsed json
+	 * @return gives us a list
+	 */
+	static List<String> getAllLineNumbers(String info) {
 		List<String> result = new LinkedList<String>();
 		JSONObject jo = new JSONObject(info);
 		JSONArray ja = jo.getJSONArray("records");
@@ -51,16 +59,28 @@ class MyScanner {
 		return result;
 	}
 
+	static List<String> getLine(String l, String d) throws Exception {
+
+		String URLpart1 = "http://www.stcp.pt/pt/itinerarium/callservice.php?action=linestops&lcode=";
+		String URLpart2 = "&ldir=";
+		String completeURL = URLpart1 + l + URLpart2 + d;
+		String readFromURL = readUrl(completeURL);
+
+		List<String> result = new LinkedList<String>();
+		JSONObject jo = new JSONObject(readFromURL);
+		JSONArray ja = jo.getJSONArray("records");
+		for (int i = 0; i < ja.length(); i++) {
+			JSONObject obj = ja.getJSONObject(i);
+			result.add(obj.toString());
+		}
+
+		return result;
+	}
+
 	public static void main(String args[]) throws Exception {
 
-		// sentido 0 ex: bolhao -> castelo do queijo
-		String readFromURLDirection0 = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
-		// sentido 1 (castelo queijo -> bolhao)
-		// String readFromURLDirection1;
-		List<String> example = getAllLines(readFromURLDirection0);
-		for(String s : example){
-			System.out.print(s+" ");
-		}
+		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
+		
 
 	}// end main
 }// end class
