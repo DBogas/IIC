@@ -1,8 +1,12 @@
 package bus;
 
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -18,7 +22,6 @@ import org.json.JSONObject;
 class MyScanner {
 
 	/**
-	 * 
 	 * @param urlString
 	 *            is the url we want to read the json from
 	 * @return gives us a string with all the un-parsed json
@@ -89,8 +92,20 @@ class MyScanner {
 
 		return result;
 	}
+	/**
+	 * method that iterates through all the lines
+	 * in each line it iterates through all the bus stops
+	 * if a bus stop isn't stored in the hashmap, stores it
+	 * 
+	 *  it creates a file for output too.
+	 * @throws Exception
+	 */
 	
 	static void getAllStops() throws Exception{
+		//file handling
+		File outputFile = new File("AllStops.txt");
+		//outputFile.createNewFile();
+		//actual code
 		HashMap<String, Stop> AllStops = new HashMap<String, Stop>();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
 		List<String> allLineNumbers = getAllLineNumbers(readFromURL);
@@ -119,6 +134,8 @@ class MyScanner {
 		System.out.println(AllStops.size());
 	}
 	public static void main(String args[]) throws Exception {
-		
+		//
+		System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("AllStops.txt"))));
+		getAllStops();
 	}// end main
 }// end class

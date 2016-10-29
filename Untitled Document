@@ -1,6 +1,9 @@
 Notas:
 usei json
+
 usei gson : "A Java serialization/deserialization library that can convert Java Objects into JSON and back."
+
+Para chamar os métodos que constroem as folhas de texto (uma com todas as paragens e a outra com todas as linhas), comvem apagar os ficheiros AllStops e AllLines se existirem.
 
 readURL from:
 http://stackoverflow.com/questions/7467568/parsing-json-from-url
