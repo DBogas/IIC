@@ -133,9 +133,41 @@ class MyScanner {
 		}
 		System.out.println(AllStops.size());
 	}
+	/**
+	 * this method aims to create a .txt file with all the Bus Lines in the following format
+	 * line code, direction
+	 * stop1_code, stop2_code, etc
+	 * @throws Exception 
+	 */
+	static void getAllLines() throws Exception{
+		//file handling
+		File outputFile = new File("AllLines.txt");
+		//actual code
+		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
+		List<String> allLineNumbers = getAllLineNumbers(readFromURL);
+		// iterating
+		for(String s : allLineNumbers){
+			List<JSONObject> aux1 = getLine(s,"0");
+			List<JSONObject> aux2 = getLine(s,"1");
+			// print in direction 0
+			System.out.println(s+",0");
+			for(JSONObject o : aux1){
+				System.out.print(o.get("code")+" ");
+			}
+			System.out.println();
+			// print in direction 1
+			System.out.println(s+",1");
+			for(JSONObject o : aux2){
+				System.out.print(o.get("code")+" ");
+			}
+			System.out.println();
+		}
+	}
+	
 	public static void main(String args[]) throws Exception {
-		//
 		System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("AllStops.txt"))));
 		getAllStops();
+		System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("AllLines.txt"))));
+		getAllLines();
 	}// end main
 }// end class
