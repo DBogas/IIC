@@ -1,0 +1,6 @@
+Notas:
+usei json
+usei gson : "A Java serialization/deserialization library that can convert Java Objects into JSON and back."
+
+readURL from:
+http://stackoverflow.com/questions/7467568/parsing-json-from-url
