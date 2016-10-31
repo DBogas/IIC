@@ -11,6 +11,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -187,7 +188,9 @@ class MyScanner {
 	}
 
 	static float[] getStopGPSCoords(String stopCode) throws Exception {
-		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=srchstoplines&stopcode=BLRB1");
+		
+		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=srchstoplines&stopcode="+stopCode);
+		
 		JSONArray ja = new JSONArray(readFromURL);
 		JSONObject jo = (JSONObject) ja.get(0);
 		String s = (String) jo.get("geomdesc");
@@ -207,6 +210,11 @@ class MyScanner {
 		String[] auxres = aux.split(" ");
 		// 0 -> longitude 1-> latitude
 		float res[] = { Float.valueOf(auxres[0]), Float.valueOf(auxres[1]) };
+		return res;
+	}
+	
+	static List<String> getAllStopCodes(){
+		List<String> res = new ArrayList<String>();
 		return res;
 	}
 
