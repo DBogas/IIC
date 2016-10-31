@@ -19,7 +19,7 @@ public class Stop {
 	}
 	
 	void printStop(){
-		System.out.println("code: "+this.code+" address: "+this.address+" zone: "+this.zone+" name: "+this.name+" longitude: "+this.longitude+" latitude: "+this.latitude);
+		System.out.println(this.code+" , "+this.address+" , "+this.zone+" , "+this.name+" , "+this.longitude+" , "+this.latitude);
 	}
 	
 }
