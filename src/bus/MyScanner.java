@@ -68,7 +68,9 @@ class MyScanner {
 		JSONArray ja = jo.getJSONArray("records");
 		for (int i = 0; i < ja.length(); i++) {
 			JSONObject obj = ja.getJSONObject(i);
-			result.add(obj.get("pubcode").toString());
+
+			// result.add(obj.get("pubcode").toString());
+			result.add(obj.get("code").toString());
 		}
 		return result;
 	}
@@ -112,10 +114,7 @@ class MyScanner {
 	 */
 
 	static void getAllStops() throws Exception {
-		// file handling
-		File outputFile = new File("AllStops.txt");
-		// outputFile.createNewFile();
-		// actual code
+
 		HashMap<String, Stop> AllStops = new HashMap<String, Stop>();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
 		List<String> allLineNumbers = getAllLineNumbers(readFromURL);
@@ -132,8 +131,8 @@ class MyScanner {
 						.toString());
 				stop.longitude = coords[0];
 				stop.latitude = coords[1];
-				if (!AllStops.containsKey(stop.code))
-					AllStops.put(stop.code, stop);
+				if (!AllStops.containsKey(stop.stopCode))
+					AllStops.put(stop.stopCode, stop);
 			}
 			// and for direction 1
 			aux = getLine(s, "1");
@@ -144,8 +143,8 @@ class MyScanner {
 						.toString());
 				stop.longitude = coords[0];
 				stop.latitude = coords[1];
-				if (!AllStops.containsKey(stop.code))
-					AllStops.put(stop.code, stop);
+				if (!AllStops.containsKey(stop.stopCode))
+					AllStops.put(stop.stopCode, stop);
 			}
 			// print
 			for (String auxS : AllStops.keySet()) {
@@ -188,9 +187,10 @@ class MyScanner {
 	}
 
 	static float[] getStopGPSCoords(String stopCode) throws Exception {
-		
-		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=srchstoplines&stopcode="+stopCode);
-		
+
+		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=srchstoplines&stopcode="
+				+ stopCode);
+
 		JSONArray ja = new JSONArray(readFromURL);
 		JSONObject jo = (JSONObject) ja.get(0);
 		String s = (String) jo.get("geomdesc");
@@ -212,18 +212,17 @@ class MyScanner {
 		float res[] = { Float.valueOf(auxres[0]), Float.valueOf(auxres[1]) };
 		return res;
 	}
-	
-	static List<String> getAllStopCodes(){
+
+	static List<String> getAllStopCodes() {
 		List<String> res = new ArrayList<String>();
 		return res;
 	}
 
 	public static void main(String args[]) throws Exception {
-		 System.setOut(new PrintStream(new BufferedOutputStream(new
-		 FileOutputStream("AllStops.txt"))));
-		 getAllStops();
-		 System.setOut(new PrintStream(new BufferedOutputStream(new
-		 FileOutputStream("AllLines.txt"))));
-		 getAllLines();
+		System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("AllLines.txt"))));
+		getAllLines();
+		System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("AllStops.txt"))));
+		getAllStops();
+
 	}// end main
 }// end class

@@ -2,7 +2,7 @@ package bus;
 
 public class Stop {
 
-	String code;
+	String stopCode;
 	String address;
 	String zone;
 	String name;
@@ -10,7 +10,7 @@ public class Stop {
 	float latitude;
 
 	Stop(String code, String address, String zone, String name) {
-		this.code = code;
+		this.stopCode = code;
 		this.address = address;
 		this.zone = zone;
 		this.name = name;
@@ -19,7 +19,7 @@ public class Stop {
 	}
 	
 	void printStop(){
-		System.out.println(this.code+" , "+this.address+" , "+this.zone+" , "+this.name+" , "+this.longitude+" , "+this.latitude);
+		System.out.println(this.stopCode+" , "+this.address+" , "+this.zone+" , "+this.name+" , "+this.longitude+" , "+this.latitude);
 	}
 	
 }
