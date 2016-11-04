@@ -116,6 +116,7 @@ class MyScanner {
 	static void getAllStops() throws Exception {
 
 		HashMap<String, Stop> AllStops = new HashMap<String, Stop>();
+		// AllStops.clear();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
 		List<String> allLineNumbers = getAllLineNumbers(readFromURL);
 
@@ -131,8 +132,10 @@ class MyScanner {
 						.toString());
 				stop.longitude = coords[0];
 				stop.latitude = coords[1];
-				if (!AllStops.containsKey(stop.stopCode))
+				if (!(AllStops.containsKey(stop.stopCode)))
 					AllStops.put(stop.stopCode, stop);
+				else if (AllStops.containsKey(stop.stopCode))
+					continue;
 			}
 			// and for direction 1
 			aux = getLine(s, "1");
@@ -143,16 +146,19 @@ class MyScanner {
 						.toString());
 				stop.longitude = coords[0];
 				stop.latitude = coords[1];
-				if (!AllStops.containsKey(stop.stopCode))
+				if (!(AllStops.containsKey(stop.stopCode)))
 					AllStops.put(stop.stopCode, stop);
-			}
-			// print
-			for (String auxS : AllStops.keySet()) {
-				AllStops.get(auxS).printStop();
+				else if (AllStops.containsKey(stop.stopCode))
+					continue;
 			}
 
 		}
+		// print
 		System.out.println(AllStops.size());
+		for (String auxS : AllStops.keySet()) {
+			AllStops.get(auxS).printStop();
+		}
+
 	}
 
 	/**
@@ -213,15 +219,12 @@ class MyScanner {
 		return res;
 	}
 
-	static List<String> getAllStopCodes() {
-		List<String> res = new ArrayList<String>();
-		return res;
-	}
-
 	public static void main(String args[]) throws Exception {
-		System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("AllLines.txt"))));
+		System.setOut(new PrintStream(new BufferedOutputStream(
+				new FileOutputStream("AllLines.txt"))));
 		getAllLines();
-		System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("AllStops.txt"))));
+		System.setOut(new PrintStream(new BufferedOutputStream(
+				new FileOutputStream("AllStops.txt"))));
 		getAllStops();
 
 	}// end main
