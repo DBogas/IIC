@@ -3,10 +3,13 @@ package bus;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -24,6 +27,8 @@ import jdk.nashorn.internal.parser.JSONParser;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import sun.font.CreatedFontTracker;
 
 import com.google.gson.Gson;
 
@@ -218,14 +223,59 @@ class MyScanner {
 		float res[] = { Float.valueOf(auxres[0]), Float.valueOf(auxres[1]) };
 		return res;
 	}
+	/**
+	 * this method takes each line from the all stops file and converts them to JS objects
+	 * @throws IOException 
+	 */
+	static void toJavaScript() throws IOException{
+		// create output file
+		File outputJS = new File("/home/diogo/workspace/iic/webcrawler/stops.js");
+		PrintWriter writer = new PrintWriter("stops.js", "UTF-8");
+		// buffered reader to stops file
+		BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
+		// read line by line
+		try {
+		    
+		    // 1st line has number of stops!!
+		    String line = br.readLine();
+		    while(line != null){
+		    // stops
+		    	line = br.readLine();
+		    	String[] stop = line.toString().split(",");
+		    	String res = "var "+stop[0]+" = { \n"+
+		    			"\tnome: "+stop[1]+", \n"
+		    			+"\tzona: "+stop[2]+", \n"
+		    			+"\tmorada: "+stop[3]+", \n"
+		    			+"\tlongitude: "+stop[4]+", \n"
+		    			+"\tlatitude: "+stop[5]+"\n};";
+		    	// write to file
+		    	writer.println(res);
+		    }
+		 } finally {
+			 writer.close();
+			 br.close();
+		}
+	}// ed of method
 
 	public static void main(String args[]) throws Exception {
-		System.setOut(new PrintStream(new BufferedOutputStream(
+		// note to self, implement a menu
+		
+		/*
+		 * the commented part does the information getting.
+		 * if we want to refresh we need to uncomment it
+		 * and delete the generated files(allLines,AllStops,stops.js)
+		 */
+		
+		
+		/*System.setOut(new PrintStream(new BufferedOutputStream(
 				new FileOutputStream("AllLines.txt"))));
 		getAllLines();
 		System.setOut(new PrintStream(new BufferedOutputStream(
 				new FileOutputStream("AllStops.txt"))));
-		getAllStops();
+		getAllStops();*/
+		
+		// this method generates a js file with all the stops
+		toJavaScript();
 
 	}// end main
 }// end class
