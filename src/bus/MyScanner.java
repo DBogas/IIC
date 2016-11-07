@@ -187,13 +187,13 @@ class MyScanner {
 			for (JSONObject o : aux1) {
 				System.out.print(o.get("code") + " ");
 			}
-			System.out.println();
+			System.out.println('\n');
 			// print in direction 1
 			System.out.println(s + ",1");
 			for (JSONObject o : aux2) {
 				System.out.print(o.get("code") + " ");
 			}
-			System.out.println();
+			System.out.println('\n');
 		}
 	}
 
@@ -228,14 +228,17 @@ class MyScanner {
 	 * @throws IOException 
 	 */
 	static void toJavaScript() throws IOException{
-		// create output file
-		File outputJS = new File("/home/diogo/workspace/iic/webcrawler/stops.js");
+		// create output files
+		File stopsOutputJS = new File("/home/diogo/workspace/iic/webcrawler/stops.js");
+		File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
+		// writers
 		PrintWriter writer = new PrintWriter("stops.js", "UTF-8");
-		// buffered reader to stops file
+		PrintWriter writer2 = new PrintWriter("lines.js","UTF-8");
+		// buffered reader to stops / lines files
 		BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
-		// read line by line
+		BufferedReader br2 = new BufferedReader(new FileReader("AllLines.txt"));
+		// read line by line the stops file
 		try {
-		    
 		    // 1st line has number of stops!!
 		    String line = br.readLine();
 		    while(line != null){
@@ -255,27 +258,35 @@ class MyScanner {
 			 writer.close();
 			 br.close();
 		}
-	}// ed of method
+		// read the lines file
+		try{
+		
+		}
+		finally{
+			
+		}
+		
+	}// end of method
 
 	public static void main(String args[]) throws Exception {
 		// note to self, implement a menu
-		
-		/*
-		 * the commented part does the information getting.
-		 * if we want to refresh we need to uncomment it
-		 * and delete the generated files(allLines,AllStops,stops.js)
-		 */
-		
-		
-		/*System.setOut(new PrintStream(new BufferedOutputStream(
-				new FileOutputStream("AllLines.txt"))));
-		getAllLines();
-		System.setOut(new PrintStream(new BufferedOutputStream(
-				new FileOutputStream("AllStops.txt"))));
-		getAllStops();*/
-		
-		// this method generates a js file with all the stops
-		toJavaScript();
-
+		Scanner in = new Scanner(System.in);
+		System.out.println("Insert 1 to refresh data from site, 2 to generate .js files");
+		int choice = in.nextInt();
+			if (choice == 1){
+				// lines data
+				System.setOut(new PrintStream(new BufferedOutputStream(
+						new FileOutputStream("AllLines.txt"))));
+				getAllLines();
+				
+				// stops data
+				System.setOut(new PrintStream(new BufferedOutputStream(
+						new FileOutputStream("AllStops.txt"))));
+				getAllStops();
+			}
+			
+			else if (choice == 2){
+				toJavaScript();
+			}
 	}// end main
 }// end class
