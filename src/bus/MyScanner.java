@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -183,17 +184,17 @@ class MyScanner {
 			List<JSONObject> aux1 = getLine(s, "0");
 			List<JSONObject> aux2 = getLine(s, "1");
 			// print in direction 0
-			System.out.println(s + ",0");
+			System.out.print(s + ",0"+","+aux1.size()+",");
 			for (JSONObject o : aux1) {
-				System.out.print(o.get("code") + " ");
+				System.out.print(o.get("code") + ",");
 			}
-			System.out.println('\n');
+			System.out.println();
 			// print in direction 1
-			System.out.println(s + ",1");
+			System.out.print(s + ",1"+","+aux2.size()+",");
 			for (JSONObject o : aux2) {
-				System.out.print(o.get("code") + " ");
+				System.out.print(o.get("code") + ",");
 			}
-			System.out.println('\n');
+			System.out.println();
 		}
 	}
 
@@ -227,16 +228,13 @@ class MyScanner {
 	 * this method takes each line from the all stops file and converts them to JS objects
 	 * @throws IOException 
 	 */
-	static void toJavaScript() throws IOException{
+	static void stopsToJS() throws IOException{
 		// create output files
 		File stopsOutputJS = new File("/home/diogo/workspace/iic/webcrawler/stops.js");
-		File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
 		// writers
 		PrintWriter writer = new PrintWriter("stops.js", "UTF-8");
-		PrintWriter writer2 = new PrintWriter("lines.js","UTF-8");
 		// buffered reader to stops / lines files
 		BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
-		BufferedReader br2 = new BufferedReader(new FileReader("AllLines.txt"));
 		// read line by line the stops file
 		try {
 		    // 1st line has number of stops!!
@@ -258,35 +256,58 @@ class MyScanner {
 			 writer.close();
 			 br.close();
 		}
-		// read the lines file
-		try{
-		
-		}
-		finally{
-			
-		}
-		
 	}// end of method
+	/**
+	 * this method makes a JS file that contains all the lines as JS objects
+	 * some code was re-used from methods above this one
+	 * prints directly to a file
+	 * @throws IOException
+	 */
+	static void linesToJS() throws IOException{
+		File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
+		PrintWriter writer = new PrintWriter("lines.js", "UTF-8");
+		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
+		List<String> lines = new LinkedList<String>();
+		
+		String line = br.readLine();
+		while(line != null){
+			String[] line_broken = line.split(",");
+			String nome = line_broken[0];
+			String sentido = line_broken[1];
+			String res = "var "+nome+"_"+sentido+"= {";
+			
+			int n_paragens = Integer.parseInt(line_broken[2]);
+				for(int i=3;i<line_broken.length;i++){
+					if(i == line_broken.length-1)res+=line_broken[i];
+					else res+=line_broken[i]+",";
+				}
+				res+="}";
+			writer.println(res);
+			line = br.readLine();
+		}
+	}
 
 	public static void main(String args[]) throws Exception {
-		// note to self, implement a menu
+		
 		Scanner in = new Scanner(System.in);
-		System.out.println("Insert 1 to refresh data from site, 2 to generate .js files");
+		System.out.println("Insert 1 to refresh data about lines, 2 to refresh data about stops, 3 to generate JS files");
 		int choice = in.nextInt();
 			if (choice == 1){
 				// lines data
 				System.setOut(new PrintStream(new BufferedOutputStream(
 						new FileOutputStream("AllLines.txt"))));
 				getAllLines();
-				
+			}
+			else if(choice == 2){
 				// stops data
 				System.setOut(new PrintStream(new BufferedOutputStream(
 						new FileOutputStream("AllStops.txt"))));
 				getAllStops();
 			}
 			
-			else if (choice == 2){
-				toJavaScript();
+			else if (choice == 3){
+				//stopsToJS();
+				linesToJS();
 			}
 	}// end main
 }// end class
