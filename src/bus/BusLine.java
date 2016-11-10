@@ -4,7 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 class BusLine {
 	int sentido;
@@ -29,10 +30,9 @@ class BusLine {
 	
 	}
 	
-	public void toJS(int direction) throws Exception{
+	public String toJS(int direction) throws Exception{
 		// output
-		File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
-		PrintWriter writer = new PrintWriter("lines.js", "UTF-8");
+		
 		String res = 	"var "+this.pubcode+"_"+direction+" ={\n"
 						+"\t accessibility: "+this.accessibility+",\n"
 						+"\t pubcode: \""+this.pubcode+"\",\n"
@@ -44,6 +44,6 @@ class BusLine {
 			else res+= "\""+s+"\""+",";
 		}
 		res+="]\n}";
-		System.out.println(res);
+		return res;
 	}
 }

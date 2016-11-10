@@ -3,35 +3,20 @@ package bus;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import jdk.nashorn.internal.parser.JSONParser;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import sun.font.CreatedFontTracker;
-
-import com.google.gson.Gson;
 
 class MyScanner {
 
@@ -267,8 +252,8 @@ class MyScanner {
 		
 		List<BusLine> result = new LinkedList<BusLine>();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
-		/*File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
-		PrintWriter writer = new PrintWriter("lines.js", "UTF-8");*/
+		File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
+		PrintWriter writer = new PrintWriter("lines.js", "UTF-8");
 		// parse JSON
 		JSONObject jo = new JSONObject(readFromURL);
 		JSONArray ja = jo.getJSONArray("records");
@@ -287,7 +272,7 @@ class MyScanner {
 			for(JSONObject o :stops){
 				bl.LineStops.add(o.get("code").toString());
 			}
-			if(bl.LineStops.size()>0)bl.toJS(0);
+			if(bl.LineStops.size()>0) writer.println(bl.toJS(0));
 			bl.LineStops.clear();
 			
 			// sentido 1
@@ -297,23 +282,14 @@ class MyScanner {
 				bl.LineStops.add(o.get("code").toString());
 			}
 			
-			if(bl.LineStops.size()>0)bl.toJS(1);
+			if(bl.LineStops.size()>0) writer.println(bl.toJS(1));
 			bl.LineStops.clear();
 			
 		}
+		writer.close();
 		return result;
 	}
 	
-	BusLine cloneBusLine(BusLine target){
-		BusLine res = new BusLine(target.accessibility, target.code, target.description, target.pubcode);
-		LinkedList<String> newList = new LinkedList<String>();
-		for(String s : target.LineStops){
-			newList.add(s);
-		}
-		res.LineStops = newList;
-		return res;
-	}
-
 	public static void main(String args[]) throws Exception {
 		
 		Scanner in = new Scanner(System.in);
