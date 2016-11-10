@@ -281,31 +281,25 @@ class MyScanner {
 						,aux.get("description").toString()
 						,aux.get("pubcode").toString());
 			//for each line we need the stops
+			
 			// sentido 0
 			List<JSONObject> stops = getLine(bl.code, "0");
-			bl.sentido = 0;
 			for(JSONObject o :stops){
 				bl.LineStops.add(o.get("code").toString());
 			}
-			bl.testPrint();
-			// output
+			if(bl.LineStops.size()>0)bl.toJS(0);
+			bl.LineStops.clear();
 			
-			//build string
-			String res = "var "+bl.pubcode+"_0"+" ={";
-			for(String s: bl.LineStops){
-				if(bl.LineStops.indexOf(s) == bl.LineStops.size()-1) res+= s;
-				else res+= s+",";
+			// sentido 1
+			stops.clear();
+			stops= getLine(bl.code, "1");
+			for(JSONObject o :stops){
+				bl.LineStops.add(o.get("code").toString());
 			}
-			res+="}";
 			
+			if(bl.LineStops.size()>0)bl.toJS(1);
+			bl.LineStops.clear();
 			
-			
-			
-			
-			
-			//String res2 = "var "+bl.pubcode+"_1"+" ={};";
-			System.out.println(res);
-			//System.out.println(res2);
 		}
 		return result;
 	}
