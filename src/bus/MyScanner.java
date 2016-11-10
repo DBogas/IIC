@@ -261,30 +261,63 @@ class MyScanner {
 	 * this method makes a JS file that contains all the lines as JS objects
 	 * some code was re-used from methods above this one
 	 * prints directly to a file
-	 * @throws IOException
+	 * @throws Exception 
 	 */
-	static void linesToJS() throws IOException{
-		File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
-		PrintWriter writer = new PrintWriter("lines.js", "UTF-8");
-		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
-		List<String> lines = new LinkedList<String>();
+	static List<BusLine> constructLines()  throws Exception{
 		
-		String line = br.readLine();
-		while(line != null){
-			String[] line_broken = line.split(",");
-			String nome = line_broken[0];
-			String sentido = line_broken[1];
-			String res = "var "+nome+"_"+sentido+"= {";
+		List<BusLine> result = new LinkedList<BusLine>();
+		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
+		/*File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
+		PrintWriter writer = new PrintWriter("lines.js", "UTF-8");*/
+		// parse JSON
+		JSONObject jo = new JSONObject(readFromURL);
+		JSONArray ja = jo.getJSONArray("records");
+		//JSONObject obj = ja.getJSONObject(i);
+		for(int i=0;i<ja.length();i++){
+			JSONObject aux = ja.getJSONObject(i);
+			// now we have the beginning of a line
+			BusLine bl = new BusLine(Integer.parseInt(aux.get("accessibility").toString())
+						,aux.get("code").toString()
+						,aux.get("description").toString()
+						,aux.get("pubcode").toString());
+			//for each line we need the stops
+			// sentido 0
+			List<JSONObject> stops = getLine(bl.code, "0");
+			bl.sentido = 0;
+			for(JSONObject o :stops){
+				bl.LineStops.add(o.get("code").toString());
+			}
+			bl.testPrint();
+			// output
 			
-			int n_paragens = Integer.parseInt(line_broken[2]);
-				for(int i=3;i<line_broken.length;i++){
-					if(i == line_broken.length-1)res+=line_broken[i];
-					else res+=line_broken[i]+",";
-				}
-				res+="}";
-			writer.println(res);
-			line = br.readLine();
+			//build string
+			String res = "var "+bl.pubcode+"_0"+" ={";
+			for(String s: bl.LineStops){
+				if(bl.LineStops.indexOf(s) == bl.LineStops.size()-1) res+= s;
+				else res+= s+",";
+			}
+			res+="}";
+			
+			
+			
+			
+			
+			
+			//String res2 = "var "+bl.pubcode+"_1"+" ={};";
+			System.out.println(res);
+			//System.out.println(res2);
 		}
+		return result;
+	}
+	
+	BusLine cloneBusLine(BusLine target){
+		BusLine res = new BusLine(target.accessibility, target.code, target.description, target.pubcode);
+		LinkedList<String> newList = new LinkedList<String>();
+		for(String s : target.LineStops){
+			newList.add(s);
+		}
+		res.LineStops = newList;
+		return res;
 	}
 
 	public static void main(String args[]) throws Exception {
@@ -307,7 +340,8 @@ class MyScanner {
 			
 			else if (choice == 3){
 				//stopsToJS();
-				linesToJS();
+				constructLines();
+				
 			}
 	}// end main
 }// end class
