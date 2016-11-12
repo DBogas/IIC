@@ -34,7 +34,9 @@ body{
 #controlador{
     width: 45%;
     height: 50%;
-    display: inline-flex; 
+    margin-left: 4%; 
+    display: inline-block;
+    align-self: center;
     background-color: red;
     
 }
@@ -42,7 +44,9 @@ body{
 #mapa{
     width: 45%;
     height: 50%;
-     display: inline-flex;
+    margin-right: 4%;
+    display: inline-block;
+    align-self: center;
     background-color: yellow;
 }
 
