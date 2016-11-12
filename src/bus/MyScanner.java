@@ -309,8 +309,8 @@ class MyScanner {
 			}
 			
 			else if (choice == 3){
-				//stopsToJS();
-				constructLines();
+				stopsToJS();
+				//constructLines();
 				
 			}
 	}// end main
