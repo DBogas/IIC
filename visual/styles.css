@@ -20,34 +20,38 @@ body{
 }
 .container_son{
     margin: auto;
+    margin-top: 1%;
 }
 
 #header{
     width: 80%;
     height: 20%;
     background-color: green;
-    
     text-align: center;
     
 }
 
 #controlador{
-    width: 45%;
-    height: 50%;
-    margin-left: 4%; 
-    display: inline-block;
+    width: 20%;
+    height: 5em; 
+    display: block;
     align-self: center;
-    background-color: red;
+    background-color: white;
+    text-align: center;
+    border: 0.5ex solid black;
     
 }
 
+
+
 #mapa{
     width: 45%;
-    height: 50%;
-    margin-right: 4%;
-    display: inline-block;
+    height: 20em;
+    display: block;
     align-self: center;
-    background-color: yellow;
+    background-color: white;
+    border: 0.5ex solid black;
+    text-align: center;
 }
 
 /*

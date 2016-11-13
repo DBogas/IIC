@@ -5,6 +5,7 @@
     <head>
         <title> Visual - STCP </title>
         <link rel = "stylesheet" type="text/css" href="styles.css">
+        <script src="scripts.js"></script>
     
     </head>
 
@@ -18,15 +19,19 @@
             </div>
             
             <div id = "controlador" class = "container_son">
-                <p>sldbvsldb</p>
+                <p>Select the Stop code here</p>
+                <!--options are to be inserted with JS -->
+                <select id = "drop_stops"></select>
+                <button onclick="contructMap()" id ="stop_gen_button">View</button>
             </div>
             
             <div id = "mapa" class = "container_son">
-                <p>sldbvsldb</p>
+             
             </div>
             
         </div>
-    
+        <!-- this must be here for the map to apeer -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
     </body>
 
 
