@@ -107,6 +107,7 @@ class MyScanner {
 	static void getAllStops() throws Exception {
 
 		HashMap<String, Stop> AllStops = new HashMap<String, Stop>();
+		
 		// AllStops.clear();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
 		List<String> allLineNumbers = getAllLineNumbers(readFromURL);
@@ -149,7 +150,6 @@ class MyScanner {
 		for (String auxS : AllStops.keySet()) {
 			AllStops.get(auxS).printStop();
 		}
-
 	}
 
 	/**
@@ -221,6 +221,7 @@ class MyScanner {
 		// buffered reader to stops / lines files
 		BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
 		// read line by line the stops file
+		LinkedList<String> listOfStops = new LinkedList<String>();
 		try {
 		    // 1st line has number of stops!!
 		    String line = br.readLine();
@@ -228,19 +229,27 @@ class MyScanner {
 		    // stops
 		    	line = br.readLine();
 		    	String[] stop = line.toString().split(",");
-		    	String res = "var "+stop[0]+" = { \n"+
-		    			"\tnome: "+stop[1]+", \n"
-		    			+"\tzona: "+stop[2]+", \n"
-		    			+"\tmorada: "+stop[3]+", \n"
-		    			+"\tlongitude: "+stop[4]+", \n"
-		    			+"\tlatitude: "+stop[5]+"\n};";
+		    	String res = "var "+stop[0]+" = {\n"+
+		    			"\tnome:"+"\""+stop[1]+"\""+",\n"
+		    			+"\tzona:"+"\""+stop[2]+"\""+",\n"
+		    			+"\tmorada:"+"\""+stop[3]+"\""+",\n"
+		    			+"\tlongitude:"+stop[4]+",\n"
+		    			+"\tlatitude:"+stop[5]+"\n};";
+		    	//pra lista
+		    	listOfStops.add(stop[0]);	
 		    	// write to file
 		    	writer.println(res);
 		    }
 		 } finally {
+			 writer.print("var allstops = [");
+			 for(String s : listOfStops){
+				 if(listOfStops.indexOf(s)==listOfStops.size()-1)writer.print("\""+s+"\"];");
+				 else writer.print("\""+s+"\",");
+			 }
 			 writer.close();
 			 br.close();
 		}
+		
 	}// end of method
 	/**
 	 * this method makes a JS file that contains all the lines as JS objects
