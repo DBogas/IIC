@@ -5,10 +5,11 @@
     <head>
         <title> Visual - STCP </title>
         <link rel = "stylesheet" type="text/css" href="styles.css">
-         <script src="stops.js"></script>
+        <script src="stops.js"></script>
+        <script src="scripts.js"></script>
     </head>
 
-    <body>
+    <body onload="startPage()">
     
         <div id = "container">
             
@@ -25,13 +26,13 @@
             </div>
             
             <div id = "mapa" class = "container_son">
-             
+                <img id = "map_img">
             </div>
             
         </div>
         <!-- this must be here for the map to apeer -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
-    <script src="scripts.js"></script>
+    
    
     </body>
 

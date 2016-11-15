@@ -229,8 +229,9 @@ class MyScanner {
 		    // stops
 		    	line = br.readLine();
 		    	String[] stop = line.toString().split(",");
-		    	String res = "var "+stop[0]+" = {\n"+
+		    	String res = "var p_"+stop[0]+" = {\n"+
 		    			"\tnome:"+"\""+stop[1]+"\""+",\n"
+		    			+"\tcodigo:"+"\""+stop[0]+"\""+",\n"
 		    			+"\tzona:"+"\""+stop[2]+"\""+",\n"
 		    			+"\tmorada:"+"\""+stop[3]+"\""+",\n"
 		    			+"\tlongitude:"+stop[4]+",\n"
