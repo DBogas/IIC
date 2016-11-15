@@ -1,29 +1,30 @@
 
-function contructMap() {
-        /*
-        var e = document.getElementById("ddlViewBy");
-        var strUser = e.options[e.selectedIndex].value;*/
+function initMap() {
     
         var target = document.getElementById("drop_stops");
-     
         var selectedStop =  window[target.options[target.selectedIndex].value.trim()]; 
-        var lat = selectedStop.latitude;
-        var lon = selectedStop.longitude;
-        
-        
+        var lat1 = selectedStop.latitude;
+        var lon1 = selectedStop.longitude;
         var zoom = 15;
+        
+    /*
         var url = "http://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&zoom="+zoom+"&size=600x300&maptype=roadmap&sensor=false";
         var mapa = document.getElementById("map_img");
         mapa.src = url;
-        /*var map = new google.maps.Map(document.getElementById('mapa'), {
-          zoom: 15,
-          center: coords
-        });*/
+        */
         
-       /* var marker = new google.maps.Marker({
-          position: coords,
+        // var myLatLng = {lat: -25.363, lng: 131.044};
+        var myLatLng = {lat: lat1,lng:lon1};
+        
+        var map = new google.maps.Map(document.getElementById('mapa'), {
+          zoom: 15,
+          center: myLatLng
+        });
+        
+        var marker = new google.maps.Marker({
+          position: myLatLng,
           map: map
-        });*/
+        });
 }
 
 function makeOptions() {
