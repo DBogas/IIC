@@ -21,5 +21,4 @@ public class Stop {
 	void printStop(){
 		System.out.println(this.stopCode+" , "+this.address+" , "+this.zone+" , "+this.name+" , "+this.longitude+" , "+this.latitude);
 	}
-	
 }

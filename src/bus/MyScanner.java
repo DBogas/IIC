@@ -104,10 +104,10 @@ class MyScanner {
 	 * @throws Exception
 	 */
 
-	static void getAllStops() throws Exception {
-
+	// static void getAllStops() throws Exception {
+	static HashMap<String, Stop> getAllStops() throws Exception {
 		HashMap<String, Stop> AllStops = new HashMap<String, Stop>();
-		
+
 		// AllStops.clear();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
 		List<String> allLineNumbers = getAllLineNumbers(readFromURL);
@@ -145,7 +145,15 @@ class MyScanner {
 			}
 
 		}
-		// print
+
+		return AllStops;
+	}
+
+	/**
+	 * print all stops
+	 */
+
+	static void printAllStops(HashMap<String, Stop> AllStops) {
 		System.out.println(AllStops.size());
 		for (String auxS : AllStops.keySet()) {
 			AllStops.get(auxS).printStop();
@@ -169,13 +177,13 @@ class MyScanner {
 			List<JSONObject> aux1 = getLine(s, "0");
 			List<JSONObject> aux2 = getLine(s, "1");
 			// print in direction 0
-			System.out.print(s + ",0"+","+aux1.size()+",");
+			System.out.print(s + ",0" + "," + aux1.size() + ",");
 			for (JSONObject o : aux1) {
 				System.out.print(o.get("code") + ",");
 			}
 			System.out.println();
 			// print in direction 1
-			System.out.print(s + ",1"+","+aux2.size()+",");
+			System.out.print(s + ",1" + "," + aux2.size() + ",");
 			for (JSONObject o : aux2) {
 				System.out.print(o.get("code") + ",");
 			}
@@ -209,13 +217,17 @@ class MyScanner {
 		float res[] = { Float.valueOf(auxres[0]), Float.valueOf(auxres[1]) };
 		return res;
 	}
+
 	/**
-	 * this method takes each line from the all stops file and converts them to JS objects
-	 * @throws IOException 
+	 * this method takes each line from the all stops file and converts them to
+	 * JS objects
+	 * 
+	 * @throws IOException
 	 */
-	static void stopsToJS() throws IOException{
+	static void stopsToJS() throws IOException {
 		// create output files
-		File stopsOutputJS = new File("/home/diogo/workspace/iic/webcrawler/stops.js");
+		File stopsOutputJS = new File(
+				"/home/diogo/workspace/iic/webcrawler/stops.js");
 		// writers
 		PrintWriter writer = new PrintWriter("stops.js", "UTF-8");
 		// buffered reader to stops / lines files
@@ -223,105 +235,147 @@ class MyScanner {
 		// read line by line the stops file
 		LinkedList<String> listOfStops = new LinkedList<String>();
 		try {
-		    // 1st line has number of stops!!
-		    String line = br.readLine();
-		    while(line != null){
-		    // stops
-		    	line = br.readLine();
-		    	String[] stop = line.toString().split(",");
-		    	String res = "var p_"+stop[0]+" = {\n"+
-		    			"\tnome:"+"\""+stop[1]+"\""+",\n"
-		    			+"\tcodigo:"+"\""+stop[0]+"\""+",\n"
-		    			+"\tzona:"+"\""+stop[2]+"\""+",\n"
-		    			+"\tmorada:"+"\""+stop[3]+"\""+",\n"
-		    			+"\tlongitude:"+stop[4]+",\n"
-		    			+"\tlatitude:"+stop[5]+"\n};";
-		    	//pra lista
-		    	listOfStops.add(stop[0]);	
-		    	// write to file
-		    	writer.println(res);
-		    }
-		 } finally {
-			 writer.print("var allstops = [");
-			 for(String s : listOfStops){
-				 if(listOfStops.indexOf(s)==listOfStops.size()-1)writer.print("\""+s+"\"];");
-				 else writer.print("\""+s+"\",");
-			 }
-			 writer.close();
-			 br.close();
+			// 1st line has number of stops!!
+			String line = br.readLine();
+			while (line != null) {
+				// stops
+				line = br.readLine();
+				String[] stop = line.toString().split(",");
+				String res = "var p_" + stop[0] + " = {\n" + "\tnome:" + "\""
+						+ stop[1] + "\"" + ",\n" + "\tcodigo:" + "\"" + stop[0]
+						+ "\"" + ",\n" + "\tzona:" + "\"" + stop[2] + "\""
+						+ ",\n" + "\tmorada:" + "\"" + stop[3] + "\"" + ",\n"
+						+ "\tlongitude:" + stop[4] + ",\n" + "\tlatitude:"
+						+ stop[5] + "\n};";
+				// pra lista
+				listOfStops.add(stop[0]);
+				// write to file
+				writer.println(res);
+			}
+		} finally {
+			writer.print("var allstops = [");
+			for (String s : listOfStops) {
+				if (listOfStops.indexOf(s) == listOfStops.size() - 1)
+					writer.print("\"" + s + "\"];");
+				else
+					writer.print("\"" + s + "\",");
+			}
+			writer.close();
+			br.close();
 		}
-		
+
 	}// end of method
+
 	/**
 	 * this method makes a JS file that contains all the lines as JS objects
-	 * some code was re-used from methods above this one
-	 * prints directly to a file
-	 * @throws Exception 
+	 * some code was re-used from methods above this one prints directly to a
+	 * file
+	 * 
+	 * @throws Exception
 	 */
-	static List<BusLine> constructLines()  throws Exception{
-		
+	static List<BusLine> constructLines() throws Exception {
+
 		List<BusLine> result = new LinkedList<BusLine>();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
-		File linesOutputJS = new File("/home/diogo/workspace/iic/webcrawler/lines.js");
+		File linesOutputJS = new File(
+				"/home/diogo/workspace/iic/webcrawler/lines.js");
 		PrintWriter writer = new PrintWriter("lines.js", "UTF-8");
 		// parse JSON
 		JSONObject jo = new JSONObject(readFromURL);
 		JSONArray ja = jo.getJSONArray("records");
-		//JSONObject obj = ja.getJSONObject(i);
-		for(int i=0;i<ja.length();i++){
+		// JSONObject obj = ja.getJSONObject(i);
+		for (int i = 0; i < ja.length(); i++) {
 			JSONObject aux = ja.getJSONObject(i);
 			// now we have the beginning of a line
-			BusLine bl = new BusLine(Integer.parseInt(aux.get("accessibility").toString())
-						,aux.get("code").toString()
-						,aux.get("description").toString()
-						,aux.get("pubcode").toString());
-			//for each line we need the stops
-			
+			BusLine bl = new BusLine(Integer.parseInt(aux.get("accessibility")
+					.toString()), aux.get("code").toString(), aux.get(
+					"description").toString(), aux.get("pubcode").toString());
+			// for each line we need the stops
+
 			// sentido 0
 			List<JSONObject> stops = getLine(bl.code, "0");
-			for(JSONObject o :stops){
+			for (JSONObject o : stops) {
 				bl.LineStops.add(o.get("code").toString());
 			}
-			if(bl.LineStops.size()>0) writer.println(bl.toJS(0));
+			if (bl.LineStops.size() > 0)
+				writer.println(bl.toJS(0));
 			bl.LineStops.clear();
-			
+
 			// sentido 1
 			stops.clear();
-			stops= getLine(bl.code, "1");
-			for(JSONObject o :stops){
+			stops = getLine(bl.code, "1");
+			for (JSONObject o : stops) {
 				bl.LineStops.add(o.get("code").toString());
 			}
-			
-			if(bl.LineStops.size()>0) writer.println(bl.toJS(1));
+
+			if (bl.LineStops.size() > 0)
+				writer.println(bl.toJS(1));
 			bl.LineStops.clear();
-			
+
 		}
 		writer.close();
 		return result;
 	}
-	
+
+	/*
+	 * Following methods make gephi readable files
+	 */
+	/**
+	 * This method takes all the stops we have and makes a csv file
+	 * 
+	 * @throws Exception
+	 */
+	static void makeNodesCSV() throws Exception{
+		// separaçoes por ;
+		//File outputFile = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/nodes.csv");
+		//PrintWriter writer = new PrintWriter("nodes.csv", "UTF-8");
+		BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
+			try {
+				// 1st line has number of stops!!
+				//writer.println("StopCode;Address;Zone;Name;Longitude;Latitude");
+				System.out.println("StopCode;Address;Zone;Name;Longitude;Latitude");
+				String line = br.readLine();
+			    while(line != null){
+			    // stops
+			    	line = br.readLine();
+			    	String[] stop = line.toString().split(",");
+				    String res = stop[0].trim()+";"+stop[1].trim()+";"+stop[2].trim()+";"+stop[3].trim()+";"+stop[4].trim()+";"+stop[5].trim();	
+				    //writer.println(res);
+				    System.out.println(res);
+			    }
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		}// end of method
+
 	public static void main(String args[]) throws Exception {
-		
+
 		Scanner in = new Scanner(System.in);
-		System.out.println("Insert 1 to refresh data about lines, 2 to refresh data about stops, 3 to generate JS files");
+		System.out.println("Insert 1 to refresh data about lines, "
+				+ "2 to refresh data about stops, " + "3 to generate JS files,"
+				+ "4 to generate csv files");
 		int choice = in.nextInt();
-			if (choice == 1){
-				// lines data
-				System.setOut(new PrintStream(new BufferedOutputStream(
-						new FileOutputStream("AllLines.txt"))));
-				getAllLines();
-			}
-			else if(choice == 2){
-				// stops data
-				System.setOut(new PrintStream(new BufferedOutputStream(
-						new FileOutputStream("AllStops.txt"))));
-				getAllStops();
-			}
-			
-			else if (choice == 3){
-				stopsToJS();
-				//constructLines();
-				
-			}
+		if (choice == 1) {
+			// lines data
+			System.setOut(new PrintStream(new BufferedOutputStream(
+					new FileOutputStream("AllLines.txt"))));
+			getAllLines();
+		} else if (choice == 2) {
+			// stops data
+			System.setOut(new PrintStream(new BufferedOutputStream(
+					new FileOutputStream("AllStops.txt"))));
+			printAllStops(getAllStops());
+		}
+
+		else if (choice == 3) {
+			stopsToJS();
+			constructLines();
+
+		} else if (choice == 4) {
+			System.setOut(new PrintStream(new BufferedOutputStream(
+					new FileOutputStream("gephi_src/stops.csv"))));
+			makeNodesCSV();
+		}
 	}// end main
 }// end class
