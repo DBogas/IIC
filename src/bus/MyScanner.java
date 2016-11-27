@@ -3,6 +3,7 @@ package bus;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -326,28 +327,64 @@ class MyScanner {
 	 * @throws Exception
 	 */
 	static void makeNodesCSV() throws Exception{
-		// separaçoes por ;
-		//File outputFile = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/nodes.csv");
-		//PrintWriter writer = new PrintWriter("nodes.csv", "UTF-8");
+		// output stuff
+		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/stops.csv");
+		file.getParentFile().mkdirs();
+		PrintWriter writer = new PrintWriter(file);
+		
 		BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
 			try {
-				// 1st line has number of stops!!
-				//writer.println("StopCode;Address;Zone;Name;Longitude;Latitude");
-				System.out.println("StopCode;Address;Zone;Name;Longitude;Latitude");
-				String line = br.readLine();
-			    while(line != null){
+				writer.println("StopCode;Address;Zone;Name;Longitude;Latitude");
+				String line;
+				int i=0;
+			    while(( line = br.readLine()) != null){
 			    // stops
-			    	line = br.readLine();
-			    	String[] stop = line.toString().split(",");
-				    String res = stop[0].trim()+";"+stop[1].trim()+";"+stop[2].trim()+";"+stop[3].trim()+";"+stop[4].trim()+";"+stop[5].trim();	
-				    //writer.println(res);
-				    System.out.println(res);
+			    	//if(line != null) {
+			    		String[] aux1 = line.toString().split(",");
+			    		String res = aux1[0].trim()+";"+aux1[1].trim()+";"+aux1[2].trim()+";"+aux1[3].trim()+";"+aux1[4].trim()+";"+aux1[5].trim();	
+			    		writer.println(res);
+			    	//}
 			    }
 			}
-			catch(Exception e){
-				e.printStackTrace();
+			finally{
+				writer.close();
 			}
+			
 		}// end of method
+	/**
+	 * method to make a csv file for each line, in each direction
+	 * Line 200 runs in 2 directions, so it will generate 2 files (200_0.csv and 200_1.csv)
+	 * @throws FileNotFoundException if it cant find the source file
+	 */
+	static void makeAllLinesCSV() throws FileNotFoundException{
+		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
+		String line;
+		/*try{
+			while((line = br.readLine()) != null){
+		    	String[] brokenLine = line.split(",");
+		    	String fileName = brokenLine[0]+"_"+brokenLine[1]+".csv";
+		    	PrintWriter printWriter = new PrintWriter(fileName);
+		    	printWriter.println("Source;Target;Type");
+		    	for(int i=0; i < Integer.parseInt(brokenLine[2])-1;i++){
+		    		printWriter.println(brokenLine[i+3]+";"+brokenLine[i+4]+";Directed");
+		    	}
+			}
+		}
+		catch(Exception e){}*/
+		
+		try {
+			while((line = br.readLine()) != null){
+				System.out.println("Source;Target;Type");
+				String[] brokenLine = line.split(",");
+				for(int i=0; i < Integer.parseInt(brokenLine[2])-1;i++){
+		    		System.out.println(brokenLine[i+3]+";"+brokenLine[i+4]+";Directed");
+		    	}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 
 	public static void main(String args[]) throws Exception {
 
@@ -373,9 +410,9 @@ class MyScanner {
 			constructLines();
 
 		} else if (choice == 4) {
-			System.setOut(new PrintStream(new BufferedOutputStream(
-					new FileOutputStream("gephi_src/stops.csv"))));
+			
 			makeNodesCSV();
+			//makeAllLinesCSV();
 		}
 	}// end main
 }// end class
