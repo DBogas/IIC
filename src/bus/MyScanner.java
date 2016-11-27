@@ -96,12 +96,9 @@ class MyScanner {
 	}
 
 	/**
-	 * method that iterates through all the lines in each line it iterates
-	 * through all the bus stops if a bus stop isn't stored in the hashmap,
-	 * stores it
-	 * 
-	 * it creates a file for output too.
-	 * 
+	 * method that iterates through all the lines
+	 *  in each line it iterates through all the bus stops 
+	 *  if a bus stop isn't stored in the hashmap, stores it 
 	 * @throws Exception
 	 */
 
@@ -155,7 +152,7 @@ class MyScanner {
 	 */
 
 	static void printAllStops(HashMap<String, Stop> AllStops) {
-		System.out.println(AllStops.size());
+		//System.out.println(AllStops.size());
 		for (String auxS : AllStops.keySet()) {
 			AllStops.get(auxS).printStop();
 		}
@@ -382,9 +379,12 @@ class MyScanner {
 	public static void main(String args[]) throws Exception {
 
 		Scanner in = new Scanner(System.in);
-		System.out.println("Insert 1 to refresh data about lines, "
-				+ "2 to refresh data about stops, " + "3 to generate JS files,"
-				+ "4 to generate csv files");
+		System.out.println("Insert "
+				+ "1 to refresh data about lines, "
+				+ "2 to refresh data about stops, " 
+				+ "3 to generate JS files,"
+				+ "4 to generate csv files"
+				);
 		int choice = in.nextInt();
 		if (choice == 1) {
 			// lines data
