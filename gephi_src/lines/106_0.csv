@@ -1,0 +1,15 @@
+Source;Target;Type
+VAL;CPNH2;Directed
+CPNH2;JP3;Directed
+JP3;CDFT1;Directed
+CDFT1;BCH1;Directed
+BCH1;BELA1;Directed
+BELA1;RCD1;Directed
+RCD1;PMEL1;Directed
+PMEL1;NTRT1;Directed
+NTRT1;ISNT1;Directed
+ISNT1;VGM1;Directed
+VGM1;ACBL1;Directed
+ACBL1;ISG1;Directed
+ISG1;FRCL1;Directed
+FRCL1;FRC;Directed

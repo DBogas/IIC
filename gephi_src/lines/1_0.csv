@@ -1,0 +1,12 @@
+Source;Target;Type
+INF1;ALFG1;Directed
+ALFG1;MVP3;Directed
+MVP3;MCE3;Directed
+MCE3;BIC3;Directed
+BIC3;PARR3;Directed
+PARR3;SCL3;Directed
+SCL3;GAS2;Directed
+GAS2;FLU2;Directed
+FLU2;DL5;Directed
+DL5;CNT3;Directed
+CNT3;PASS;Directed

@@ -1,0 +1,12 @@
+Source;Target;Type
+CMO3;CLRG;Directed
+CLRG;PRL8;Directed
+PRL8;BTLH4;Directed
+BTLH4;BGND;Directed
+BGND;BTLH7;Directed
+BTLH7;SCAT2;Directed
+SCAT2;PRDJ;Directed
+PRDJ;AAL;Directed
+AAL;PRFL;Directed
+PRFL;GGF1;Directed
+GGF1;CMO3;Directed

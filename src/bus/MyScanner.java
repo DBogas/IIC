@@ -359,32 +359,25 @@ class MyScanner {
 	static void makeAllLinesCSV() throws FileNotFoundException{
 		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
 		String line;
-		/*try{
+		try{
 			while((line = br.readLine()) != null){
 		    	String[] brokenLine = line.split(",");
 		    	String fileName = brokenLine[0]+"_"+brokenLine[1]+".csv";
-		    	PrintWriter printWriter = new PrintWriter(fileName);
-		    	printWriter.println("Source;Target;Type");
-		    	for(int i=0; i < Integer.parseInt(brokenLine[2])-1;i++){
-		    		printWriter.println(brokenLine[i+3]+";"+brokenLine[i+4]+";Directed");
+		    	File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/lines/"+fileName);
+				file.getParentFile().mkdirs();
+				PrintWriter writer = new PrintWriter(file);
+		    	writer.println("Source;Target;Type");
+		    	for(int i=3; i < brokenLine.length-1;i++){
+		    		writer.println(brokenLine[i]+";"+brokenLine[i+1]+";Directed");
 		    	}
+		    	writer.close();
 			}
 		}
-		catch(Exception e){}*/
-		
-		try {
-			while((line = br.readLine()) != null){
-				System.out.println("Source;Target;Type");
-				String[] brokenLine = line.split(",");
-				for(int i=0; i < Integer.parseInt(brokenLine[2])-1;i++){
-		    		System.out.println(brokenLine[i+3]+";"+brokenLine[i+4]+";Directed");
-		    	}
-			}
-		} catch (IOException e) {
+		catch(Exception e){
 			e.printStackTrace();
 		}
 		
-	}
+	}// end of method
 
 	public static void main(String args[]) throws Exception {
 
@@ -412,7 +405,7 @@ class MyScanner {
 		} else if (choice == 4) {
 			
 			makeNodesCSV();
-			//makeAllLinesCSV();
+			makeAllLinesCSV();
 		}
 	}// end main
 }// end class
