@@ -224,8 +224,7 @@ class MyScanner {
 	 */
 	static void stopsToJS() throws IOException {
 		// create output files
-		File stopsOutputJS = new File(
-				"/home/diogo/workspace/iic/webcrawler/stops.js");
+		File stopsOutputJS = new File("webcrawler/stops.js");
 		// writers
 		PrintWriter writer = new PrintWriter("stops.js", "UTF-8");
 		// buffered reader to stops / lines files
@@ -235,9 +234,8 @@ class MyScanner {
 		try {
 			// 1st line has number of stops!!
 			String line = br.readLine();
-			while (line != null) {
+			while ((line = br.readLine()) != null) {
 				// stops
-				line = br.readLine();
 				String[] stop = line.toString().split(",");
 				String res = "var p_" + stop[0] + " = {\n" + "\tnome:" + "\""
 						+ stop[1] + "\"" + ",\n" + "\tcodigo:" + "\"" + stop[0]
@@ -275,8 +273,8 @@ class MyScanner {
 
 		List<BusLine> result = new LinkedList<BusLine>();
 		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
-		File linesOutputJS = new File(
-				"/home/diogo/workspace/iic/webcrawler/lines.js");
+		//File stopsOutputJS = new File("webcrawler/stops.js");
+		File linesOutputJS = new File("webcrawler/lines.js");
 		PrintWriter writer = new PrintWriter("lines.js", "UTF-8");
 		// parse JSON
 		JSONObject jo = new JSONObject(readFromURL);
@@ -354,8 +352,8 @@ class MyScanner {
 	 * @throws FileNotFoundException if it cant find the source file
 	 * also return a list with all edges. yes, it has repeated edges, thinking about the edge weight kinda thing
 	 */
-	static LinkedList<String> makeAllLinesCSV() throws FileNotFoundException{
-		LinkedList<String> allEdges = new LinkedList<String>();
+	static HashMap<String, Integer> makeAllLinesCSV() throws FileNotFoundException{
+		HashMap<String, Integer> allEdges = new HashMap<String, Integer>();
 		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
 		String line;
 		try{
@@ -369,7 +367,11 @@ class MyScanner {
 		    	for(int i=3; i < brokenLine.length-1;i++){
 		    		String aux = brokenLine[i]+";"+brokenLine[i+1]+";Directed";
 		    		writer.println(aux);
-		    		allEdges.add(aux);
+		    		// hash it
+		    		if(!allEdges.containsKey(aux))allEdges.put(aux, 1);
+		    		//map.put(key, map.get(key) + 1);
+		    		else allEdges.put(aux, allEdges.get(aux)+1);
+
 		    	}
 		    	writer.close();
 			}
@@ -381,13 +383,13 @@ class MyScanner {
 		
 	}// end of method
 	
-	static void allEdgesCSV(LinkedList<String> lista ) throws FileNotFoundException{
+	static void allEdgesCSV(HashMap<String, Integer> lista ) throws FileNotFoundException{
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/allEdges.csv");
 		file.getParentFile().mkdirs();
 		PrintWriter writer = new PrintWriter(file);
-		writer.println("Source;Target;Type");
-		for(String s : lista){
-			writer.println(s);
+		writer.println("Source;Target;Type;Weight");
+		for(String s : lista.keySet()){
+			writer.println(s+";"+lista.get(s));
 		}
 		writer.close();
 	}
