@@ -352,8 +352,10 @@ class MyScanner {
 	 * method to make a csv file for each line, in each direction
 	 * Line 200 runs in 2 directions, so it will generate 2 files (200_0.csv and 200_1.csv)
 	 * @throws FileNotFoundException if it cant find the source file
+	 * also return a list with all edges. yes, it has repeated edges, thinking about the edge weight kinda thing
 	 */
-	static void makeAllLinesCSV() throws FileNotFoundException{
+	static LinkedList<String> makeAllLinesCSV() throws FileNotFoundException{
+		LinkedList<String> allEdges = new LinkedList<String>();
 		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
 		String line;
 		try{
@@ -365,7 +367,9 @@ class MyScanner {
 				PrintWriter writer = new PrintWriter(file);
 		    	writer.println("Source;Target;Type");
 		    	for(int i=3; i < brokenLine.length-1;i++){
-		    		writer.println(brokenLine[i]+";"+brokenLine[i+1]+";Directed");
+		    		String aux = brokenLine[i]+";"+brokenLine[i+1]+";Directed";
+		    		writer.println(aux);
+		    		allEdges.add(aux);
 		    	}
 		    	writer.close();
 			}
@@ -373,8 +377,20 @@ class MyScanner {
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		return allEdges;
 		
 	}// end of method
+	
+	static void allEdgesCSV(LinkedList<String> lista ) throws FileNotFoundException{
+		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/allEdges.csv");
+		file.getParentFile().mkdirs();
+		PrintWriter writer = new PrintWriter(file);
+		writer.println("Source;Target;Type");
+		for(String s : lista){
+			writer.println(s);
+		}
+		writer.close();
+	}
 
 	public static void main(String args[]) throws Exception {
 
@@ -405,7 +421,7 @@ class MyScanner {
 		} else if (choice == 4) {
 			
 			makeNodesCSV();
-			makeAllLinesCSV();
+			allEdgesCSV(makeAllLinesCSV());
 		}
 	}// end main
 }// end class
