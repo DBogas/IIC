@@ -31,14 +31,14 @@ var 202_0 ={
 	 pubcode: "202",
 	 code: "202",
 	 description: "202 - ALIADOS-PASSEIO ALEGRE (VIA AV. BESSA)",
-	 paragens : ["AAL4","TRD1","GCRT1","PRR1","FIG","CVA1","HML1","BVBR2","BCM3","GRC1","CSBV","SDP1","ABSS1","SJBC1","SJB1","ABM1","BRP1","BRV3","FTM2","ABVT1","LGO4","RCRT2","LNEV2","NEVG","MLH3","JNN2","CRTO4","PING3","PORI2","PASS1"]
+	 paragens : ["AAL4","TRD1","GCRT1","PRR1","FIG","CVA1","HML1","BVBR2","BCM3","GRC1","CSBV","SDP1","ABSS1","SJBC1","SJB1","ABM1","BRP1","BRV3","FTM2","ABVT1","LGO4","RCRT2","LNEV2","NEVG","MLH3","JNN2","CRTO4","LIEG2","DIU1","DTR","RFAR1"]
 }
 var 202_1 ={
 	 accessibility: 2,
 	 pubcode: "202",
 	 code: "202",
 	 description: "202 - ALIADOS-PASSEIO ALEGRE (VIA AV. BESSA)",
-	 paragens : ["PASS1","SRLZ1","PING1","DTR","LIEG1","CRTO3","MLH5","NEVG1","LNEV1","RCRT1","LGO5","ABVT2","FTM1","BRV4","BRP2","ABM2","SJB2","SJBC2","ABSS2","RBSS2","SDP2","MRS2","BCM4","BVBR1","HML2","ICDF1","CDF1","PRR7","TRD5","AAL1","AAL4"]
+	 paragens : ["RFAR1","DTR","LIEG1","CRTO3","MLH5","NEVG1","LNEV1","RCRT1","LGO5","ABVT2","FTM1","BRV4","BRP2","ABM2","SJB2","SJBC2","ABSS2","RBSS2","SDP2","MRS2","BCM4","BVBR1","HML2","ICDF1","CDF1","PRR7","TRD5","AAL1","AAL4"]
 }
 var 203_0 ={
 	 accessibility: 2,
@@ -381,7 +381,7 @@ var 601_0 ={
 	 pubcode: "601",
 	 code: "601",
 	 description: "601 - CORDOARIA-AEROPORTO",
-	 paragens : ["CORD3","CMO","HSA5","PAL3","PRG1","BS1","BCM3","GRC1","CSBV","SDP1","FZIN1","RAEP1","CONT1","HIPD","QTC1","AEP","EXP1","EXP5","REXP1","AMR1","BAT1","ALMG1","MTES1","ABMG1","JAS1","NOF1","31JA1","OLV1","FRRS3","FRXI3","TLHA1","BRRO1","PRU1","AEPT1"]
+	 paragens : ["CORD3","CMO","HSA5","PAL3","PRG1","BS1","BCM3","GRC1","CSBV","SDP1","FZIN1","RAEP1","CONT1","HIPD","QTC1","AEP","EXP1","EXP5","REXP1","AMR1","BAT1","ALMG1","MTES1","ABMG1","JAS1","NOF1","31JA1","OLV1","FRRS3","ROR2","FRRS2","TTS2","BLD2","GTN2","STCB2","CPOV2","ABX2","1PRU1","AEPT1"]
 }
 var 601_1 ={
 	 accessibility: 1,
@@ -781,6 +781,20 @@ var ZM_1 ={
 	 code: "104",
 	 description: "ZM - CORDOARIA-BOM SUCESSO",
 	 paragens : ["BS8","PRG2","VILR","DPV2","SMAI2","MCE2","MVP2","ALFG2","MRG2","RBRI2","PBLS","TSJN","SBVT","CORD7"]
+}
+var ZF_0 ={
+	 accessibility: 1,
+	 pubcode: "ZF",
+	 code: "106",
+	 description: "ZF - VALADARES (ESTAÇÃO)-FRANCELOS",
+	 paragens : ["VAL","CPNH2","JP3","CDFT1","BCH1","BELA1","RCD1","PMEL1","NTRT1","ISNT1","VGM1","ACBL1","ISG1","FRCL1","FRC"]
+}
+var ZF_1 ={
+	 accessibility: 1,
+	 pubcode: "ZF",
+	 code: "106",
+	 description: "ZF - VALADARES (ESTAÇÃO)-FRANCELOS",
+	 paragens : ["FRC","FRCL2","ISG2","ACBL2","VGM2","ISNT2","NTRT2","PMEL2","RCD2","BELA2","BCH2","CDFT2","JP1","CPNH1","E109","VAL1","VAL"]
 }
 var 1_0 ={
 	 accessibility: 0,

@@ -329,7 +329,7 @@ class MyScanner {
 		
 		BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
 			try {
-				writer.println("StopCode;Address;Zone;Name;Longitude;Latitude");
+				writer.println("Id;Address;Zone;Name;Longitude;Latitude");
 				String line;
 				int i=0;
 			    while(( line = br.readLine()) != null){
@@ -365,7 +365,7 @@ class MyScanner {
 				PrintWriter writer = new PrintWriter(file);
 		    	writer.println("Source;Target;Type");
 		    	for(int i=3; i < brokenLine.length-1;i++){
-		    		String aux = brokenLine[i]+";"+brokenLine[i+1]+";Directed";
+		    		String aux = "\""+brokenLine[i]+"\""+";"+"\""+brokenLine[i+1]+"\""+";Directed";
 		    		writer.println(aux);
 		    		// hash it
 		    		if(!allEdges.containsKey(aux))allEdges.put(aux, 1);

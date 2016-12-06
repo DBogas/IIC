@@ -1,0 +1,12 @@
+zonas pintadas por cor, com legenda de cores.
+paragens simplificadas, também elas coloridas (em vez de TSL1 e TSL2 tem-se apenas TSL -> filtro por nome de paragem)
+extrai tabela com dados das paragens : excentricidade, closeness centrality, harmonic closeness centrality, betweeness centrality
+https://en.wikipedia.org/wiki/Centrality
+
+ha paragens com excentricidade 0 -> + que 1 componente conexa. needs solving.
+
+template do report / prazos.
+
+
+
+
