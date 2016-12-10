@@ -1,0 +1,73 @@
+html{
+    height: 90hv;
+    width: 90wv;
+    margin: auto;
+    
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-image: url(css-background.png);
+    background-size: 100%;
+}
+#container{
+    width: inherit;
+    height: inherit;
+    margin: auto;
+    align-content: center;
+    
+}
+.container_son{
+    margin: auto;
+    margin-top: 1%;
+}
+
+#header{
+    width: 80%;
+    height: 20%;
+    text-align: center;
+    
+}
+
+#opt_picker{
+    width: inherit;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+#show_stop{
+    display: none;
+}
+
+#show_line{
+    display: none;
+}
+
+#controlador{
+    width: 20%;
+    height: 5em; 
+    display: block;
+    align-self: center;
+    background-color: white;
+    text-align: center;
+    border: 0.5ex solid black;
+    
+}
+
+#mapa{
+    width: 45%;
+    height: 20em;
+    display: block;
+    align-self: center;
+    background-color: white;
+    border: 0.5ex solid black;
+    text-align: center;
+}
+
+
+
+/*
+*/

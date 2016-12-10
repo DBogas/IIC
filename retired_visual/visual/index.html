@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <title> Visual - STCP </title>
+        <link rel = "stylesheet" type="text/css" href="styles.css">
+        <script src="stops.js"></script>
+        <script src="scripts.js"></script>
+    </head>
+
+    <body onload="startPage()">
+    
+        <div id = "container">
+            
+            <div id = "header" class = "container_son">
+                <h1>STCP - Visual</h1>
+                <p> A representation of STCP's bus network using Google Maps API</p>
+            </div>
+            
+            <div id = "opt_picker" class = "container_son">
+                <p> Choose what you want to see</p>
+                <button>Lines</button>
+                <button onclick="showStopPicker()">Stops</button>
+            </div>
+            
+            
+            
+                <div id = "show_stop" class="container_son" >
+                    <div id = "controlador" class = "container_son">
+                        <p>Select the Stop code here</p>
+                        <!--options are to be inserted with JS -->
+                        <select id = "drop_stops"></select>
+                        <button onclick="initMap()" id ="stop_gen_button">View</button>
+                        <button onclick="backFromStops()">Back</button>
+                    </div>
+            
+                    <div id = "mapa" class = "container_son hidden">
+                        <img id = "map_img">
+                    </div>
+                </div>
+            
+                <div id = "show_line"></div>
+           
+            
+        </div>
+        <!-- this must be here for the map to apeer -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap"></script>
+    
+   
+    </body>
+
+
+</html>
