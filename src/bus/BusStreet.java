@@ -14,6 +14,8 @@ public class BusStreet {
 	String street; // this is the street name
 	LinkedList<Stop> stops; // this is the group of stops a street has
 	LinkedList<BusStreet> neighbours; // this is the group of edges (in and out going)
+	float longitude;
+	float latitude;
 	
 	BusStreet(String s){
 		this.street = s;

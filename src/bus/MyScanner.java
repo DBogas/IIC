@@ -229,12 +229,13 @@ class MyScanner {
 				// constroi-se a paragem sempre, a rua nem sempre
 				// como estamos a ler de um ficheiro de texto, temos de construir a paragem
 				Stop aux = new Stop(pieces[0],pieces[1],pieces[2],pieces[3]);
-				aux.longitude = Integer.parseInt(pieces[4]);
-				aux.latitude = Integer.parseInt(pieces[5]);
+				aux.longitude = Float.parseFloat(pieces[4]);
+				aux.latitude = Float.parseFloat(pieces[5]);
 				//se a rua nao existir na hash
 				if(!result.containsKey(pieces[1])){
 					// construimos a rua
 					BusStreet s = new BusStreet(aux.address);
+					s.stops.add(aux);
 					// e como a rua ainda n esta guardada, guardamos
 					result.put(aux.address, s);
 				}
@@ -405,6 +406,14 @@ class MyScanner {
 		else if (choice == 3) {
 			makeNodesCSV();
 			allEdgesCSV(makeAllLinesCSV());
+		}else if(choice == 4){
+			HashMap<String,BusStreet> aux = stopsByStreet();
+			for(BusStreet s: aux.values()){
+				System.out.println(s.street);
+				for(Stop s1: s.stops){
+					s1.printStop();
+				}
+			}
 		}
 	}// end main
 }// end class
