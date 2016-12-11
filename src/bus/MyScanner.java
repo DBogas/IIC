@@ -14,6 +14,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Scanner;
 
 import org.json.JSONArray;
@@ -245,8 +246,63 @@ class MyScanner {
 			}
 		return result;
 	}
-
-	
+	// method to read all lines from txt file and put them in a list
+	static Queue<BusLine> readLinesFromFile() throws IOException{
+		Queue<BusLine> answer = new LinkedList<BusLine>();
+		// read from the file
+		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
+		String line;
+		while((line = br.readLine()) != null){
+			String[] pieces = line.split(",");
+			BusLine bl = new BusLine(pieces[0], pieces[1]);
+			for(int i=3;i<pieces.length;i++){
+				if(!pieces[0].equals(""))bl.LineStops.add(pieces[i]);
+			}
+			answer.add(bl);
+		}
+		return  answer;
+		
+	}
+	static HashMap<String,AddressEdge> generateEdgesToStreets() throws IOException{
+		HashMap<String,AddressEdge> answer = new HashMap<String, AddressEdge>();
+		// hash com as ruas
+		HashMap<String,BusStreet> streets = stopsByStreet();
+		// fila com as linhas
+		Queue<BusLine> allLines = readLinesFromFile();
+		while(!allLines.isEmpty()){
+			BusLine target = allLines.remove();
+			for(int i=0;i<target.LineStops.size()-1;i++){
+				
+				//ruas de inicio e destino
+				BusStreet src = new BusStreet();
+				BusStreet dest = new BusStreet();
+				String s = "";
+				String d = "";
+				for(BusStreet b : streets.values()){
+					// ver se serve de rua de partida
+					if(b.stops.contains(target.LineStops.get(i))){
+						src = b;
+						s = src.street;
+					}
+					// ver se serve de rua de destino
+					else if(b.stops.contains(target.LineStops.get(i+1))){ 
+						dest = b;
+						d = dest.street;
+					}
+				}
+				String check =s+"-"+d;
+				if(answer.containsKey(check)){
+					answer.get(check).weight++;
+				}
+				else{
+					AddressEdge nova = new AddressEdge(src, dest);
+					answer.put(nova.nome, nova);
+				}
+			}// fecha for
+		}//fecha while
+		
+	return answer;
+	}
 	/*
 	 * Following methods make gephi readable files
 	 */

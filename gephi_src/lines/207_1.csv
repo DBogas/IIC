@@ -1,11 +1,9 @@
 Source;Target;Type
 "MFZ2";"PRI4";Directed
-"PRI4";"2PVC2";Directed
-"2PVC2";"JBR2";Directed
-"JBR2";"SRVM2";Directed
-"SRVM2";"BPTL2";Directed
-"BPTL2";"INSA2";Directed
-"INSA2";"CMPT2";Directed
+"PRI4";"PVC2";Directed
+"PVC2";"1JBRR2";Directed
+"1JBRR2";"PFOZ2";Directed
+"PFOZ2";"CMPT2";Directed
 "CMPT2";"PT2";Directed
 "PT2";"PJUV2";Directed
 "PJUV2";"PGM2";Directed

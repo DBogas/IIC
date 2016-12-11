@@ -21,5 +21,10 @@ class BusLine {
 		this.LineStops = new LinkedList<String>();
 	}
 	
+	public BusLine(String code,String direction){
+		this.code = code;
+		this.sentido = Integer.parseInt(direction);
+	}
+	
 	
 }

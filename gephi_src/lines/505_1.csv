@@ -28,7 +28,8 @@ Source;Target;Type
 "DBT2";"GSUL1";Directed
 "GSUL1";"EZC4";Directed
 "EZC4";"LION1";Directed
-"LION1";"CEMT2";Directed
+"LION1";"MTLB2";Directed
+"MTLB2";"CEMT2";Directed
 "CEMT2";"CCRN2";Directed
 "CCRN2";"LGCP2";Directed
 "LGCP2";"TMPR2";Directed

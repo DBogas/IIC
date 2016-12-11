@@ -26,11 +26,10 @@ Source;Target;Type
 "PGM1";"PJUV1";Directed
 "PJUV1";"PT3";Directed
 "PT3";"CMPT1";Directed
-"CMPT1";"INSA1";Directed
-"INSA1";"BPTL1";Directed
-"BPTL1";"SRVM1";Directed
+"CMPT1";"JRC3";Directed
+"JRC3";"SRVM1";Directed
 "SRVM1";"AALB1";Directed
 "AALB1";"JBR1";Directed
-"JBR1";"1PVC1";Directed
-"1PVC1";"PRI1";Directed
+"JBR1";"PVC1";Directed
+"PVC1";"PRI1";Directed
 "PRI1";"MFZ1";Directed

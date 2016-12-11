@@ -10,8 +10,7 @@ Source;Target;Type
 "LGT4";"BCP2";Directed
 "BCP2";"PNG2";Directed
 "PNG2";"BRB4";Directed
-"BRB4";"SR6";Directed
-"SR6";"SR5";Directed
+"BRB4";"SR5";Directed
 "SR5";"FBC2";Directed
 "FBC2";"VLC2";Directed
 "VLC2";"PQN2";Directed

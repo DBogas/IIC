@@ -49,6 +49,5 @@ Source;Target;Type
 "ELVG2";"RBR2";Directed
 "RBR2";"MS1";Directed
 "MS1";"SBNT3";Directed
-"SBNT3";"PRDJ2";Directed
-"PRDJ2";"MCBL1";Directed
-"MCBL1";"TRD4";Directed
+"SBNT3";"PRDJ";Directed
+"PRDJ";"TRD4";Directed

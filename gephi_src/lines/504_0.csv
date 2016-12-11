@@ -12,10 +12,7 @@ Source;Target;Type
 "PGM1";"PJUV1";Directed
 "PJUV1";"PT3";Directed
 "PT3";"CMPT1";Directed
-"CMPT1";"INSA1";Directed
-"INSA1";"BPTL1";Directed
-"BPTL1";"JRC1";Directed
-"JRC1";"PFOZ1";Directed
+"CMPT1";"PFOZ1";Directed
 "PFOZ1";"ALFK1";Directed
 "ALFK1";"CREI1";Directed
 "CREI1";"LGO5";Directed

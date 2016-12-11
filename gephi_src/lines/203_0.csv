@@ -20,8 +20,8 @@ Source;Target;Type
 "SRV1";"AALB";Directed
 "AALB";"SRVM3";Directed
 "SRVM3";"JBR1";Directed
-"JBR1";"1PVC1";Directed
-"1PVC1";"PRI1";Directed
+"JBR1";"PVC1";Directed
+"PVC1";"PRI1";Directed
 "PRI1";"MFZ1";Directed
 "MFZ1";"LIEG1";Directed
 "LIEG1";"CRTO3";Directed

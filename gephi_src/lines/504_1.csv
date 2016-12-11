@@ -15,10 +15,7 @@ Source;Target;Type
 "LGO4";"CREI2";Directed
 "CREI2";"ALFK2";Directed
 "ALFK2";"PFOZ2";Directed
-"PFOZ2";"JRC3";Directed
-"JRC3";"BPTL2";Directed
-"BPTL2";"INSA2";Directed
-"INSA2";"CMPT2";Directed
+"PFOZ2";"CMPT2";Directed
 "CMPT2";"PT2";Directed
 "PT2";"PJUV2";Directed
 "PJUV2";"PGM2";Directed

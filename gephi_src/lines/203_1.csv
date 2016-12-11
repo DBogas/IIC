@@ -9,8 +9,8 @@ Source;Target;Type
 "LIEG2";"DIU1";Directed
 "DIU1";"MFZ2";Directed
 "MFZ2";"PRI4";Directed
-"PRI4";"2PVC2";Directed
-"2PVC2";"JBR2";Directed
+"PRI4";"PVC2";Directed
+"PVC2";"JBR2";Directed
 "JBR2";"SRVM2";Directed
 "SRVM2";"SRV2";Directed
 "SRV2";"GC12";Directed

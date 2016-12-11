@@ -1,6 +1,8 @@
 package bus;
 
 import java.util.*;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
 /**
  * this class basically lets us 
  * group all the bus stops we have by street
@@ -17,6 +19,12 @@ public class BusStreet {
 		this.street = s;
 		this.stops = new LinkedList<Stop>();
 		this.neighbours = new LinkedList<BusStreet>();
+	}
+	// helps debug
+	BusStreet(){
+		this.street ="";
+		this.neighbours = new LinkedList<BusStreet>();
+		this.stops = new LinkedList<Stop>();
 	}
 	
 }

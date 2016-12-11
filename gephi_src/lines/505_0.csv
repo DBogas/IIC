@@ -18,7 +18,8 @@ Source;Target;Type
 "TMPR1";"LGCP1";Directed
 "LGCP1";"CCRN1";Directed
 "CCRN1";"CEMT1";Directed
-"CEMT1";"LION1";Directed
+"CEMT1";"MTLB1";Directed
+"MTLB1";"LION1";Directed
 "LION1";"EZC3";Directed
 "EZC3";"GSUL2";Directed
 "GSUL2";"EPC1";Directed
