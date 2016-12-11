@@ -35,7 +35,7 @@ class MyScanner {
 			reader = new BufferedReader(new InputStreamReader(url.openStream()));
 			StringBuffer buffer = new StringBuffer();
 			int read;
-			char[] chars = new char[1024];
+			char[] chars = new char[4096];
 			while ((read = reader.read(chars)) != -1)
 				buffer.append(chars, 0, read);
 
@@ -210,8 +210,41 @@ class MyScanner {
 		float res[] = { Float.valueOf(auxres[0]), Float.valueOf(auxres[1]) };
 		return res;
 	}
-
 	
+	/**
+	 * this method groups stops by street
+	 * @return
+	 * @throws IOException 
+	 */
+	static HashMap<String,BusStreet> stopsByStreet() throws IOException{
+		HashMap<String, BusStreet> result = new HashMap<String, BusStreet>();
+		// vamos ler do ficheiro de texto
+			BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
+			String stop;
+			while((stop = br.readLine()) != null ){
+				String[] pieces = stop.split(",");
+				//Id;Address;Zone;Name;Longitude;Latitude
+				//String code, String address, String zone, String name
+				// constroi-se a paragem sempre, a rua nem sempre
+				// como estamos a ler de um ficheiro de texto, temos de construir a paragem
+				Stop aux = new Stop(pieces[0],pieces[1],pieces[2],pieces[3]);
+				aux.longitude = Integer.parseInt(pieces[4]);
+				aux.latitude = Integer.parseInt(pieces[5]);
+				//se a rua nao existir na hash
+				if(!result.containsKey(pieces[1])){
+					// construimos a rua
+					BusStreet s = new BusStreet(aux.address);
+					// e como a rua ainda n esta guardada, guardamos
+					result.put(aux.address, s);
+				}
+				// se a rua existir
+				else{
+					// colocar a paragem na rua rua
+					result.get(pieces[1]).stops.add(aux);
+				}
+			}
+		return result;
+	}
 
 	
 	/*
