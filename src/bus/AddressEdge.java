@@ -12,4 +12,7 @@ public class AddressEdge {
 		this.weight = 1;
 		this.nome = a.street+"-"+b.street;
 	}
+	void print(){
+		System.out.println(this.nome+" "+this.weight);
+	}
 }

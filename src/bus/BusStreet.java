@@ -29,4 +29,12 @@ public class BusStreet {
 		this.stops = new LinkedList<Stop>();
 	}
 	
+	BusStreet cloneMe(){
+		BusStreet a = new BusStreet(this.street);
+		a.neighbours = this.neighbours;
+		a.stops = this.stops;
+		a.latitude = this.latitude;
+		a.longitude = this.longitude;
+		return a;
+	}
 }

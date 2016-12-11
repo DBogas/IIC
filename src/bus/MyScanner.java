@@ -235,6 +235,8 @@ class MyScanner {
 				if(!result.containsKey(pieces[1])){
 					// construimos a rua
 					BusStreet s = new BusStreet(aux.address);
+					s.latitude = aux.latitude;
+					s.longitude = aux.longitude;
 					s.stops.add(aux);
 					// e como a rua ainda n esta guardada, guardamos
 					result.put(aux.address, s);
@@ -248,8 +250,8 @@ class MyScanner {
 		return result;
 	}
 	// method to read all lines from txt file and put them in a list
-	static Queue<BusLine> readLinesFromFile() throws IOException{
-		Queue<BusLine> answer = new LinkedList<BusLine>();
+	static LinkedList<BusLine> readLinesFromFile() throws IOException{
+		LinkedList<BusLine> answer = new LinkedList<BusLine>();
 		// read from the file
 		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
 		String line;
@@ -257,47 +259,59 @@ class MyScanner {
 			String[] pieces = line.split(",");
 			BusLine bl = new BusLine(pieces[0], pieces[1]);
 			for(int i=3;i<pieces.length;i++){
-				if(!pieces[0].equals(""))bl.LineStops.add(pieces[i]);
+				if(!(pieces[0].equals("")))bl.LineStops.add(pieces[i]);
 			}
 			answer.add(bl);
 		}
 		return  answer;
 		
 	}
+	
+	
+	static BusStreet getStreet(String s) throws IOException{
+		HashMap<String,BusStreet> aux = stopsByStreet();
+		BusStreet answer = null;
+		for(BusStreet b : aux.values()){
+			if(b.stops.contains(s)) answer = b.cloneMe();
+		}
+		return answer;
+	}
+	
+	
 	static HashMap<String,AddressEdge> generateEdgesToStreets() throws IOException{
 		HashMap<String,AddressEdge> answer = new HashMap<String, AddressEdge>();
 		// hash com as ruas
 		HashMap<String,BusStreet> streets = stopsByStreet();
 		// fila com as linhas
-		Queue<BusLine> allLines = readLinesFromFile();
-		while(!allLines.isEmpty()){
-			BusLine target = allLines.remove();
-			for(int i=0;i<target.LineStops.size()-1;i++){
-				
+		LinkedList<BusLine> allLines = readLinesFromFile();
+		for(BusLine bl :allLines){
+			for(int i=0;i<bl.LineStops.size()-1;i++){
 				//ruas de inicio e destino
-				BusStreet src = new BusStreet();
-				BusStreet dest = new BusStreet();
-				String s = "";
-				String d = "";
-				for(BusStreet b : streets.values()){
+				BusStreet src = getStreet(bl.LineStops.get(i));
+				BusStreet dest = getStreet(bl.LineStops.get(i+1));
+				String s = src.street;
+				String d = dest.street;
+				/*for(BusStreet b : streets.values()){
 					// ver se serve de rua de partida
-					if(b.stops.contains(target.LineStops.get(i))){
-						src = b;
-						s = src.street;
+					if(b.stops.contains(bl.LineStops.get(i))){
+						src = b.cloneMe();
+						s = b.street;
 					}
 					// ver se serve de rua de destino
-					else if(b.stops.contains(target.LineStops.get(i+1))){ 
-						dest = b;
-						d = dest.street;
+					else if(b.stops.contains(bl.LineStops.get(i+1))){ 
+						dest = b.cloneMe();
+						d = b.street;
 					}
-				}
+				}*/
 				String check =s+"-"+d;
 				if(answer.containsKey(check)){
 					answer.get(check).weight++;
+					//answer.get(check).print();
 				}
 				else{
 					AddressEdge nova = new AddressEdge(src, dest);
 					answer.put(nova.nome, nova);
+					//answer.get(check).print();
 				}
 			}// fecha for
 		}//fecha while
@@ -407,12 +421,10 @@ class MyScanner {
 			makeNodesCSV();
 			allEdgesCSV(makeAllLinesCSV());
 		}else if(choice == 4){
-			HashMap<String,BusStreet> aux = stopsByStreet();
-			for(BusStreet s: aux.values()){
-				System.out.println(s.street);
-				for(Stop s1: s.stops){
-					s1.printStop();
-				}
+			HashMap<String,AddressEdge> aux = generateEdgesToStreets();
+			System.out.println("size: "+aux.size());
+			for(AddressEdge s: aux.values()){
+				s.print();
 			}
 		}
 	}// end main

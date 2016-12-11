@@ -24,6 +24,7 @@ class BusLine {
 	public BusLine(String code,String direction){
 		this.code = code;
 		this.sentido = Integer.parseInt(direction);
+		this.LineStops = new LinkedList<String>();
 	}
 	
 	
