@@ -221,18 +221,17 @@ class MyScanner {
 		HashMap<String, BusStreet> result = new HashMap<String, BusStreet>();
 		// vamos ler do ficheiro de texto
 			BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
+			
 			String stop;
 			while((stop = br.readLine()) != null ){
 				String[] pieces = stop.split(",");
-				//Id;Address;Zone;Name;Longitude;Latitude
-				//String code, String address, String zone, String name
 				// constroi-se a paragem sempre, a rua nem sempre
 				// como estamos a ler de um ficheiro de texto, temos de construir a paragem
-				Stop aux = new Stop(pieces[0],pieces[1],pieces[2],pieces[3]);
-				aux.longitude = Float.parseFloat(pieces[4]);
-				aux.latitude = Float.parseFloat(pieces[5]);
+				Stop aux = new Stop(pieces[0].trim(),pieces[1].trim(),pieces[2].trim(),pieces[3].trim());
+				aux.longitude = Float.parseFloat(pieces[4].trim());
+				aux.latitude = Float.parseFloat(pieces[5].trim());
 				//se a rua nao existir na hash
-				if(!result.containsKey(pieces[1])){
+				if(!result.containsKey(pieces[1].trim())){
 					// construimos a rua
 					BusStreet s = new BusStreet(aux.address);
 					s.latitude = aux.latitude;
@@ -244,7 +243,7 @@ class MyScanner {
 				// se a rua existir
 				else{
 					// colocar a paragem na rua rua
-					result.get(pieces[1]).stops.add(aux);
+					result.get(pieces[1].trim()).stops.add(aux);
 				}
 			}
 		return result;
@@ -388,6 +387,29 @@ class MyScanner {
 		
 	}// end of method
 	
+	static HashMap<String,Stop> readStopsFile() throws IOException{
+		HashMap<String,Stop> answer = new HashMap<String, Stop>();
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
+			String line;
+			while((line = br.readLine()) != null){
+				String[] pieces = line.trim().split(",");
+				Stop nova = new Stop(	pieces[0].trim(), 
+										pieces[1].trim(), 
+										pieces[2].trim(),
+										pieces[3].trim());
+				nova.longitude = Float.parseFloat(pieces[4].trim());
+				nova.latitude = Float.parseFloat(pieces[5].trim());
+				answer.put(nova.stopCode,nova);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		String line;
+		System.out.println(answer.size());
+		return answer;
+	}
+	
 	static void allEdgesCSV(HashMap<String, Integer> lista ) throws FileNotFoundException{
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/allEdges.csv");
 		file.getParentFile().mkdirs();
@@ -421,11 +443,21 @@ class MyScanner {
 			makeNodesCSV();
 			allEdgesCSV(makeAllLinesCSV());
 		}else if(choice == 4){
-			HashMap<String,AddressEdge> aux = generateEdgesToStreets();
+			/*HashMap<String,AddressEdge> aux = generateEdgesToStreets();
 			System.out.println("size: "+aux.size());
 			for(AddressEdge s: aux.values()){
 				s.print();
-			}
+			}*/
+			/*HashMap<String, BusStreet> aux = stopsByStreet();
+			
+			for(BusStreet bs : aux.values()){
+				System.out.println(bs.street+" "+bs.stops.size());
+				for(Stop s: bs.stops){
+					s.printStop();
+				}
+				break;
+			}*/
+			readStopsFile();
 		}
 	}// end main
 }// end class
