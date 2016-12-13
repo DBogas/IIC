@@ -219,35 +219,20 @@ class MyScanner {
 	 */
 	static HashMap<String,BusStreet> stopsByStreet() throws IOException{
 		HashMap<String, BusStreet> result = new HashMap<String, BusStreet>();
-		// vamos ler do ficheiro de texto
-			BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
-			
-			String stop;
-			while((stop = br.readLine()) != null ){
-				String[] pieces = stop.split(",");
-				// constroi-se a paragem sempre, a rua nem sempre
-				// como estamos a ler de um ficheiro de texto, temos de construir a paragem
-				Stop aux = new Stop(pieces[0].trim(),pieces[1].trim(),pieces[2].trim(),pieces[3].trim());
-				aux.longitude = Float.parseFloat(pieces[4].trim());
-				aux.latitude = Float.parseFloat(pieces[5].trim());
-				//se a rua nao existir na hash
-				if(!result.containsKey(pieces[1].trim())){
-					// construimos a rua
-					BusStreet s = new BusStreet(aux.address);
-					s.latitude = aux.latitude;
-					s.longitude = aux.longitude;
-					s.stops.add(aux);
-					// e como a rua ainda n esta guardada, guardamos
-					result.put(aux.address, s);
-				}
-				// se a rua existir
-				else{
-					// colocar a paragem na rua rua
-					result.get(pieces[1].trim()).stops.add(aux);
-				}
+		HashMap<String, Stop> src = readStopsFile();
+		for(Stop s : src.values()){
+			if(!result.containsKey(s.address)){
+				BusStreet bs = new BusStreet(s.address);
+				bs.stops.add(s);
+				result.put(bs.street, bs);
 			}
+			else{
+				result.get(s.address).stops.add(s);
+			}
+		}
 		return result;
 	}
+	
 	// method to read all lines from txt file and put them in a list
 	static LinkedList<BusLine> readLinesFromFile() throws IOException{
 		LinkedList<BusLine> answer = new LinkedList<BusLine>();
@@ -443,21 +428,8 @@ class MyScanner {
 			makeNodesCSV();
 			allEdgesCSV(makeAllLinesCSV());
 		}else if(choice == 4){
-			/*HashMap<String,AddressEdge> aux = generateEdgesToStreets();
-			System.out.println("size: "+aux.size());
-			for(AddressEdge s: aux.values()){
-				s.print();
-			}*/
-			/*HashMap<String, BusStreet> aux = stopsByStreet();
+	
 			
-			for(BusStreet bs : aux.values()){
-				System.out.println(bs.street+" "+bs.stops.size());
-				for(Stop s: bs.stops){
-					s.printStop();
-				}
-				break;
-			}*/
-			readStopsFile();
 		}
 	}// end main
 }// end class
