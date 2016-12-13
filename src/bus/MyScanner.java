@@ -21,14 +21,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 class MyScanner {
-
-	/**
-	 * @param urlString
-	 *            is the url we want to read the json from
-	 * @return gives us a string with all the un-parsed json
-	 * @throws Exception
-	 *             if it cant connect, for various reasons.
-	 */
+	
+	
+	  //@param urlString is the url we want to read the json from
+	  //@return gives us a string with all the un-parsed json
+	  //@throws Exception if it cant connect, for various reasons.
+	 
 	static String readUrl(String urlString) throws Exception {
 		BufferedReader reader = null;
 		try {
@@ -39,22 +37,18 @@ class MyScanner {
 			char[] chars = new char[4096];
 			while ((read = reader.read(chars)) != -1)
 				buffer.append(chars, 0, read);
-
-			return buffer.toString();
+				return buffer.toString();
 		} finally {
 			if (reader != null)
 				reader.close();
 		}
 	}
 
-	/**
-	 * this method gives us a list of strings that represent the codes of the
-	 * bus stops we want.
-	 * 
-	 * @param info
-	 *            is a string of parsed json
-	 * @return gives us a list
-	 */
+	
+	 //this method gives us a list of strings that represent the codes of the bus stops we want.
+	 //@param info is a string of parsed json
+	 //@return gives us a list
+	 
 	static List<String> getAllLineNumbers(String info) {
 		List<String> result = new LinkedList<String>();
 		JSONObject jo = new JSONObject(info);
@@ -68,11 +62,8 @@ class MyScanner {
 
 	/**
 	 * method to get a line l in a direction d.
-	 * 
-	 * @param l
-	 *            is the line's code
-	 * @param d
-	 *            is the direction we want
+	 * @param l is the line's code
+	 * @param d is the direction we want
 	 * @return a list of all stops
 	 * @throws Exception
 	 */
@@ -90,7 +81,6 @@ class MyScanner {
 			JSONObject obj = ja.getJSONObject(i);
 			result.add(obj);
 		}
-
 		return result;
 	}
 
@@ -164,7 +154,7 @@ class MyScanner {
 		// file handling
 		File outputFile = new File("AllLines.txt");
 		// actual code
-		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=1");
+		String readFromURL = readUrl("http://www.stcp.pt/pt/itinerarium/callservice.php?action=lineslist&service=1&madrugada=0");
 		List<String> allLineNumbers = getAllLineNumbers(readFromURL);
 		// iterating
 		for (String s : allLineNumbers) {
@@ -183,6 +173,7 @@ class MyScanner {
 			}
 			System.out.println();
 		}
+		System.out.flush();
 	}
 
 	static float[] getStopGPSCoords(String stopCode) throws Exception {
@@ -253,26 +244,40 @@ class MyScanner {
 	
 	
 	static BusStreet getStreet(String s) throws IOException{
-		HashMap<String,BusStreet> aux = stopsByStreet();
-		BusStreet answer = null;
-		for(BusStreet b : aux.values()){
-			if(b.stops.contains(s)) answer = b.cloneMe();
+		HashMap<String,BusStreet> streets = stopsByStreet();
+		HashMap<String, Stop> stops = readStopsFile();
+		Stop st = stops.get(s);
+		//st.printStop();
+		
+		for(BusStreet b : streets.values()){
+			if(b.street.equals(st.address)) {
+				return b;
+			}
 		}
-		return answer;
+		System.out.println("Street not found");
+		return null;
 	}
 	
 	
 	static HashMap<String,AddressEdge> generateEdgesToStreets() throws IOException{
+		// answer
 		HashMap<String,AddressEdge> answer = new HashMap<String, AddressEdge>();
-		// hash com as ruas
+		// streets
 		HashMap<String,BusStreet> streets = stopsByStreet();
-		// fila com as linhas
+		System.out.println("streets: " +streets.size());
+		// lines
 		LinkedList<BusLine> allLines = readLinesFromFile();
+		System.out.println("lines: "+allLines.size());
 		for(BusLine bl :allLines){
+			System.out.println(bl.code);
+			System.out.println("line size: "+bl.LineStops.size());
 			for(int i=0;i<bl.LineStops.size()-1;i++){
 				//ruas de inicio e destino
+				//System.out.println(i+1);
 				BusStreet src = getStreet(bl.LineStops.get(i));
+				//System.out.print("src: "+src.street);
 				BusStreet dest = getStreet(bl.LineStops.get(i+1));
+				//System.out.println(" - dest: "+dest.street);
 				String s = src.street;
 				String d = dest.street;
 				/*for(BusStreet b : streets.values()){
@@ -391,7 +396,7 @@ class MyScanner {
 			e.printStackTrace();
 		}
 		String line;
-		System.out.println(answer.size());
+		//System.out.println(answer.size());
 		return answer;
 	}
 	
@@ -423,12 +428,15 @@ class MyScanner {
 			// stops data
 			System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("AllStops.txt"))));
 			printAllStops(getAllStops());
+			System.out.flush();
 		}
 		else if (choice == 3) {
 			makeNodesCSV();
 			allEdgesCSV(makeAllLinesCSV());
 		}else if(choice == 4){
-	
+			//getStreet("TSL2");
+			HashMap<String, AddressEdge> edges = generateEdgesToStreets();
+			System.out.println(edges.size());
 			
 		}
 	}// end main
