@@ -307,6 +307,36 @@ class MyScanner {
 		
 	return answer;
 	}
+	
+	// group stops by code
+	static HashMap<String, Spot> groupStopsByCode() throws IOException{
+		HashMap<String, Spot> answer =  new HashMap<String, Spot>();
+		HashMap<String, Stop> src = readStopsFile();
+		for(Stop s : src.values()){
+			String to_check = s.stopCode;
+			// se precisar de retirar o ultimo char, retira-o
+			if(Character.isDigit(to_check.charAt(to_check.length()-1))){
+				StringBuilder sb = new StringBuilder(to_check);
+				sb.deleteCharAt(to_check.length()-1);
+				to_check = sb.toString();
+			}
+			// se n estiver na hash
+			if(!answer.containsKey(to_check)){
+				// criar spot e por a paragem la dentro
+				Spot novo =  new Spot(to_check);
+				novo.stops.put(s.stopCode, s);
+				answer.put(to_check, novo);
+			}
+			// se estiver na hash
+			else{
+				answer.get(to_check).stops.put(s.stopCode, s);
+			}
+		}
+		return answer;
+	}
+	
+	
+	
 	/*
 	 * Following methods make gephi readable files
 	 */
@@ -435,9 +465,14 @@ class MyScanner {
 			allEdgesCSV(makeAllLinesCSV());
 		}else if(choice == 4){
 			//getStreet("TSL2");
-			HashMap<String, AddressEdge> edges = generateEdgesToStreets();
-			System.out.println(edges.size());
-			
+			//HashMap<String, AddressEdge> edges = generateEdgesToStreets();
+			//System.out.println(edges.size());
+			HashMap<String, Spot> src = groupStopsByCode();
+			System.out.println("size:"+src.size());
+			for(Spot s : src.values()){
+				s.printSpot();
+				break;
+			}
 		}
 	}// end main
 }// end class
