@@ -1,5 +1,7 @@
 Source;Target;Type
-"RFAR1";"DTR";Directed
+"PASS1";"SRLZ1";Directed
+"SRLZ1";"PING1";Directed
+"PING1";"DTR";Directed
 "DTR";"LIEG1";Directed
 "LIEG1";"CRTO3";Directed
 "CRTO3";"MLH5";Directed

@@ -30,3 +30,14 @@ Source;Target;Type
 "MTB4";"SRPT2";Directed
 "SRPT2";"PPR2";Directed
 "PPR2";"CI22";Directed
+"CI22";"HPRL2";Directed
+"HPRL2";"CVI2";Directed
+"CVI2";"QTAM2";Directed
+"QTAM2";"CZV2";Directed
+"CZV2";"CMIC2";Directed
+"CMIC2";"ICDF1";Directed
+"ICDF1";"CDF1";Directed
+"CDF1";"PRR7";Directed
+"PRR7";"TRD5";Directed
+"TRD5";"AAL1";Directed
+"AAL1";"AAL2";Directed

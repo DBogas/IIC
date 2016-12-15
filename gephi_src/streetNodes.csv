@@ -1,0 +1,673 @@
+Id;TotalStops;Longitude;Latitude
+R.GATÕES;[bus.Stop@74a14482, bus.Stop@1540e19d, bus.Stop@677327b6];0.0;0.0
+R.MACHADO SANTOS;[bus.Stop@14ae5a5, bus.Stop@7f31245a, bus.Stop@6d6f6e28, bus.Stop@135fbaa4, bus.Stop@45ee12a7];0.0;0.0
+TV.31 JANEIRO;[bus.Stop@330bedb4];0.0;0.0
+R.DR.OLIVEIRA LOBO;[bus.Stop@2503dbd3, bus.Stop@4b67cf4d, bus.Stop@7ea987ac, bus.Stop@12a3a380];0.0;0.0
+R.MOSTEIRO LEÇA;[bus.Stop@29453f44, bus.Stop@5cad8086];0.0;0.0
+R.DUQUE LOULÉ;[bus.Stop@6e0be858];0.0;0.0
+URB.JOSÉ DOMINGUES POÇAS;[bus.Stop@61bbe9ba, bus.Stop@610455d6];0.0;0.0
+R.ALTINO COELHO;[bus.Stop@511d50c0, bus.Stop@60e53b93];0.0;0.0
+R.FERNÃO LOPES;[bus.Stop@5e2de80c, bus.Stop@1d44bcfa];0.0;0.0
+R.SARMENTO BEIRES;[bus.Stop@266474c2, bus.Stop@6f94fa3e];0.0;0.0
+R.COMBATENTES G.GUERRA;[bus.Stop@5e481248];0.0;0.0
+R.REI RAMIRO;[bus.Stop@66d3c617, bus.Stop@63947c6b, bus.Stop@2b193f2d, bus.Stop@355da254, bus.Stop@4dc63996, bus.Stop@d716361, bus.Stop@6ff3c5b5, bus.Stop@3764951d];0.0;0.0
+R.VITORINO DAMÁSIO;[bus.Stop@4b1210ee];0.0;0.0
+R.DO FAROL;[bus.Stop@4d7e1886];0.0;0.0
+R.LUÍS WOODHOUSE;[bus.Stop@3cd1a2f1];0.0;0.0
+R.DR.VASCO VALENTE;[bus.Stop@2f0e140b, bus.Stop@7440e464];0.0;0.0
+R.PENA;[bus.Stop@49476842, bus.Stop@78308db1];0.0;0.0
+R.JOÃO COUTINHO;[bus.Stop@27c170f0, bus.Stop@5451c3a8, bus.Stop@2626b418, bus.Stop@5a07e868, bus.Stop@76ed5528, bus.Stop@2c7b84de];0.0;0.0
+R.ANT.BERNARDINO ALMEIDA;[bus.Stop@3fee733d, bus.Stop@5acf9800, bus.Stop@4617c264, bus.Stop@36baf30c];0.0;0.0
+R.OURO;[bus.Stop@7a81197d, bus.Stop@5ca881b5, bus.Stop@24d46ca6, bus.Stop@4517d9a3, bus.Stop@372f7a8d, bus.Stop@2f92e0f4, bus.Stop@28a418fc, bus.Stop@5305068a, bus.Stop@1f32e575, bus.Stop@279f2327, bus.Stop@2ff4acd0, bus.Stop@54bedef2, bus.Stop@5caf905d, bus.Stop@27716f4, bus.Stop@8efb846, bus.Stop@2a84aee7, bus.Stop@a09ee92, bus.Stop@30f39991];0.0;0.0
+R.PRELADA;[bus.Stop@452b3a41, bus.Stop@4a574795];0.0;0.0
+R.BOLAMA;[bus.Stop@f6f4d33, bus.Stop@23fc625e, bus.Stop@3f99bd52];0.0;0.0
+AV.CARVALHA;[bus.Stop@4f023edb, bus.Stop@3a71f4dd, bus.Stop@7adf9f5f, bus.Stop@85ede7b, bus.Stop@5674cd4d, bus.Stop@63961c42, bus.Stop@65b54208, bus.Stop@1be6f5c3, bus.Stop@6b884d57, bus.Stop@38af3868];0.0;0.0
+R.CAP.SALGUEIRO MAIA;[bus.Stop@77459877, bus.Stop@5b2133b1, bus.Stop@72ea2f77, bus.Stop@33c7353a];0.0;0.0
+R.VALE DOS AMORES;[bus.Stop@681a9515, bus.Stop@3af49f1c];0.0;0.0
+R.SRA.DA HORA;[bus.Stop@19469ea2];0.0;0.0
+R.GEN.SILVEIRA;[bus.Stop@13221655];0.0;0.0
+R.SARAIVA DE CARVALHO;[bus.Stop@2f2c9b19];0.0;0.0
+LGO.S.PEDRO CAMPANHÃ;[bus.Stop@31befd9f];0.0;0.0
+R.JOÃO RODRIGUES CABRILHO;[bus.Stop@1c20c684];0.0;0.0
+VIA ESTRUTURANTE DE CRESTINS;[bus.Stop@1fb3ebeb, bus.Stop@548c4f57, bus.Stop@1218025c, bus.Stop@816f27d, bus.Stop@87aac27, bus.Stop@3e3abc88, bus.Stop@6ce253f1, bus.Stop@53d8d10a];0.0;0.0
+R.ALVARO RODRIGUES;[bus.Stop@e9e54c2, bus.Stop@65ab7765];0.0;0.0
+R.AUGUSTO GOMES;[bus.Stop@1b28cdfa];0.0;0.0
+R.LOUREIRO;[bus.Stop@eed1f14];0.0;0.0
+R.SOUSA PINTO;[bus.Stop@7229724f];0.0;0.0
+LGO.CABINE;[bus.Stop@4c873330, bus.Stop@119d7047, bus.Stop@776ec8df];0.0;0.0
+LGO.CAMPO LINDO;[bus.Stop@4eec7777, bus.Stop@3b07d329];0.0;0.0
+R.JERÓNIMO AZEVEDO;[bus.Stop@41629346, bus.Stop@404b9385];0.0;0.0
+R.ANTÓNIO FRANCISCO SOUSA;[bus.Stop@6d311334, bus.Stop@682a0b20, bus.Stop@3d075dc0, bus.Stop@214c265e, bus.Stop@448139f0, bus.Stop@7cca494b];0.0;0.0
+R.JOÃO BARROS;[bus.Stop@7ba4f24f];0.0;0.0
+R.JOÃO MASCARENHAS;[bus.Stop@3b9a45b3, bus.Stop@7699a589];0.0;0.0
+VL9;[bus.Stop@58372a00, bus.Stop@4dd8dc3];0.0;0.0
+ALAM.BASÍLIO TELES;[bus.Stop@6d03e736, bus.Stop@568db2f2, bus.Stop@378bf509, bus.Stop@5fd0d5ae];0.0;0.0
+AV.25 ABRIL;[bus.Stop@2d98a335, bus.Stop@16b98e56, bus.Stop@7ef20235, bus.Stop@27d6c5e0, bus.Stop@4f3f5b24];0.0;0.0
+R.MATAS;[bus.Stop@15aeb7ab, bus.Stop@7b23ec81, bus.Stop@6acbcfc0, bus.Stop@5f184fc6, bus.Stop@3feba861];0.0;0.0
+R.SOBREIRAS;[bus.Stop@5b480cf9, bus.Stop@6f496d9f];0.0;0.0
+R.VILAR;[bus.Stop@723279cf, bus.Stop@10f87f48, bus.Stop@b4c966a, bus.Stop@2f4d3709, bus.Stop@4e50df2e];0.0;0.0
+LGO.PRIORADO;[bus.Stop@1d81eb93];0.0;0.0
+R.JOSÉ LUIS ARAÚJO;[bus.Stop@7291c18f, bus.Stop@34a245ab];0.0;0.0
+TV.RASA;[bus.Stop@7cc355be];0.0;0.0
+R.J.ALVES SILVA;[bus.Stop@6e8cf4c6];0.0;0.0
+R.PASSOS MANUEL;[bus.Stop@12edcd21, bus.Stop@34c45dca, bus.Stop@52cc8049, bus.Stop@5b6f7412, bus.Stop@27973e9b];0.0;0.0
+PR.REPÚBLICA;[bus.Stop@312b1dae, bus.Stop@7530d0a];0.0;0.0
+R.PASSARIAS;[bus.Stop@27bc2616, bus.Stop@3941a79c, bus.Stop@506e1b77, bus.Stop@4fca772d];0.0;0.0
+R.PADRE DIAMANTINO;[bus.Stop@9807454, bus.Stop@3d494fbf];0.0;0.0
+R.SANTA MARTA PENAGUIÃO;[bus.Stop@1ddc4ec2];0.0;0.0
+PR.MOUZINHO ALBUQUERQUE;[bus.Stop@133314b, bus.Stop@b1bc7ed, bus.Stop@7cd84586];0.0;0.0
+R.SILVA TAPADA;[bus.Stop@30dae81, bus.Stop@1b2c6ec2, bus.Stop@4edde6e5];0.0;0.0
+R.BEATA D. MAFALDA;[bus.Stop@70177ecd];0.0;0.0
+PR.IMPÉRIO;[bus.Stop@1e80bfe8];0.0;0.0
+R.MOLHE;[bus.Stop@66a29884, bus.Stop@4769b07b, bus.Stop@cc34f4d];0.0;0.0
+R.ROSÁRIO;[bus.Stop@17a7cec2];0.0;0.0
+R.GUARDEIRAS;[bus.Stop@65b3120a, bus.Stop@6f539caf, bus.Stop@79fc0f2f, bus.Stop@50040f0c];0.0;0.0
+R.S.TOMÉ;[bus.Stop@2dda6444, bus.Stop@5e9f23b4, bus.Stop@4783da3f, bus.Stop@378fd1ac, bus.Stop@49097b5d, bus.Stop@6e2c634b];0.0;0.0
+R.SANTOS DIAS;[bus.Stop@37a71e93, bus.Stop@7e6cbb7a, bus.Stop@7c3df479, bus.Stop@7106e68e, bus.Stop@7eda2dbb, bus.Stop@6576fe71, bus.Stop@76fb509a];0.0;0.0
+R.ALBERTO AIRES GOUVEIA;[bus.Stop@300ffa5d, bus.Stop@1f17ae12];0.0;0.0
+R.GÓLGOTA;[bus.Stop@4d405ef7];0.0;0.0
+LGO.AVIADORES;[bus.Stop@6193b845];0.0;0.0
+R.D.NUN''ÁLVARES PEREIRA;[bus.Stop@2e817b38, bus.Stop@c4437c4];0.0;0.0
+C.MÁRTIRES PÁTRIA;[bus.Stop@433c675d, bus.Stop@3f91beef, bus.Stop@1a6c5a9e];0.0;0.0
+R.M.FERREIRA CRUZ;[bus.Stop@37bba400, bus.Stop@179d3b25, bus.Stop@254989ff];0.0;0.0
+R.MARQUÊS SÁ BANDEIRA;[bus.Stop@5d099f62, bus.Stop@37f8bb67];0.0;0.0
+R.AUGUSTO MARTINS;[bus.Stop@49c2faae];0.0;0.0
+LGO.MONTINHO;[bus.Stop@20ad9418, bus.Stop@31cefde0];0.0;0.0
+R.JOÃO VIEIRA;[bus.Stop@439f5b3d, bus.Stop@1d56ce6a, bus.Stop@5197848c, bus.Stop@17f052a3, bus.Stop@2e0fa5d3, bus.Stop@5010be6, bus.Stop@685f4c2e];0.0;0.0
+R.DR.AIRES GOUVEIA OSÓRIO;[bus.Stop@7daf6ecc, bus.Stop@2e5d6d97];0.0;0.0
+R.D.JOÃO CASTRO;[bus.Stop@238e0d81, bus.Stop@31221be2, bus.Stop@377dca04, bus.Stop@728938a9, bus.Stop@21b8d17c, bus.Stop@6433a2, bus.Stop@5910e440, bus.Stop@6267c3bb];0.0;0.0
+R.MARTIM MONIZ;[bus.Stop@533ddba, bus.Stop@246b179d, bus.Stop@7a07c5b4, bus.Stop@26a1ab54, bus.Stop@3d646c37, bus.Stop@41cf53f9];0.0;0.0
+R.PÁDUA CORREIA;[bus.Stop@5a10411, bus.Stop@2ef1e4fa, bus.Stop@306a30c7];0.0;0.0
+TV.ENXURREIRAS;[bus.Stop@b81eda8];0.0;0.0
+R.TELHEIRA;[bus.Stop@68de145];0.0;0.0
+R.JUSTINO MARQUES;[bus.Stop@27fa135a];0.0;0.0
+AV.ENG.DUARTE PACHECO;[bus.Stop@46f7f36a, bus.Stop@421faab1, bus.Stop@2b71fc7e, bus.Stop@5ce65a89, bus.Stop@25f38edc, bus.Stop@1a86f2f1, bus.Stop@3eb07fd3, bus.Stop@506c589e, bus.Stop@69d0a921, bus.Stop@446cdf90];0.0;0.0
+AV.DR.GERMANO VIEIRA;[bus.Stop@799f7e29, bus.Stop@4b85612c];0.0;0.0
+R.ENTRE MUROS;[bus.Stop@277050dc];0.0;0.0
+PR.EXÉRC.LIBERTADOR;[bus.Stop@5c29bfd, bus.Stop@7aec35a];0.0;0.0
+R.NOVA S.CRISPIM;[bus.Stop@67424e82, bus.Stop@42110406];0.0;0.0
+R.RODRIGUES FREITAS;[bus.Stop@531d72ca, bus.Stop@22d8cfe0, bus.Stop@579bb367, bus.Stop@1de0aca6, bus.Stop@255316f2, bus.Stop@41906a77, bus.Stop@4b9af9a9, bus.Stop@5387f9e0];0.0;0.0
+ALAM.EMPRESA;[bus.Stop@6e5e91e4];0.0;0.0
+R.MANUEL J.FERNANDES SANTOS;[bus.Stop@2cdf8d8a, bus.Stop@30946e09, bus.Stop@5cb0d902, bus.Stop@46fbb2c1, bus.Stop@1698c449, bus.Stop@5ef04b5, bus.Stop@5f4da5c3];0.0;0.0
+R.BORDEAUX;[bus.Stop@443b7951];0.0;0.0
+R.CONS.LUÍS MAGALHÃES;[bus.Stop@14514713, bus.Stop@69663380, bus.Stop@5b37e0d2, bus.Stop@4459eb14, bus.Stop@5a2e4553, bus.Stop@28c97a5, bus.Stop@6659c656, bus.Stop@6d5380c2];0.0;0.0
+PR.PEDRA VERDE;[bus.Stop@45ff54e6];0.0;0.0
+R.SOEIRO MENDES;[bus.Stop@2328c243, bus.Stop@bebdb06];0.0;0.0
+R.GESTALINHO;[bus.Stop@7a4f0f29, bus.Stop@45283ce2];0.0;0.0
+R.ANTÓNIO GALVÃO;[bus.Stop@2077d4de, bus.Stop@7591083d];0.0;0.0
+R.MARINHA;[bus.Stop@77a567e1, bus.Stop@736e9adb, bus.Stop@6d21714c, bus.Stop@108c4c35, bus.Stop@4ccabbaa, bus.Stop@4bf558aa];0.0;0.0
+R.SILVA BRINCO;[bus.Stop@2d38eb89, bus.Stop@5fa7e7ff, bus.Stop@4629104a, bus.Stop@27f8302d, bus.Stop@4d76f3f8];0.0;0.0
+R.PADRE AMÉRICO;[bus.Stop@2d8e6db6, bus.Stop@23ab930d];0.0;0.0
+AV.OLIVEIRA ZÍNA;[bus.Stop@4534b60d, bus.Stop@3fa77460];0.0;0.0
+R.CONCEIÇÃO FERNANDES;[bus.Stop@619a5dff, bus.Stop@1ed6993a, bus.Stop@7e32c033, bus.Stop@7ab2bfe1, bus.Stop@497470ed, bus.Stop@63c12fb0, bus.Stop@b1a58a3, bus.Stop@6438a396, bus.Stop@e2144e4, bus.Stop@6477463f, bus.Stop@3d71d552, bus.Stop@1cf4f579, bus.Stop@18769467, bus.Stop@46ee7fe8, bus.Stop@7506e922, bus.Stop@4ee285c6];0.0;0.0
+R.DR.MAGALHÃES LEMOS;[bus.Stop@621be5d1];0.0;0.0
+PR.CORUJEIRA;[bus.Stop@573fd745];0.0;0.0
+ROT. NATÁLIA CORREIA;[bus.Stop@15327b79];0.0;0.0
+R.FREI DIOGO MELO PEREIRA;[bus.Stop@4f2410ac, bus.Stop@722c41f4];0.0;0.0
+R.ANTÓNIO SIMÕES;[bus.Stop@5b80350b, bus.Stop@5d6f64b1, bus.Stop@32a1bec0];0.0;0.0
+R.28 JANEIRO;[bus.Stop@22927a81];0.0;0.0
+R.CALDEIREIROS;[bus.Stop@78e03bb5];0.0;0.0
+AV.NUNO TRISTÃO;[bus.Stop@5e8c92f4, bus.Stop@61e4705b];0.0;0.0
+R.JOÃO PEDRO RIBEIRO;[bus.Stop@50134894, bus.Stop@2957fcb0];0.0;0.0
+R.RECAREI;[bus.Stop@1376c05c, bus.Stop@51521cc1, bus.Stop@1b4fb997, bus.Stop@deb6432, bus.Stop@28ba21f3, bus.Stop@694f9431, bus.Stop@f2a0b8e, bus.Stop@593634ad, bus.Stop@20fa23c1, bus.Stop@3581c5f3];0.0;0.0
+LGO.ANT.CÁLEM;[bus.Stop@6aa8ceb6, bus.Stop@2530c12];0.0;0.0
+AV.F.PEREIRA MELO;[bus.Stop@73c6c3b2, bus.Stop@48533e64];0.0;0.0
+R.JOÃO DE BARROS;[bus.Stop@64a294a6, bus.Stop@7e0b37bc, bus.Stop@3b95a09c];0.0;0.0
+PR.MUNICÍPIO;[bus.Stop@6ae40994];0.0;0.0
+PR.CIDADE SALVADOR;[bus.Stop@1a93a7ca];0.0;0.0
+R.FORMIGA;[bus.Stop@3d82c5f3, bus.Stop@2b05039f];0.0;0.0
+R.DR.SEVERIANO;[bus.Stop@61e717c2, bus.Stop@66cd51c3, bus.Stop@4dcbadb4];0.0;0.0
+R.GONÇALO MENDES MAIA;[bus.Stop@4e515669, bus.Stop@17d10166];0.0;0.0
+R.BESSA LEITE;[bus.Stop@1b9e1916, bus.Stop@ba8a1dc];0.0;0.0
+AV.FABRIL NORTE;[bus.Stop@4f8e5cde, bus.Stop@504bae78, bus.Stop@3b764bce];0.0;0.0
+R.ANTÓNIO MARQUES;[bus.Stop@759ebb3d, bus.Stop@484b61fc];0.0;0.0
+R.D.ANTÓNIO FERREIRA GOMES;[bus.Stop@45fe3ee3];0.0;0.0
+R.JOSÉ RODRIGUES JÚNIOR;[bus.Stop@4cdf35a9, bus.Stop@4c98385c];0.0;0.0
+LGO.STO.ANTONIO;[bus.Stop@5fcfe4b2];0.0;0.0
+R.ALEIXO;[bus.Stop@6bf2d08e];0.0;0.0
+AV.SERPA PINTO;[bus.Stop@5eb5c224, bus.Stop@53e25b76, bus.Stop@73a8dfcc, bus.Stop@ea30797, bus.Stop@7e774085, bus.Stop@3f8f9dd6];0.0;0.0
+R.LOMBA;[bus.Stop@aec6354, bus.Stop@1c655221, bus.Stop@58d25a40, bus.Stop@1b701da1, bus.Stop@726f3b58, bus.Stop@442d9b6e, bus.Stop@ee7d9f1, bus.Stop@15615099];0.0;0.0
+RUA GEN. HUMBERTO DELGADO;[bus.Stop@1edf1c96];0.0;0.0
+R.9 AGOSTO;[bus.Stop@368102c8];0.0;0.0
+R.SALGUEIROS;[bus.Stop@6996db8, bus.Stop@1963006a, bus.Stop@7fbe847c, bus.Stop@41975e01];0.0;0.0
+R.BOTICA;[bus.Stop@c2e1f26];0.0;0.0
+R.JUSTINO TEIXEIRA;[bus.Stop@dcf3e99];0.0;0.0
+R.SANTOS POUSADA;[bus.Stop@6d9c638, bus.Stop@7dc5e7b4, bus.Stop@1ee0005, bus.Stop@75a1cd57];0.0;0.0
+AV.D.JOAO I;[bus.Stop@3d012ddd, bus.Stop@6f2b958e, bus.Stop@1eb44e46, bus.Stop@6504e3b2, bus.Stop@515f550a, bus.Stop@626b2d4a, bus.Stop@5e91993f, bus.Stop@1c4af82c, bus.Stop@379619aa];0.0;0.0
+R.P. ABÍLIO SAMPAIO;[bus.Stop@cac736f, bus.Stop@5e265ba4, bus.Stop@156643d4, bus.Stop@123a439b, bus.Stop@7de26db8];0.0;0.0
+PR.PARADA LEITÃO;[bus.Stop@1175e2db];0.0;0.0
+R.ELISIO DE MELO;[bus.Stop@36aa7bc2];0.0;0.0
+VIA PERIFÉRICA MAIA VERMOIM;[bus.Stop@76ccd017, bus.Stop@182decdb];0.0;0.0
+R.MONCHIQUE;[bus.Stop@26f0a63f, bus.Stop@4361bd48, bus.Stop@53bd815b, bus.Stop@2401f4c3];0.0;0.0
+R.PADRE DIAMANTINO GOMES;[bus.Stop@7637f22];0.0;0.0
+R.25 ABRIL;[bus.Stop@4926097b, bus.Stop@762efe5d];0.0;0.0
+R.MOALDE;[bus.Stop@5d22bbb7, bus.Stop@41a4555e, bus.Stop@3830f1c0, bus.Stop@39ed3c8d];0.0;0.0
+AV.AEROPORTO;[bus.Stop@71dac704, bus.Stop@123772c4, bus.Stop@2d363fb3, bus.Stop@7d6f77cc, bus.Stop@5aaa6d82];0.0;0.0
+R.CALOUSTE GULBENKIAN;[bus.Stop@73a28541];0.0;0.0
+PR.ALMEIDA GARRETT;[bus.Stop@6f75e721, bus.Stop@69222c14];0.0;0.0
+R.CMDTE.QUELHAS LIMA;[bus.Stop@606d8acf, bus.Stop@782830e, bus.Stop@470e2030, bus.Stop@3fb4f649];0.0;0.0
+R.LÓ FERREIRA;[bus.Stop@33833882];0.0;0.0
+R.ALVES SALDANHA;[bus.Stop@200a570f, bus.Stop@16b3fc9e];0.0;0.0
+R.GUERRA JUNQUEIRO;[bus.Stop@e2d56bf, bus.Stop@244038d0, bus.Stop@5680a178, bus.Stop@5fdef03a, bus.Stop@3b22cdd0, bus.Stop@1e81f4dc, bus.Stop@4d591d15, bus.Stop@65ae6ba4, bus.Stop@48cf768c, bus.Stop@59f95c5d, bus.Stop@5ccd43c2, bus.Stop@4aa8f0b4, bus.Stop@7960847b, bus.Stop@6a6824be, bus.Stop@5c8da962];0.0;0.0
+R.NATÁRIA;[bus.Stop@512ddf17, bus.Stop@2c13da15];0.0;0.0
+R.CÊRCA;[bus.Stop@77556fd];0.0;0.0
+AEROPORTO;[bus.Stop@368239c8];0.0;0.0
+R.CARLOS MAIA;[bus.Stop@9e89d68];0.0;0.0
+PR.JOÃO OLIVEIRA MARQUES;[bus.Stop@3b192d32];0.0;0.0
+R.MOUZINHO SILVEIRA;[bus.Stop@16f65612, bus.Stop@311d617d, bus.Stop@7c53a9eb];0.0;0.0
+R.GODINHO FARIA;[bus.Stop@ed17bee, bus.Stop@2a33fae0, bus.Stop@707f7052, bus.Stop@11028347, bus.Stop@14899482, bus.Stop@21588809, bus.Stop@2aae9190, bus.Stop@2f333739, bus.Stop@77468bd9, bus.Stop@12bb4df8, bus.Stop@4cc77c2e];0.0;0.0
+R.ENG.FERREIRA DIAS;[bus.Stop@7a7b0070];0.0;0.0
+R.FREIXO;[bus.Stop@39a054a5, bus.Stop@71bc1ae4, bus.Stop@6ed3ef1, bus.Stop@2437c6dc, bus.Stop@1f89ab83, bus.Stop@e73f9ac, bus.Stop@61064425];0.0;0.0
+ALAMEDA CARTES;[bus.Stop@7b1d7fff];0.0;0.0
+R.JULIÃO SARMENTO;[bus.Stop@299a06ac, bus.Stop@383534aa];0.0;0.0
+PR.GUILHERMINA SUGGIA;[bus.Stop@6bc168e5];0.0;0.0
+PR.CARLOS ALBERTO;[bus.Stop@7b3300e5];0.0;0.0
+R.PEDRO HISPANO;[bus.Stop@2e5c649, bus.Stop@136432db];0.0;0.0
+R.HERÓIS ÁFRICA;[bus.Stop@7382f612, bus.Stop@1055e4af];0.0;0.0
+R.OSCAR DA SILVA;[bus.Stop@3caeaf62, bus.Stop@e6ea0c6, bus.Stop@6a38e57f, bus.Stop@5577140b, bus.Stop@1c6b6478, bus.Stop@67f89fa3, bus.Stop@4ac68d3e, bus.Stop@277c0f21, bus.Stop@6073f712, bus.Stop@43556938, bus.Stop@3d04a311, bus.Stop@7a46a697];0.0;0.0
+R.JÚLIO DINIS;[bus.Stop@5f205aa, bus.Stop@6d86b085, bus.Stop@75828a0f, bus.Stop@3abfe836, bus.Stop@2ff5659e, bus.Stop@77afea7d, bus.Stop@161cd475, bus.Stop@532760d8, bus.Stop@57fa26b7, bus.Stop@5f8ed237];0.0;0.0
+R.GEN.TORRES;[bus.Stop@2f410acf, bus.Stop@47089e5f, bus.Stop@4141d797, bus.Stop@68f7aae2];0.0;0.0
+CASA DA MÚSICA;[bus.Stop@4f47d241, bus.Stop@4c3e4790, bus.Stop@38cccef, bus.Stop@5679c6c6, bus.Stop@27ddd392];0.0;0.0
+R.BOA HORA;[bus.Stop@19e1023e, bus.Stop@7cef4e59];0.0;0.0
+R.S.ROQUE LAMEIRA;[bus.Stop@64b8f8f4, bus.Stop@2db0f6b2, bus.Stop@3cd1f1c8, bus.Stop@3a4afd8d, bus.Stop@1996cd68, bus.Stop@3339ad8e, bus.Stop@555590, bus.Stop@6d1e7682, bus.Stop@424c0bc4, bus.Stop@3c679bde, bus.Stop@16b4a017, bus.Stop@8807e25, bus.Stop@2a3046da];0.0;0.0
+R.CÊRCO PORTO;[bus.Stop@2a098129, bus.Stop@198e2867, bus.Stop@12f40c25, bus.Stop@3ada9e37, bus.Stop@5cbc508c, bus.Stop@3419866c, bus.Stop@63e31ee];0.0;0.0
+TV.FONTE VELHA;[bus.Stop@68fb2c38];0.0;0.0
+R.N.SRA.FATIMA;[bus.Stop@567d299b];0.0;0.0
+R.CORONEL ALMEIDA VALENTE;[bus.Stop@2eafffde];0.0;0.0
+R.ALTO CHAQUEDAS;[bus.Stop@59690aa4, bus.Stop@6842775d, bus.Stop@574caa3f, bus.Stop@64cee07, bus.Stop@1761e840, bus.Stop@6c629d6e];0.0;0.0
+R.ELIAS GARCIA;[bus.Stop@5ecddf8f, bus.Stop@3f102e87, bus.Stop@27abe2cd, bus.Stop@5f5a92bb, bus.Stop@6fdb1f78, bus.Stop@51016012, bus.Stop@29444d75, bus.Stop@2280cdac, bus.Stop@1517365b, bus.Stop@4fccd51b, bus.Stop@44e81672];0.0;0.0
+R.ENG.CARLOS AMARANTE;[bus.Stop@60215eee, bus.Stop@4ca8195f, bus.Stop@65e579dc, bus.Stop@61baa894];0.0;0.0
+R.LOURINHA;[bus.Stop@b065c63, bus.Stop@768debd];0.0;0.0
+R.GONÇALO CRISTÓVÃO;[bus.Stop@490d6c15, bus.Stop@7d4793a8];0.0;0.0
+R.CENTRAL CAMPO;[bus.Stop@449b2d27, bus.Stop@5479e3f, bus.Stop@27082746, bus.Stop@66133adc, bus.Stop@7bfcd12c, bus.Stop@42f30e0a];0.0;0.0
+TV.BICA VELHA;[bus.Stop@24273305];0.0;0.0
+VILA D''ESTE;[bus.Stop@5b1d2887];0.0;0.0
+R.MONTE PIPOS;[bus.Stop@46f5f779, bus.Stop@1c2c22f3, bus.Stop@18e8568, bus.Stop@33e5ccce];0.0;0.0
+R.S.DINIS;[bus.Stop@5a42bbf4, bus.Stop@270421f5, bus.Stop@52d455b8, bus.Stop@4f4a7090, bus.Stop@18ef96, bus.Stop@6956de9];0.0;0.0
+R.ESTEVES;[bus.Stop@769c9116, bus.Stop@6aceb1a5, bus.Stop@2d6d8735, bus.Stop@ba4d54, bus.Stop@12bc6874, bus.Stop@de0a01f, bus.Stop@4c75cab9];0.0;0.0
+R.CONDE ALTO MEARIM;[bus.Stop@1ef7fe8e];0.0;0.0
+R.MEDANCELHE;[bus.Stop@6f79caec, bus.Stop@67117f44, bus.Stop@5d3411d];0.0;0.0
+R.CAMPO LINDO;[bus.Stop@2471cca7, bus.Stop@5fe5c6f];0.0;0.0
+R.D.MANUEL II;[bus.Stop@6979e8cb, bus.Stop@763d9750, bus.Stop@5c0369c4, bus.Stop@2be94b0f, bus.Stop@d70c109, bus.Stop@17ed40e0, bus.Stop@50675690, bus.Stop@31b7dea0, bus.Stop@3ac42916];0.0;0.0
+TV.ÁLVARO CASTELÕES;[bus.Stop@47d384ee];0.0;0.0
+R.NAVAS TOLOSA;[bus.Stop@2d6a9952];0.0;0.0
+R.BRITO CAPELO;[bus.Stop@22a71081, bus.Stop@3930015a, bus.Stop@629f0666];0.0;0.0
+LGO.VENDA NOVA;[bus.Stop@1bc6a36e, bus.Stop@1ff8b8f];0.0;0.0
+R.S.JOÃO BRITO;[bus.Stop@387c703b, bus.Stop@224aed64];0.0;0.0
+R.D.SILVIA ALVES TEIXEIRA;[bus.Stop@c39f790, bus.Stop@71e7a66b, bus.Stop@2ac1fdc4, bus.Stop@5f150435];0.0;0.0
+R.PROF.ALVARO RODRIGUES;[bus.Stop@1c53fd30];0.0;0.0
+AV.D.MANUEL II;[bus.Stop@50cbc42f, bus.Stop@75412c2f, bus.Stop@282ba1e, bus.Stop@13b6d03];0.0;0.0
+R.PADRE MAGALHÃES;[bus.Stop@f5f2bb7];0.0;0.0
+R.FALCÃO;[bus.Stop@73035e27, bus.Stop@64c64813, bus.Stop@3ecf72fd, bus.Stop@483bf400, bus.Stop@21a06946];0.0;0.0
+R.VISCONDE DEVESAS;[bus.Stop@77f03bb1, bus.Stop@326de728, bus.Stop@25618e91];0.0;0.0
+AV.BRASIL;[bus.Stop@7a92922, bus.Stop@71f2a7d5, bus.Stop@2cfb4a64, bus.Stop@5474c6c, bus.Stop@4b6995df];0.0;0.0
+R.ALBERTO LAURA MOREIRA;[bus.Stop@2fc14f68];0.0;0.0
+R.ROBERTO IVENS;[bus.Stop@591f989e, bus.Stop@66048bfd, bus.Stop@61443d8f, bus.Stop@445b84c0];0.0;0.0
+R.SANTANA;[bus.Stop@61a52fbd, bus.Stop@233c0b17, bus.Stop@63d4e2ba, bus.Stop@7bb11784, bus.Stop@33a10788, bus.Stop@7006c658, bus.Stop@34033bd0, bus.Stop@47fd17e3, bus.Stop@7cdbc5d3, bus.Stop@3aa9e816, bus.Stop@17d99928];0.0;0.0
+R.ÁLVARES CABRAL;[bus.Stop@3834d63f, bus.Stop@1ae369b7];0.0;0.0
+R.D.FREI ESTEVES VASQUEZ PIMENTEL;[bus.Stop@6fffcba5, bus.Stop@34340fab, bus.Stop@2aafb23c, bus.Stop@2b80d80f];0.0;0.0
+R.ALFREDO CUNHA;[bus.Stop@3ab39c39, bus.Stop@2eee9593, bus.Stop@7907ec20, bus.Stop@546a03af];0.0;0.0
+R.COVÊLO;[bus.Stop@721e0f4f];0.0;0.0
+AV.MANUEL PINTO AZEVEDO;[bus.Stop@28864e92, bus.Stop@6ea6d14e];0.0;0.0
+R.JOÃO REGRAS;[bus.Stop@6ad5c04e];0.0;0.0
+R.PEDRAS RUBRAS;[bus.Stop@6833ce2c];0.0;0.0
+R.CATASSOL;[bus.Stop@725bef66, bus.Stop@2aaf7cc2];0.0;0.0
+R.SOUTO CONTUMIL;[bus.Stop@6e3c1e69];0.0;0.0
+R.FERNÃO MENDES PINTO;[bus.Stop@1888ff2c];0.0;0.0
+R.PONTE PEDRA;[bus.Stop@35851384, bus.Stop@649d209a, bus.Stop@6adca536];0.0;0.0
+R.JOSÉ MARIA ALVES;[bus.Stop@357246de];0.0;0.0
+R.BARROS LIMA;[bus.Stop@28f67ac7, bus.Stop@256216b3];0.0;0.0
+R.PADRE COSTA;[bus.Stop@2a18f23c, bus.Stop@d7b1517, bus.Stop@16c0663d, bus.Stop@23223dd8, bus.Stop@4ec6a292, bus.Stop@1b40d5f0, bus.Stop@ea4a92b, bus.Stop@3c5a99da, bus.Stop@47f37ef1, bus.Stop@5a01ccaa, bus.Stop@71c7db30];0.0;0.0
+R.NOVA SEIXO;[bus.Stop@19bb089b, bus.Stop@4563e9ab, bus.Stop@11531931, bus.Stop@5e025e70, bus.Stop@1fbc7afb, bus.Stop@45c8e616, bus.Stop@4cdbe50f, bus.Stop@66d33a, bus.Stop@7cf10a6f];0.0;0.0
+R.BARROSA;[bus.Stop@7e0babb1];0.0;0.0
+R.TOMÁS RIBEIRO;[bus.Stop@6debcae2, bus.Stop@5ba23b66];0.0;0.0
+R.RODELO;[bus.Stop@2ff4f00f, bus.Stop@c818063];0.0;0.0
+AV.RODRIGUES FREITAS;[bus.Stop@3f0ee7cb, bus.Stop@75bd9247, bus.Stop@7d417077, bus.Stop@7dc36524, bus.Stop@35bbe5e8, bus.Stop@2c8d66b2, bus.Stop@5a39699c];0.0;0.0
+R.JÁU;[bus.Stop@3cb5cdba];0.0;0.0
+AV.MONTEVIDEU;[bus.Stop@56cbfb61, bus.Stop@1134affc, bus.Stop@d041cf, bus.Stop@129a8472, bus.Stop@1b0375b3, bus.Stop@2f7c7260];0.0;0.0
+AV.VASCO GAMA;[bus.Stop@2d209079, bus.Stop@6bdf28bb, bus.Stop@6b71769e, bus.Stop@2752f6e2, bus.Stop@e580929, bus.Stop@1cd072a9, bus.Stop@7c75222b, bus.Stop@4c203ea1];0.0;0.0
+R.SANTA CATARINA;[bus.Stop@27f674d];0.0;0.0
+R.PROF.BONFIM BARREIROS;[bus.Stop@1d251891];0.0;0.0
+R.DR.BERNARDINO MACHADO;[bus.Stop@48140564, bus.Stop@58ceff1, bus.Stop@7c30a502, bus.Stop@49e4cb85, bus.Stop@2133c8f8, bus.Stop@43a25848];0.0;0.0
+LGO.LAPA;[bus.Stop@3ac3fd8b, bus.Stop@5594a1b5];0.0;0.0
+LGO.D.LUIS I;[bus.Stop@6a5fc7f7];0.0;0.0
+R.AREEIROS;[bus.Stop@3b6eb2ec, bus.Stop@1e643faf];0.0;0.0
+ESPLANADA RIO JANEIRO;[bus.Stop@6e8dacdf, bus.Stop@7a79be86];0.0;0.0
+R.RIBEIRO CAMBADO;[bus.Stop@34ce8af7, bus.Stop@b684286, bus.Stop@880ec60, bus.Stop@3f3afe78];0.0;0.0
+R.1;[bus.Stop@7f63425a, bus.Stop@36d64342, bus.Stop@39ba5a14, bus.Stop@511baa65];0.0;0.0
+AV.BEIRA MAR;[bus.Stop@340f438e];0.0;0.0
+AV.DR.MANUEL T.RUELA;[bus.Stop@30c7da1e];0.0;0.0
+R.LATINO COELHO;[bus.Stop@5b464ce8];0.0;0.0
+R.5;[bus.Stop@57829d67, bus.Stop@19dfb72a, bus.Stop@17c68925];0.0;0.0
+R.HERÓIS DO ULTRAMAR;[bus.Stop@7e0ea639];0.0;0.0
+ESTR.N.107-FREIXIEIRO;[bus.Stop@3d24753a, bus.Stop@59a6e353];0.0;0.0
+R.DAMIÃO GÓIS;[bus.Stop@7a0ac6e3, bus.Stop@71be98f5, bus.Stop@6fadae5d];0.0;0.0
+R.CÂNDIDO REIS;[bus.Stop@17f6480, bus.Stop@2d6e8792, bus.Stop@2812cbfa, bus.Stop@2acf57e3, bus.Stop@506e6d5e, bus.Stop@96532d6, bus.Stop@3796751b, bus.Stop@67b64c45, bus.Stop@4411d970];0.0;0.0
+R.PAULO GAMA;[bus.Stop@6442b0a6, bus.Stop@60f82f98, bus.Stop@35f983a6, bus.Stop@7f690630];0.0;0.0
+R.ARNALDO LEITE;[bus.Stop@edf4efb];0.0;0.0
+R.ANTÓNIO CARDOSO;[bus.Stop@2f7a2457, bus.Stop@566776ad];0.0;0.0
+R.ENG.FARINAS ALMEIDA;[bus.Stop@6108b2d7, bus.Stop@1554909b, bus.Stop@6bf256fa];0.0;0.0
+PR.MARQUÊS POMBAL;[bus.Stop@6cd8737, bus.Stop@22f71333, bus.Stop@13969fbe, bus.Stop@6aaa5eb0, bus.Stop@3498ed];0.0;0.0
+R.ENG.FERNANDO PINTO OLIVEIRA;[bus.Stop@1a407d53, bus.Stop@3d8c7aca];0.0;0.0
+R.ASPRELA;[bus.Stop@5ebec15];0.0;0.0
+R.MANUEL FERREIRA PINTO;[bus.Stop@21bcffb5, bus.Stop@380fb434, bus.Stop@668bc3d5, bus.Stop@3cda1055, bus.Stop@7a5d012c, bus.Stop@3fb6a447];0.0;0.0
+LGO.ANTÓNIO CÁLEM;[bus.Stop@79b4d0f];0.0;0.0
+R.BELMONTE;[bus.Stop@6b2fad11, bus.Stop@79698539];0.0;0.0
+AV.CONDE;[bus.Stop@73f792cf, bus.Stop@2ed94a8b, bus.Stop@38082d64, bus.Stop@dfd3711, bus.Stop@42d3bd8b, bus.Stop@26ba2a48];0.0;0.0
+VIA ACESSO CONTINENTE;[bus.Stop@5f2050f6];0.0;0.0
+R.SERRALVES;[bus.Stop@3b81a1bc, bus.Stop@64616ca2];0.0;0.0
+PR.BATALHA;[bus.Stop@13fee20c, bus.Stop@4e04a765, bus.Stop@783e6358];0.0;0.0
+AV.DESPORTOS;[bus.Stop@17550481];0.0;0.0
+R.TOURAIS;[bus.Stop@735f7ae5, bus.Stop@180bc464, bus.Stop@1324409e, bus.Stop@2c6a3f77];0.0;0.0
+R.SANTA CASA MESERICORDIA MAIA;[bus.Stop@246ae04d];0.0;0.0
+AV.COMERCIO  LEIXÕES;[bus.Stop@62043840, bus.Stop@5315b42e, bus.Stop@2ef9b8bc, bus.Stop@5d624da6];0.0;0.0
+PRACETA OLIVEIRAS;[bus.Stop@1e67b872, bus.Stop@60addb54];0.0;0.0
+AV.CALOUSTE GULBENKIAM;[bus.Stop@3f2a3a5, bus.Stop@4cb2c100, bus.Stop@6fb554cc, bus.Stop@614c5515, bus.Stop@77b52d12, bus.Stop@2d554825, bus.Stop@68837a77];0.0;0.0
+R.DR.JOSÉ A.MARQUES;[bus.Stop@6be46e8f, bus.Stop@3567135c];0.0;0.0
+R.CONDE FERREIRA;[bus.Stop@327471b5, bus.Stop@4157f54e];0.0;0.0
+R.BOAVISTA;[bus.Stop@90f6bfd, bus.Stop@47f6473];0.0;0.0
+R.PINTO BESSA;[bus.Stop@15975490, bus.Stop@6b143ee9, bus.Stop@1936f0f5];0.0;0.0
+R.CONCHAS;[bus.Stop@6615435c, bus.Stop@4909b8da];0.0;0.0
+R.DIREITA VISO;[bus.Stop@3a03464];0.0;0.0
+R.ALFREDO KEIL;[bus.Stop@2d3fcdbd, bus.Stop@617c74e5];0.0;0.0
+R.CIDRES;[bus.Stop@6537cf78, bus.Stop@67b6d4ae, bus.Stop@34b7bfc0, bus.Stop@366e2eef, bus.Stop@6df97b55, bus.Stop@3cbbc1e0, bus.Stop@35fb3008, bus.Stop@7225790e, bus.Stop@54a097cc, bus.Stop@36f6e879, bus.Stop@5a61f5df, bus.Stop@3551a94];0.0;0.0
+R.FRANCOS;[bus.Stop@531be3c5, bus.Stop@52af6cff];0.0;0.0
+AV.COMBATENTES G.GUERRA;[bus.Stop@735b478, bus.Stop@2c9f9fb0, bus.Stop@2096442d];0.0;0.0
+PR.MACHADO SANTOS;[bus.Stop@9f70c54];0.0;0.0
+R.N.SRA.BOM DESPACHO;[bus.Stop@234bef66];0.0;0.0
+R.BOLHÃO;[bus.Stop@737996a0, bus.Stop@61dc03ce];0.0;0.0
+R.FONTAINHAS;[bus.Stop@50f8360d];0.0;0.0
+AV.N.SRA.NATIVIDADE;[bus.Stop@2cb4c3ab, bus.Stop@13c78c0b, bus.Stop@12843fce, bus.Stop@3dd3bcd];0.0;0.0
+R.VERA CRUZ;[bus.Stop@97e1986];0.0;0.0
+R.SRA.PENHA;[bus.Stop@26f67b76];0.0;0.0
+LGO.S.SEBASTIÃO;[bus.Stop@153f5a29, bus.Stop@7f560810];0.0;0.0
+R.BARREIRO;[bus.Stop@69d9c55, bus.Stop@13a57a3b, bus.Stop@7ca48474, bus.Stop@337d0578, bus.Stop@59e84876, bus.Stop@61a485d2, bus.Stop@39fb3ab6, bus.Stop@6276ae34, bus.Stop@7946e1f4];0.0;0.0
+R.PROF.SOUSA JÚNIOR;[bus.Stop@3c09711b];0.0;0.0
+R.ORIENTAL;[bus.Stop@5cc7c2a6, bus.Stop@b97c004, bus.Stop@4590c9c3, bus.Stop@32e6e9c3, bus.Stop@5056dfcb, bus.Stop@6574b225];0.0;0.0
+R.CERRO;[bus.Stop@2669b199, bus.Stop@2344fc66];0.0;0.0
+R.N.SRA.AMPARO;[bus.Stop@458ad742, bus.Stop@5afa04c, bus.Stop@6ea12c19, bus.Stop@6a024a67, bus.Stop@7921b0a2, bus.Stop@174d20a];0.0;0.0
+R.DOMINGOS BARREIROS TOMÉ;[bus.Stop@66d2e7d9, bus.Stop@1efbd816];0.0;0.0
+R.RESTAURAÇÃO;[bus.Stop@6a2bcfcb, bus.Stop@4de8b406, bus.Stop@3c756e4d, bus.Stop@7c0e2abd, bus.Stop@48eff760, bus.Stop@402f32ff, bus.Stop@573f2bb1, bus.Stop@5ae9a829, bus.Stop@6d8a00e3, bus.Stop@548b7f67, bus.Stop@7ac7a4e4];0.0;0.0
+R.JOSÉ MARIANI;[bus.Stop@6d78f375];0.0;0.0
+R.ANGOLA;[bus.Stop@50c87b21, bus.Stop@5f375618];0.0;0.0
+R.ANT.JOSE ALMEIDA;[bus.Stop@1810399e, bus.Stop@32d992b2, bus.Stop@215be6bb, bus.Stop@4439f31e, bus.Stop@5dfcfece];0.0;0.0
+LGO.ALJUBARROTA;[bus.Stop@23ceabc1];0.0;0.0
+R.BREINER;[bus.Stop@5d5eef3d];0.0;0.0
+R.MÁRTIRES LIBERDADE;[bus.Stop@56f4468b];0.0;0.0
+R.IGREJA MADALENA;[bus.Stop@6cc4c815, bus.Stop@3a82f6ef, bus.Stop@100fc185];0.0;0.0
+R.COELHO NETO;[bus.Stop@643b1d11];0.0;0.0
+AV.CIDADE XANGAI;[bus.Stop@2ef5e5e3, bus.Stop@36d4b5c, bus.Stop@6d00a15d, bus.Stop@51efea79];0.0;0.0
+R.NOVA S.GEMIL;[bus.Stop@5034c75a, bus.Stop@396a51ab];0.0;0.0
+R.DR.FERREIRA SILVA;[bus.Stop@51081592, bus.Stop@7f9a81e8];0.0;0.0
+R.RICARDO SEVERO;[bus.Stop@9629756];0.0;0.0
+R.ILHA S.MIGUEL;[bus.Stop@62ee68d8, bus.Stop@735b5592];0.0;0.0
+R.EGAS MONIZ;[bus.Stop@58651fd0];0.0;0.0
+R.MOSTEIRO;[bus.Stop@4520ebad, bus.Stop@5419f379, bus.Stop@7dc7cbad, bus.Stop@d2cc05a, bus.Stop@4f933fd1, bus.Stop@548a9f61, bus.Stop@1753acfe, bus.Stop@7c16905e, bus.Stop@2a2d45ba, bus.Stop@2a5ca609, bus.Stop@20e2cbe0, bus.Stop@68be2bc2];0.0;0.0
+R.IGREJA;[bus.Stop@28feb3fa, bus.Stop@675d3402, bus.Stop@51565ec2, bus.Stop@482f8f11];0.0;0.0
+PRACETA HEROIS ULTRAMAR;[bus.Stop@1593948d, bus.Stop@1b604f19, bus.Stop@7823a2f9];0.0;0.0
+R.D.AFONSO II;[bus.Stop@4cc0edeb];0.0;0.0
+R.PORTO MOURO;[bus.Stop@457e2f02, bus.Stop@5c7fa833, bus.Stop@39aeed2f, bus.Stop@724af044];0.0;0.0
+RUA ALFREDO DOS SANTOS OLIVEIRA;[bus.Stop@4678c730];0.0;0.0
+R.BÉLGICA;[bus.Stop@6767c1fc, bus.Stop@29ee9faa, bus.Stop@c038203, bus.Stop@cc285f4, bus.Stop@55f3ddb1, bus.Stop@8bd1b6a, bus.Stop@18be83e4, bus.Stop@cb5822, bus.Stop@4b9e13df, bus.Stop@2b98378d, bus.Stop@475530b9, bus.Stop@1d057a39, bus.Stop@26be92ad, bus.Stop@4c70fda8, bus.Stop@224edc67, bus.Stop@14acaea5, bus.Stop@46d56d67];0.0;0.0
+R.JORNAL NOTÍCIAS;[bus.Stop@d8355a8, bus.Stop@59fa1d9b, bus.Stop@28d25987, bus.Stop@4501b7af];0.0;0.0
+R.TRINDADE;[bus.Stop@523884b2, bus.Stop@5b275dab, bus.Stop@61832929, bus.Stop@29774679];0.0;0.0
+VIA PANORÂMICA EDGAR CARDOSO;[bus.Stop@3ffc5af1];0.0;0.0
+R.S.BRÁS;[bus.Stop@5e5792a0, bus.Stop@26653222, bus.Stop@3532ec19, bus.Stop@68c4039c, bus.Stop@ae45eb6, bus.Stop@59f99ea, bus.Stop@27efef64, bus.Stop@6f7fd0e6];0.0;0.0
+R.1 DE MAIO;[bus.Stop@47c62251];0.0;0.0
+R.ILHAR MOURISCA;[bus.Stop@3e6fa38a, bus.Stop@66a3ffec];0.0;0.0
+R.CARVALHA DE BAIXO;[bus.Stop@77caeb3e];0.0;0.0
+RUA DE SARAH AFONSO;[bus.Stop@1e88b3c];0.0;0.0
+RUA Nº.1;[bus.Stop@42d80b78];0.0;0.0
+R.MANUEL PINTO AZEVEDO;[bus.Stop@3bfdc050, bus.Stop@1bce4f0a, bus.Stop@5e3a8624, bus.Stop@5c3bd550, bus.Stop@91161c7, bus.Stop@604ed9f0, bus.Stop@6a4f787b, bus.Stop@685cb137];0.0;0.0
+AV.GUSTAVO EIFFEL;[bus.Stop@6a41eaa2, bus.Stop@7cd62f43, bus.Stop@6d4b1c02, bus.Stop@6093dd95];0.0;0.0
+PEDRO HISPÂNO;[bus.Stop@5622fdf];0.0;0.0
+R.AMIAL;[bus.Stop@4883b407, bus.Stop@7d9d1a19, bus.Stop@39c0f4a, bus.Stop@1794d431, bus.Stop@42e26948, bus.Stop@57baeedf, bus.Stop@343f4d3d, bus.Stop@53b32d7, bus.Stop@5442a311, bus.Stop@548e7350, bus.Stop@1a968a59];0.0;0.0
+R.CONDE COVILHÃ;[bus.Stop@4667ae56, bus.Stop@77cd7a0, bus.Stop@204f30ec];0.0;0.0
+AV.DESCOBRIMENTOS;[bus.Stop@e25b2fe, bus.Stop@754ba872, bus.Stop@146ba0ac, bus.Stop@4dfa3a9d, bus.Stop@6eebc39e];0.0;0.0
+R.PROF.MANUEL CARDOSO RIBEIRO;[bus.Stop@464bee09];0.0;0.0
+R.JORGE FERREIRINHA;[bus.Stop@f6c48ac, bus.Stop@13deb50e, bus.Stop@239963d8, bus.Stop@3abbfa04, bus.Stop@57fffcd7, bus.Stop@31ef45e3];0.0;0.0
+R.VALE FORMOSO;[bus.Stop@598067a5, bus.Stop@3c0ecd4b, bus.Stop@14bf9759, bus.Stop@5f341870, bus.Stop@553f17c, bus.Stop@4f7d0008];0.0;0.0
+AV.DIOGO LEITE;[bus.Stop@271053e1, bus.Stop@589838eb];0.0;0.0
+R.ALEXANDRE BRAGA;[bus.Stop@42dafa95, bus.Stop@6500df86, bus.Stop@402a079c];0.0;0.0
+R.D.JOÃO IV;[bus.Stop@59ec2012, bus.Stop@4cf777e8, bus.Stop@2f686d1f];0.0;0.0
+R.GENERAL HUMBERTO DELGADO;[bus.Stop@3fee9989, bus.Stop@73ad2d6, bus.Stop@7085bdee, bus.Stop@1ce92674, bus.Stop@5700d6b1, bus.Stop@6fd02e5, bus.Stop@5bcab519, bus.Stop@e45f292];0.0;0.0
+R.CEGONHAS;[bus.Stop@5f2108b5, bus.Stop@31a5c39e, bus.Stop@3f49dace, bus.Stop@1e397ed7];0.0;0.0
+AV.ANTÓNIO SANTOS LEITE;[bus.Stop@490ab905, bus.Stop@56ac3a89, bus.Stop@27c20538, bus.Stop@72d818d1, bus.Stop@6e06451e];0.0;0.0
+R.OCIDENTAL;[bus.Stop@59494225, bus.Stop@6e1567f1, bus.Stop@5cb9f472, bus.Stop@cb644e, bus.Stop@13805618, bus.Stop@56ef9176, bus.Stop@4566e5bd];0.0;0.0
+R.N.SRA. DA SILVA;[bus.Stop@1ed4004b, bus.Stop@ff5b51f];0.0;0.0
+R.AZEVÊDO;[bus.Stop@25bbe1b6, bus.Stop@5702b3b1, bus.Stop@69ea3742, bus.Stop@4b952a2d];0.0;0.0
+R.TAIPAS;[bus.Stop@3159c4b8];0.0;0.0
+R.PROF.AMADEU SANTOS;[bus.Stop@73846619, bus.Stop@4bec1f0c];0.0;0.0
+R.QUINTA AMARELA;[bus.Stop@29ca901e];0.0;0.0
+R.ANÍBAL CUNHA;[bus.Stop@5649fd9b, bus.Stop@6adede5, bus.Stop@2d928643];0.0;0.0
+LGO.CAPELA;[bus.Stop@5025a98f, bus.Stop@49993335];0.0;0.0
+R.DELFIM MAIA;[bus.Stop@20322d26];0.0;0.0
+R.CASTELOS;[bus.Stop@192b07fd, bus.Stop@64bfbc86, bus.Stop@64bf3bbf];0.0;0.0
+R.CAPITÃO HENRIQUE GALVÃO;[bus.Stop@55d56113];0.0;0.0
+AV.ENG.LUDGERO MARQUES;[bus.Stop@148080bb, bus.Stop@dc24521, bus.Stop@10bdf5e5];0.0;0.0
+PR.ESTAÇÃO;[bus.Stop@6e1ec318, bus.Stop@7e0b0338, bus.Stop@617faa95, bus.Stop@1e127982];0.0;0.0
+AV.FONTES PEREIRA MELO;[bus.Stop@60c6f5b, bus.Stop@2038ae61, bus.Stop@3c0f93f1, bus.Stop@31dc339b];0.0;0.0
+R.BOUÇA CAVADINHA;[bus.Stop@544fe44c];0.0;0.0
+R.CAMPISMO;[bus.Stop@31610302, bus.Stop@71318ec4, bus.Stop@21213b92];0.0;0.0
+R.CRASTO;[bus.Stop@a67c67e, bus.Stop@3327bd23, bus.Stop@4e1d422d, bus.Stop@66480dd7, bus.Stop@52a86356, bus.Stop@5ce81285, bus.Stop@78c03f1f, bus.Stop@5ec0a365, bus.Stop@4fe3c938];0.0;0.0
+R.MONTE MINA;[bus.Stop@5383967b, bus.Stop@2ac273d3, bus.Stop@71423665];0.0;0.0
+TV.OUTEIRO TINE;[bus.Stop@20398b7c];0.0;0.0
+R.PINHEIRO MANSO;[bus.Stop@6fc6f14e, bus.Stop@56235b8e];0.0;0.0
+LGO.PADRE JOAQUIM SANTOS;[bus.Stop@3632be31, bus.Stop@5abca1e0];0.0;0.0
+R.ALEGRIA;[bus.Stop@2286778, bus.Stop@4e9ba398, bus.Stop@6d7b4f4c, bus.Stop@527740a2, bus.Stop@13a5fe33, bus.Stop@3108bc];0.0;0.0
+R.MARECHAL SALDANHA;[bus.Stop@370736d9, bus.Stop@5f9d02cb, bus.Stop@63753b6d, bus.Stop@6b09bb57];0.0;0.0
+ESTR.CIRCUNVALAÇÃO;[bus.Stop@6536e911, bus.Stop@520a3426, bus.Stop@18eed359, bus.Stop@3e9b1010, bus.Stop@6c3708b3, bus.Stop@6f1fba17, bus.Stop@185d8b6, bus.Stop@67784306, bus.Stop@335eadca, bus.Stop@210366b4, bus.Stop@eec5a4a, bus.Stop@2b2948e2, bus.Stop@6ddf90b0, bus.Stop@57536d79, bus.Stop@3b0143d3, bus.Stop@5a8e6209, bus.Stop@4b4523f8, bus.Stop@731a74c, bus.Stop@369f73a2, bus.Stop@1f28c152, bus.Stop@7d907bac, bus.Stop@7791a895, bus.Stop@3a5ed7a6, bus.Stop@6325a3ee, bus.Stop@1d16f93d, bus.Stop@67b92f0a, bus.Stop@2b9627bc, bus.Stop@65e2dbf3, bus.Stop@4f970963, bus.Stop@61f8bee4, bus.Stop@7b49cea0, bus.Stop@887af79, bus.Stop@7fac631b, bus.Stop@5b87ed94, bus.Stop@6e0e048a, bus.Stop@5bc79255, bus.Stop@47ef968d, bus.Stop@23e028a9, bus.Stop@3dd4520b, bus.Stop@5ae63ade, bus.Stop@610694f1, bus.Stop@43814d18, bus.Stop@5c5a1b69, bus.Stop@3701eaf6, bus.Stop@627551fb, bus.Stop@2b552920, bus.Stop@2758fe70, bus.Stop@1f36e637, bus.Stop@578486a3, bus.Stop@551aa95a, bus.Stop@35d176f7, bus.Stop@1dfe2924, bus.Stop@6ebc05a6, bus.Stop@6e6c3152, bus.Stop@50b494a6, bus.Stop@3cef309d, bus.Stop@32709393, bus.Stop@3d99d22e, bus.Stop@49fc609f, bus.Stop@cd2dae5, bus.Stop@3a883ce7, bus.Stop@4973813a, bus.Stop@6321e813, bus.Stop@79be0360, bus.Stop@22a67b4, bus.Stop@57855c9a, bus.Stop@3b084709, bus.Stop@3224f60b, bus.Stop@63e2203c, bus.Stop@1efed156, bus.Stop@6737fd8f, bus.Stop@72b6cbcc, bus.Stop@a7e666, bus.Stop@68bbe345, bus.Stop@30b8a058, bus.Stop@7494e528, bus.Stop@4bbfb90a, bus.Stop@7c29daf3, bus.Stop@9660f4e, bus.Stop@5a8806ef, bus.Stop@6c49835d, bus.Stop@5e853265, bus.Stop@67205a84, bus.Stop@7d0587f1, bus.Stop@5d76b067, bus.Stop@2a17b7b6];0.0;0.0
+AV.SALGADO ZENHA;[bus.Stop@4f063c0a, bus.Stop@1e6d1014, bus.Stop@76707e36, bus.Stop@614ddd49];0.0;0.0
+R.ENG. MAIA BERNARDO;[bus.Stop@1f554b06];0.0;0.0
+R.N.SRA.DO AMPARO;[bus.Stop@694e1548, bus.Stop@1c3a4799, bus.Stop@131276c2, bus.Stop@26aa12dd];0.0;0.0
+R.CRUZES;[bus.Stop@3fd7a715, bus.Stop@711f39f9, bus.Stop@71bbf57e];0.0;0.0
+R.QUATRO CAMINHOS;[bus.Stop@7f13d6e, bus.Stop@51cdd8a];0.0;0.0
+R.AURÉLIO PAZ DOS REIS;[bus.Stop@d44fc21];0.0;0.0
+VIA DE ARDEGÃES;[bus.Stop@23faf8f2, bus.Stop@2d6eabae, bus.Stop@4e7dc304, bus.Stop@64729b1e, bus.Stop@10bbd20a, bus.Stop@48503868, bus.Stop@6895a785];0.0;0.0
+R.GAMA BARROS;[bus.Stop@184f6be2];0.0;0.0
+R.DR.ALBERTO SOUSA VALENTE;[bus.Stop@56aac163];0.0;0.0
+R.AGRA;[bus.Stop@1f7030a6, bus.Stop@5a1c0542, bus.Stop@396f6598];0.0;0.0
+ALAM.HERNÂNI MONTEIRO;[bus.Stop@394e1a0f, bus.Stop@27a5f880, bus.Stop@1d29cf23, bus.Stop@5f282abb, bus.Stop@167fdd33, bus.Stop@1e965684, bus.Stop@4d95d2a2];0.0;0.0
+R.COSTA CABRAL;[bus.Stop@53f65459, bus.Stop@3b088d51, bus.Stop@1786dec2, bus.Stop@74650e52, bus.Stop@15d0c81b, bus.Stop@6acdbdf5, bus.Stop@4b1c1ea0, bus.Stop@17579e0f, bus.Stop@4d41cee, bus.Stop@3712b94, bus.Stop@2833cc44, bus.Stop@33f88ab, bus.Stop@27a8c74e, bus.Stop@2d8f65a4, bus.Stop@1b68ddbd, bus.Stop@646d64ab, bus.Stop@59e5ddf, bus.Stop@536aaa8d, bus.Stop@e320068, bus.Stop@1f57539, bus.Stop@76f2b07d, bus.Stop@704a52ec];0.0;0.0
+R.CENTRAL FRANCOS;[bus.Stop@6ee52dcd, bus.Stop@4493d195];0.0;0.0
+LGO.MOINHO VENTO;[bus.Stop@2781e022];0.0;0.0
+R.ANTÓNIO AROSO;[bus.Stop@57e1b0c, bus.Stop@4232c52b];0.0;0.0
+R.1 MAIO (N 105);[bus.Stop@1877ab81, bus.Stop@305fd85d, bus.Stop@458c1321, bus.Stop@11438d26, bus.Stop@34cd072c, bus.Stop@7a1ebcd8, bus.Stop@5faeada1, bus.Stop@528931cf];0.0;0.0
+R.JOSÉ JOAQUIM R.TELES;[bus.Stop@ea1a8d5, bus.Stop@1563da5, bus.Stop@2bbf4b8b, bus.Stop@30a3107a, bus.Stop@33c7e1bb, bus.Stop@34c4973, bus.Stop@52feb982, bus.Stop@7a765367];0.0;0.0
+R.31 JANEIRO;[bus.Stop@76b0bfab, bus.Stop@17d677df, bus.Stop@3043fe0e, bus.Stop@78e67e0a];0.0;0.0
+R.MAURICIO PEREIRA PINTO;[bus.Stop@bd8db5a];0.0;0.0
+R.MAINÇA;[bus.Stop@2f943d71, bus.Stop@80503];0.0;0.0
+R.CÂNDIDA SÁ ALBERGARIA;[bus.Stop@4b553d26];0.0;0.0
+R.NOVA REGADO;[bus.Stop@69a3d1d];0.0;0.0
+R.TEATRO;[bus.Stop@86be70a];0.0;0.0
+R.SENHOR MATOSINHOS;[bus.Stop@480bdb19, bus.Stop@2a556333];0.0;0.0
+R.DR.JOSÉ AGUIAR NOGUEIRA;[bus.Stop@7d70d1b1];0.0;0.0
+R.JACINTOS;[bus.Stop@2a742aa2, bus.Stop@3cb1ffe6];0.0;0.0
+TV.CAVADA NOVA;[bus.Stop@3dfc5fb8, bus.Stop@467aecef, bus.Stop@4d50efb8, bus.Stop@7e2d773b];0.0;0.0
+AV.ANT.MACEDO;[bus.Stop@2173f6d9, bus.Stop@307f6b8c, bus.Stop@7a187f14, bus.Stop@6f195bc3, bus.Stop@51e2adc7, bus.Stop@1a8a8f7c];0.0;0.0
+R.FERNÃO MAGALHÃES;[bus.Stop@2353b3e6, bus.Stop@631330c, bus.Stop@42f93a98];0.0;0.0
+R.GONDIVAI;[bus.Stop@c46bcd4, bus.Stop@3234e239, bus.Stop@3d921e20, bus.Stop@36b4cef0, bus.Stop@fad74ee, bus.Stop@1a1d6a08];0.0;0.0
+AV.ASSOC.EMP.DE PORTUGAL;[bus.Stop@37d31475, bus.Stop@27808f31, bus.Stop@436e852b, bus.Stop@32d2fa64, bus.Stop@1d8d30f7];0.0;0.0
+R.ANTÓNIO CÂNDIDO;[bus.Stop@3e57cd70, bus.Stop@9a7504c];0.0;0.0
+TÚNEL RIBEIRA;[bus.Stop@2c039ac6, bus.Stop@587d1d39];0.0;0.0
+R.BARTOLOMEU VELHO;[bus.Stop@58c1670b, bus.Stop@6b57696f];0.0;0.0
+R.REGADIO;[bus.Stop@5bb21b69, bus.Stop@6b9651f3, bus.Stop@38bc8ab5, bus.Stop@687080dc, bus.Stop@23d2a7e8, bus.Stop@7a9273a8, bus.Stop@26a7b76d];0.0;0.0
+AV.ESCULTORES;[bus.Stop@4abdb505, bus.Stop@7ce6a65d, bus.Stop@1500955a, bus.Stop@e874448, bus.Stop@29b5cd00, bus.Stop@60285225];0.0;0.0
+R.DR.DOMINGOS MATOS;[bus.Stop@7113b13f, bus.Stop@45820e51];0.0;0.0
+R.Dr MANUEL FIGUEIREDO;[bus.Stop@42d8062c];0.0;0.0
+AV.DR.DOMINGOS GONÇALVES DE SÁ;[bus.Stop@6043cd28];0.0;0.0
+AV.ANTÓNIO COELHO MOREIRA;[bus.Stop@cb51256];0.0;0.0
+AV.LIDADOR MAIA;[bus.Stop@59906517, bus.Stop@5bfbf16f, bus.Stop@25af5db5, bus.Stop@12cdcf4];0.0;0.0
+R.CANTOR ZECA AFONSO;[bus.Stop@5bcea91b];0.0;0.0
+R.ANTÓNIO MANUEL SEQUEIRA;[bus.Stop@5f3a4b84, bus.Stop@27f723, bus.Stop@670b40af, bus.Stop@4923ab24, bus.Stop@44c8afef];0.0;0.0
+R.MIOSÓTIS;[bus.Stop@7b69c6ba, bus.Stop@46daef40, bus.Stop@12f41634, bus.Stop@13c27452];0.0;0.0
+R.BELIDE;[bus.Stop@262b2c86, bus.Stop@371a67ec];0.0;0.0
+R.CLEMENTE MENERES;[bus.Stop@5ed828d];0.0;0.0
+TV.SENRA;[bus.Stop@50d0686];0.0;0.0
+PR.GUILHERME GOMES FERNANDES;[bus.Stop@7a3d45bd, bus.Stop@1e7c7811];0.0;0.0
+R.FRANCISCO SANCHES;[bus.Stop@77ec78b9];0.0;0.0
+R.SENHOR;[bus.Stop@1a3869f4, bus.Stop@a38d7a3, bus.Stop@77f99a05];0.0;0.0
+R.ALEXANDRE HERCULANO;[bus.Stop@63440df3, bus.Stop@3aeaafa6, bus.Stop@76a3e297];0.0;0.0
+R.ANTÓNIO PATRÍCIO;[bus.Stop@4d3167f4];0.0;0.0
+RUA FERREIRA DE CASTRO;[bus.Stop@ed9d034, bus.Stop@6121c9d6];0.0;0.0
+LGO.MIGUEL BOMBARDA;[bus.Stop@87f383f];0.0;0.0
+PR.LIBERDADE;[bus.Stop@4eb7f003, bus.Stop@eafc191];0.0;0.0
+R.STA.CATARINA;[bus.Stop@612fc6eb, bus.Stop@1060b431, bus.Stop@612679d6, bus.Stop@11758f2a];0.0;0.0
+R.FERNANDES TOMÁS;[bus.Stop@e720b71, bus.Stop@1b26f7b2];0.0;0.0
+R.N.SRA.FÁTIMA;[bus.Stop@491cc5c9];0.0;0.0
+AV.INFANTE SAGRES;[bus.Stop@74ad1f1f, bus.Stop@6a1aab78, bus.Stop@462d5aee, bus.Stop@69b0fd6f, bus.Stop@757942a1, bus.Stop@4a87761d];0.0;0.0
+R.LAGOA;[bus.Stop@66d1af89];0.0;0.0
+R.MANUEL ALVES REIS;[bus.Stop@8646db9, bus.Stop@37374a5e];0.0;0.0
+R.CONTUMIL;[bus.Stop@4671e53b, bus.Stop@2db7a79b, bus.Stop@6950e31, bus.Stop@b7dd107];0.0;0.0
+AV.GOMES JUNIOR;[bus.Stop@42eca56e, bus.Stop@52f759d7, bus.Stop@7cbd213e, bus.Stop@192d3247, bus.Stop@3ecd23d9];0.0;0.0
+AV.ANTUNES GUIMARÃES;[bus.Stop@569cfc36, bus.Stop@43bd930a, bus.Stop@33723e30, bus.Stop@64f6106c, bus.Stop@553a3d88, bus.Stop@7a30d1e6, bus.Stop@5891e32e, bus.Stop@cb0ed20, bus.Stop@8e24743];0.0;0.0
+R.ABEL SALAZAR;[bus.Stop@74a10858];0.0;0.0
+R.ENG.DUARTE PACHECO;[bus.Stop@23fe1d71, bus.Stop@28ac3dc3];0.0;0.0
+R.SOL POENTE;[bus.Stop@32eebfca, bus.Stop@4e718207, bus.Stop@1d371b2d, bus.Stop@543c6f6d];0.0;0.0
+R.MONTE BURGOS;[bus.Stop@13eb8acf, bus.Stop@51c8530f, bus.Stop@7403c468, bus.Stop@43738a82, bus.Stop@c81cdd1, bus.Stop@1fc2b765, bus.Stop@75881071];0.0;0.0
+R.LINHARES;[bus.Stop@2a70a3d8, bus.Stop@289d1c02, bus.Stop@22eeefeb, bus.Stop@17d0685f, bus.Stop@3891771e, bus.Stop@78ac1102];0.0;0.0
+R. AREIAS;[bus.Stop@2de8284b, bus.Stop@396e2f39, bus.Stop@a74868d, bus.Stop@12c8a2c0, bus.Stop@7e0e6aa2, bus.Stop@365185bd, bus.Stop@18bf3d14, bus.Stop@4fb64261];0.0;0.0
+R.CONDOMINHAS;[bus.Stop@42607a4f, bus.Stop@782663d3, bus.Stop@1990a65e, bus.Stop@64485a47, bus.Stop@25bbf683];0.0;0.0
+R.SRA.LUZ;[bus.Stop@6ec8211c, bus.Stop@7276c8cd];0.0;0.0
+R.ARROTEIA;[bus.Stop@544a2ea6, bus.Stop@2e3fc542, bus.Stop@150c158, bus.Stop@4524411f, bus.Stop@401e7803, bus.Stop@10dba097];0.0;0.0
+R.CONDE CASTELO MELHOR;[bus.Stop@1786f9d5, bus.Stop@704d6e83];0.0;0.0
+R.LARANJEIRAS;[bus.Stop@43a0cee9, bus.Stop@eb21112, bus.Stop@2eda0940, bus.Stop@3578436e];0.0;0.0
+R.NOVA SANTEGÃOS;[bus.Stop@706a04ae, bus.Stop@6eceb130, bus.Stop@10a035a0, bus.Stop@67b467e9];0.0;0.0
+R.D.HENRIQUE CERNACHE;[bus.Stop@47db50c5, bus.Stop@5c072e3f, bus.Stop@4d1b0d2a, bus.Stop@954b04f, bus.Stop@149494d8, bus.Stop@710726a3];0.0;0.0
+R.SOARES REIS;[bus.Stop@646007f4, bus.Stop@481a15ff, bus.Stop@78186a70, bus.Stop@306279ee, bus.Stop@545997b1, bus.Stop@4cf4d528];0.0;0.0
+NOVO ARRUAMENTO;[bus.Stop@77846d2c, bus.Stop@548ad73b, bus.Stop@4c762604, bus.Stop@2641e737, bus.Stop@727803de];0.0;0.0
+R.BOM SUCESSO;[bus.Stop@704921a5, bus.Stop@df27fae];0.0;0.0
+R.PEDRO ÁLVARES CABRAL;[bus.Stop@24a35978, bus.Stop@16f7c8c1, bus.Stop@2f0a87b3, bus.Stop@319b92f3, bus.Stop@fcd6521, bus.Stop@27d415d9, bus.Stop@5c18298f];0.0;0.0
+R.VELOSO SALGADO;[bus.Stop@31f924f5, bus.Stop@5579bb86, bus.Stop@5204062d, bus.Stop@4fcd19b3];0.0;0.0
+R.ESCOLA MANINHO;[bus.Stop@376b4233, bus.Stop@2fd66ad3];0.0;0.0
+ALAM.DAS ANTAS;[bus.Stop@5d11346a, bus.Stop@7a36aefa, bus.Stop@17211155, bus.Stop@b3d7190, bus.Stop@5fdba6f9, bus.Stop@10d59286];0.0;0.0
+R.SENDIM;[bus.Stop@fe18270, bus.Stop@6fb0d3ed];0.0;0.0
+R.BONJÓIA;[bus.Stop@6dde5c8c, bus.Stop@5123a213, bus.Stop@52525845];0.0;0.0
+R.CAMÕES;[bus.Stop@3b94d659, bus.Stop@24b1d79b, bus.Stop@68ceda24, bus.Stop@281e3708];0.0;0.0
+R.SÁ E MELO;[bus.Stop@35a50a4c];0.0;0.0
+R.PENEDO;[bus.Stop@1f021e6c];0.0;0.0
+R.CONDE AVRANCHES;[bus.Stop@103f852, bus.Stop@587c290d];0.0;0.0
+R.CORONEL CARLOS MOREIRA;[bus.Stop@4516af24, bus.Stop@4ae82894, bus.Stop@543788f3, bus.Stop@6d3af739, bus.Stop@1da51a35, bus.Stop@16022d9d, bus.Stop@7e9a5fbe, bus.Stop@44a3ec6b, bus.Stop@71623278, bus.Stop@768b970c];0.0;0.0
+R.EDUARDO J.R.FIGUEIRA;[bus.Stop@5a4041cc, bus.Stop@15b3e5b, bus.Stop@61ca2dfa, bus.Stop@4b53f538];0.0;0.0
+R.D.AFONSO HENRIQUES;[bus.Stop@134593bf, bus.Stop@4bb4de6a, bus.Stop@7ba18f1b, bus.Stop@2f8f5f62, bus.Stop@1068e947, bus.Stop@7dc222ae, bus.Stop@aecb35a, bus.Stop@5fcd892a, bus.Stop@8b87145, bus.Stop@6483f5ae, bus.Stop@b9afc07, bus.Stop@382db087, bus.Stop@73d4cc9e, bus.Stop@80169cf, bus.Stop@5427c60c, bus.Stop@15bfd87, bus.Stop@543e710e, bus.Stop@57f23557, bus.Stop@3d0f8e03, bus.Stop@6366ebe0, bus.Stop@44f75083, bus.Stop@2698dc7, bus.Stop@43d7741f, bus.Stop@17baae6e, bus.Stop@69379752, bus.Stop@27fe3806, bus.Stop@5f71c76a, bus.Stop@1d7acb34, bus.Stop@48a242ce, bus.Stop@1e4a7dd4, bus.Stop@4f51b3e0, bus.Stop@4b9e255];0.0;0.0
+R.DE ALTOS;[bus.Stop@5e57643e, bus.Stop@133e16fd];0.0;0.0
+R.N.SRA FÁTIMA;[bus.Stop@51b279c9];0.0;0.0
+R.MANUEL M.COSTA JÚNIOR;[bus.Stop@1ad282e0, bus.Stop@7f416310, bus.Stop@1cab0bfb, bus.Stop@5e955596, bus.Stop@50de0926];0.0;0.0
+R.BOA NOVA;[bus.Stop@2473b9ce, bus.Stop@60438a68];0.0;0.0
+R.ARCO;[bus.Stop@140e5a13];0.0;0.0
+R.LIMA JÚNIOR;[bus.Stop@3439f68d];0.0;0.0
+R.IGREJA PARANHOS;[bus.Stop@dbd940d];0.0;0.0
+R.D.PEDRO V;[bus.Stop@71d15f18, bus.Stop@17695df3, bus.Stop@6c9f5c0d, bus.Stop@de3a06f, bus.Stop@76b10754];0.0;0.0
+ESPLANADA CASTELO;[bus.Stop@2bea5ab4];0.0;0.0
+AV.SIDÓNIO PAIS;[bus.Stop@3d8314f0, bus.Stop@2df32bf7];0.0;0.0
+AV.REPÚBLICA;[bus.Stop@530612ba, bus.Stop@2a40cd94, bus.Stop@f4168b8, bus.Stop@3bd94634, bus.Stop@58a90037, bus.Stop@74294adb, bus.Stop@70a9f84e, bus.Stop@130f889, bus.Stop@1188e820, bus.Stop@2f490758, bus.Stop@101df177, bus.Stop@166fa74d, bus.Stop@40f08448, bus.Stop@276438c9];0.0;0.0
+R.CUSTIÓ;[bus.Stop@588df31b, bus.Stop@33b37288, bus.Stop@77a57272, bus.Stop@7181ae3f, bus.Stop@46238e3f, bus.Stop@6e2c9341, bus.Stop@32464a14, bus.Stop@4e4aea35, bus.Stop@1442d7b5, bus.Stop@1efee8e7, bus.Stop@1ee807c6, bus.Stop@76a4d6c];0.0;0.0
+R.PAUS;[bus.Stop@517cd4b, bus.Stop@6cc7b4de, bus.Stop@32cf48b7];0.0;0.0
+R.DIOGO CÃO;[bus.Stop@679b62af];0.0;0.0
+R.EDUARDO CASTRO GANDRA;[bus.Stop@5cdd8682, bus.Stop@d6da883, bus.Stop@45afc369, bus.Stop@799d4f69, bus.Stop@49c43f4e, bus.Stop@290dbf45, bus.Stop@12028586, bus.Stop@17776a8, bus.Stop@69a10787];0.0;0.0
+R.D.ANTÓNIO CASTRO MEIRELES;[bus.Stop@2d127a61, bus.Stop@2bbaf4f0, bus.Stop@11c20519, bus.Stop@70beb599, bus.Stop@4e41089d, bus.Stop@32a068d1, bus.Stop@33cb5951, bus.Stop@365c30cc, bus.Stop@701fc37a, bus.Stop@4148db48];0.0;0.0
+R.ANTÓNIO J.ALMEIDA;[bus.Stop@282003e1, bus.Stop@7fad8c79, bus.Stop@71a794e5, bus.Stop@76329302, bus.Stop@5e25a92e];0.0;0.0
+R.PINHEIRO;[bus.Stop@4df828d7, bus.Stop@b59d31];0.0;0.0
+R.PESO REGUA;[bus.Stop@62fdb4a6];0.0;0.0
+R.LEOTE REGO;[bus.Stop@11e21d0e];0.0;0.0
+R.INFANTE D.HENRIQUE;[bus.Stop@1dd02175, bus.Stop@31206beb];0.0;0.0
+R.VESSADA;[bus.Stop@3e77a1ed, bus.Stop@3ffcd140];0.0;0.0
+AV.5 OUTUBRO;[bus.Stop@23bb8443, bus.Stop@1176dcec, bus.Stop@120d6fe6, bus.Stop@4ba2ca36, bus.Stop@3444d69d];0.0;0.0
+R.GONDARÉM;[bus.Stop@1372ed45, bus.Stop@6a79c292, bus.Stop@37574691, bus.Stop@25359ed8, bus.Stop@21a947fe];0.0;0.0
+R.DR.MANUEL PEREIRA SILVA;[bus.Stop@5606c0b, bus.Stop@80ec1f8, bus.Stop@1445d7f];0.0;0.0
+R.DR.FARINHOTE;[bus.Stop@6a396c1e];0.0;0.0
+R.ESTAÇÃO;[bus.Stop@6c3f5566, bus.Stop@12405818];0.0;0.0
+AV.DR.FRANCISCO SÁ CARNEIRO;[bus.Stop@314c508a, bus.Stop@10b48321];0.0;0.0
+R.CINCO OUTUBRO;[bus.Stop@6b67034, bus.Stop@16267862, bus.Stop@453da22c, bus.Stop@71248c21];0.0;0.0
+R.ANTERO ANTUNES DE ALBUQUERQUE;[bus.Stop@442675e1];0.0;0.0
+R.ASSUNÇÃO;[bus.Stop@6166e06f];0.0;0.0
+R.FARRAPAS;[bus.Stop@49e202ad];0.0;0.0
+R.FRANÇA BORGES;[bus.Stop@1c72da34];0.0;0.0
+TV.PRELADA;[bus.Stop@6b0c2d26];0.0;0.0
+R.PADRE ANTÓNIO VIEIRA;[bus.Stop@3d3fcdb0, bus.Stop@641147d0];0.0;0.0
+VIA ACESSO P.ARRÁBIDA-V.N.GAIA;[bus.Stop@6e38921c];0.0;0.0
+R.MEIRAL;[bus.Stop@64d7f7e0, bus.Stop@27c6e487, bus.Stop@49070868, bus.Stop@6385cb26];0.0;0.0
+R.BUÇACO;[bus.Stop@38364841, bus.Stop@28c4711c];0.0;0.0
+R.ARMANDO LAROZE ROCHA;[bus.Stop@59717824];0.0;0.0
+AV.DOS SANATÓRIOS;[bus.Stop@146044d7, bus.Stop@1e9e725a];0.0;0.0
+AV.BOAVISTA;[bus.Stop@15d9bc04, bus.Stop@473b46c3, bus.Stop@516be40f, bus.Stop@3c0a50da, bus.Stop@646be2c3, bus.Stop@797badd3, bus.Stop@77be656f, bus.Stop@19dc67c2, bus.Stop@221af3c0, bus.Stop@62bd765, bus.Stop@23a5fd2, bus.Stop@78a2da20, bus.Stop@dd3b207, bus.Stop@551bdc27, bus.Stop@58fdd99, bus.Stop@6b1274d2, bus.Stop@7bc1a03d, bus.Stop@70b0b186, bus.Stop@ba8d91c, bus.Stop@7364985f, bus.Stop@5d20e46, bus.Stop@709ba3fb, bus.Stop@3d36e4cd, bus.Stop@6a472554, bus.Stop@7ff2a664, bus.Stop@525b461a, bus.Stop@58c1c010, bus.Stop@b7f23d9, bus.Stop@61d47554, bus.Stop@69b794e2];0.0;0.0
+R.GONÇALO SAMPAIO;[bus.Stop@3f200884];0.0;0.0
+R.CARLOS MALHEIRO DIAS;[bus.Stop@4d339552];0.0;0.0
+R.PONTE MOREIRA;[bus.Stop@f0f2775, bus.Stop@5a4aa2f2, bus.Stop@6591f517, bus.Stop@345965f2];0.0;0.0
+R.ROÇADAS;[bus.Stop@429bd883, bus.Stop@4d49af10];0.0;0.0
+AV.INFANTE D.HENRIQUE;[bus.Stop@279ad2e3, bus.Stop@58134517, bus.Stop@4450d156];0.0;0.0
+R.ÁLVARO CASTELÕES;[bus.Stop@4461c7e3, bus.Stop@351d0846, bus.Stop@77e4c80f, bus.Stop@35fc6dc4, bus.Stop@7fe8ea47];0.0;0.0
+R.ANT.FELICIANO CASTILHO;[bus.Stop@226a82c4, bus.Stop@731f8236];0.0;0.0
+R.CONS.VELOSO CRUZ;[bus.Stop@255b53dc, bus.Stop@1dd92fe2, bus.Stop@6b53e23f, bus.Stop@64d2d351];0.0;0.0
+R.S.GENS;[bus.Stop@1b68b9a4, bus.Stop@4f9a3314, bus.Stop@3b2c72c2, bus.Stop@491666ad, bus.Stop@176d53b2, bus.Stop@971d0d8, bus.Stop@51931956, bus.Stop@2b4a2ec7, bus.Stop@564718df];0.0;0.0
+PR.LIÉGE;[bus.Stop@51b7e5df];0.0;0.0
+R.FORMOSA;[bus.Stop@18a70f16, bus.Stop@62e136d3];0.0;0.0
+R.FARIA GUIMARÃES;[bus.Stop@c8e4bb0, bus.Stop@6279cee3, bus.Stop@4206a205, bus.Stop@29ba4338];0.0;0.0
+R.MANARIZ;[bus.Stop@57175e74];0.0;0.0
+R.ALDEIA NOVA;[bus.Stop@7bb58ca3, bus.Stop@c540f5a, bus.Stop@770c2e6b];0.0;0.0
+R.VASCO GAMA;[bus.Stop@1a052a00, bus.Stop@4d826d77, bus.Stop@61009542, bus.Stop@77e9807f, bus.Stop@448ff1a8, bus.Stop@1a38c59b, bus.Stop@7f77e91b, bus.Stop@44a664f2, bus.Stop@7f9fcf7f, bus.Stop@2357d90a, bus.Stop@6328d34a, bus.Stop@145eaa29];0.0;0.0
+AV.RAMOS PINTO;[bus.Stop@15bb6bea, bus.Stop@8b96fde, bus.Stop@2d2e5f00, bus.Stop@4c40b76e, bus.Stop@2ea6137];0.0;0.0
+R.MAÍNÇA;[bus.Stop@41ee392b, bus.Stop@1e67a849, bus.Stop@57d5872c, bus.Stop@667a738, bus.Stop@36f0f1be, bus.Stop@157632c9];0.0;0.0
+R.GONÇALVES ZARCO;[bus.Stop@6ee12bac, bus.Stop@55040f2f, bus.Stop@64c87930, bus.Stop@400cff1a];0.0;0.0
+R.BENTO JESUS CARAÇA;[bus.Stop@275710fc];0.0;0.0
+R.FERREIRA SANTOS;[bus.Stop@525f1e4e];0.0;0.0
+TV.CALOUSTE GULBENKIAN;[bus.Stop@75f9eccc];0.0;0.0
+R.FEZ;[bus.Stop@52aa2946, bus.Stop@4de5031f, bus.Stop@67e2d983, bus.Stop@5d47c63f];0.0;0.0
+AV.ANT.DOMINGUES SANTOS;[bus.Stop@5ea434c8, bus.Stop@3bbc39f8, bus.Stop@4ae3c1cd, bus.Stop@29f69090];0.0;0.0
+R.GODINHO;[bus.Stop@568bf312, bus.Stop@ca263c2, bus.Stop@589b3632];0.0;0.0
+R.S.VICENTE;[bus.Stop@45f45fa1, bus.Stop@4c6e276e, bus.Stop@534df152, bus.Stop@52e677af, bus.Stop@35083305, bus.Stop@8e0379d, bus.Stop@341b80b2, bus.Stop@55a1c291, bus.Stop@2145433b, bus.Stop@2890c451, bus.Stop@40e6dfe1, bus.Stop@1b083826, bus.Stop@105fece7, bus.Stop@3ec300f1, bus.Stop@482cd91f, bus.Stop@123f1134, bus.Stop@7d68ef40, bus.Stop@5b0abc94, bus.Stop@75c072cb, bus.Stop@1f1c7bf6, bus.Stop@25b485ba, bus.Stop@2b546384, bus.Stop@5d740a0f];0.0;0.0
+R.ARQUITETO CASSIANO BARBOSA;[bus.Stop@214b199c, bus.Stop@20d3d15a, bus.Stop@2893de87, bus.Stop@55ca8de8];0.0;0.0
+LGO.COVILHÃ;[bus.Stop@2c34f934];0.0;0.0
+R. GENERAL JOSÉ VICENTE FREITAS;[bus.Stop@12d3a4e9];0.0;0.0
+AV.GEN.HUMBERTO DELGADO;[bus.Stop@240237d2, bus.Stop@25a65b77, bus.Stop@2ed0fbae, bus.Stop@212bf671, bus.Stop@14a2f921, bus.Stop@3c87521, bus.Stop@2aece37d, bus.Stop@548a102f, bus.Stop@5762806e, bus.Stop@17c386de, bus.Stop@5af97850, bus.Stop@5ef60048];0.0;0.0
+R.GIL EANES;[bus.Stop@1d548a08];0.0;0.0
+TV.DOS MANINHOS;[bus.Stop@16aa0a0a, bus.Stop@780cb77];0.0;0.0
+AV.DR.ANTUNES GUIMARÃES;[bus.Stop@691a7f8f, bus.Stop@50a7bc6e, bus.Stop@161b062a, bus.Stop@17c1bced, bus.Stop@2d9d4f9d, bus.Stop@4034c28c, bus.Stop@e50a6f6, bus.Stop@14ec4505, bus.Stop@53ca01a2, bus.Stop@358c99f5, bus.Stop@3ee0fea4, bus.Stop@48524010];0.0;0.0
+R.AGRELA;[bus.Stop@4b168fa9];0.0;0.0
+R.BONFIM;[bus.Stop@1a84f40f, bus.Stop@23282c25, bus.Stop@7920ba90, bus.Stop@6b419da, bus.Stop@3b2da18f, bus.Stop@5906ebcb, bus.Stop@258e2e41];0.0;0.0
+R.ANTERO QUENTAL;[bus.Stop@3d299e3, bus.Stop@55a561cf, bus.Stop@3b938003, bus.Stop@6f3b5d16, bus.Stop@78b1cc93, bus.Stop@6646153, bus.Stop@21507a04];0.0;0.0
+R.HENRIQUE BRAVO;[bus.Stop@143640d5, bus.Stop@6295d394, bus.Stop@475e586c, bus.Stop@657c8ad9];0.0;0.0
+R.CENTRAL ARDEGÃES;[bus.Stop@436a4e4b, bus.Stop@f2f2cc1];0.0;0.0
+ALAMEDA REPÚBLICA;[bus.Stop@3a079870];0.0;0.0
+AV.DA CONDUTA;[bus.Stop@3b2cf7ab, bus.Stop@2aa5fe93, bus.Stop@5c1a8622, bus.Stop@5ad851c9, bus.Stop@6156496, bus.Stop@3c153a1, bus.Stop@b62fe6d, bus.Stop@13acb0d1, bus.Stop@3e3047e6, bus.Stop@37e547da, bus.Stop@2b6856dd, bus.Stop@5db45159, bus.Stop@6107227e];0.0;0.0
+AV.FLORES;[bus.Stop@7c417213, bus.Stop@15761df8, bus.Stop@6ab7a896, bus.Stop@327b636c];0.0;0.0
+R.DE MARIA LAMAS;[bus.Stop@45dd4eda, bus.Stop@60611244];0.0;0.0
+R.CAVACO;[bus.Stop@3745e5c6, bus.Stop@5e4c8041];0.0;0.0
+R.CALHEIROS LOBO;[bus.Stop@71c8becc, bus.Stop@19d37183];0.0;0.0
+R.LEVADA;[bus.Stop@1a0dcaa, bus.Stop@3bd40a57];0.0;0.0
+R.HENRIQUE BARROS;[bus.Stop@fdefd3f, bus.Stop@d83da2e];0.0;0.0
+R.ARREGADAS;[bus.Stop@a4102b8, bus.Stop@11dc3715, bus.Stop@69930714, bus.Stop@7a52f2a2, bus.Stop@78047b92, bus.Stop@8909f18, bus.Stop@79ca92b9, bus.Stop@1460a8c0];0.0;0.0
+R.CONSELHEIRO COSTA AROSO;[bus.Stop@4f638935, bus.Stop@4387b79e, bus.Stop@6e75aa0d, bus.Stop@7fc229ab];0.0;0.0
+LGO.EIRÓZ;[bus.Stop@2cbb3d47];0.0;0.0
+R.PADRE DEHON;[bus.Stop@527e5409, bus.Stop@1198b989];0.0;0.0
+R.DR.MÁRIO CAL BRANDÃO;[bus.Stop@7ff95560];0.0;0.0
+PR.GALIZA;[bus.Stop@add0edd, bus.Stop@2aa3cd93, bus.Stop@7ea37dbf];0.0;0.0
+AV.ALIADOS;[bus.Stop@4b44655e, bus.Stop@290d210d, bus.Stop@1d76aeea, bus.Stop@78dd667e, bus.Stop@10db82ae, bus.Stop@501edcf1, bus.Stop@78b729e6, bus.Stop@6b4a4e18, bus.Stop@27c86f2d, bus.Stop@197d671];0.0;0.0
+R.STA.LUZIA;[bus.Stop@402e37bc, bus.Stop@79ad8b2f, bus.Stop@1df82230];0.0;0.0
+R.CLUBE CAÇADORES;[bus.Stop@22635ba0, bus.Stop@13c10b87];0.0;0.0
+R.FERROVIÁRIO;[bus.Stop@6a01e23, bus.Stop@5a955565, bus.Stop@6293abcc, bus.Stop@7995092a, bus.Stop@7fc2413d];0.0;0.0
+R.SIMÕES LOPES;[bus.Stop@f8c1ddd, bus.Stop@70be0a2b, bus.Stop@2133814f, bus.Stop@4c15e7fd, bus.Stop@23986957, bus.Stop@23f7d05d, bus.Stop@1e730495, bus.Stop@7d3a22a9];0.0;0.0
+R.ALMEIRIGA NORTE;[bus.Stop@1d082e88, bus.Stop@60704c];0.0;0.0
+AV.LIBERDADE;[bus.Stop@6b19b79, bus.Stop@2a32de6c, bus.Stop@7692d9cc, bus.Stop@75f32542, bus.Stop@7f1302d6];0.0;0.0
+PR.DR.PEDRO.T.PEREIRA;[bus.Stop@43ee72e6];0.0;0.0
+R.FONSECA DIAS;[bus.Stop@23529fee, bus.Stop@4fe767f3, bus.Stop@2805c96b, bus.Stop@184cf7cf];0.0;0.0
+R.AVILHO;[bus.Stop@2fd6b6c7];0.0;0.0
+TV.TENENTE VALADIM;[bus.Stop@5bfa9431, bus.Stop@5db250b4];0.0;0.0
+AV.D.MARIA II;[bus.Stop@223f3642];0.0;0.0
+AV.D.AFONSO HENRIQUES;[bus.Stop@38c5cc4c, bus.Stop@37918c79, bus.Stop@78e94dcf, bus.Stop@233fe9b6, bus.Stop@358ee631, bus.Stop@ec756bd];0.0;0.0
+R.DR.JOSÉ D.OLIVEIRA;[bus.Stop@3c72f59f];0.0;0.0
+LGO.S.FRANCISCO;[bus.Stop@60dcc9fe, bus.Stop@222114ba];0.0;0.0
+R.CORUJEIRAS;[bus.Stop@16e7dcfd, bus.Stop@3d121db3, bus.Stop@3b07a0d6];0.0;0.0
+R.DR.GERMANO VIEIRA;[bus.Stop@11a9e7c8, bus.Stop@3901d134];0.0;0.0
+LGO.SOUTO;[bus.Stop@14d3bc22, bus.Stop@12d4bf7e, bus.Stop@4c1d9d4b];0.0;0.0
+LGO.ALFÂNDEGA;[bus.Stop@7b227d8d];0.0;0.0
+AV.VILLAGARCIA AROSA;[bus.Stop@7219ec67, bus.Stop@45018215, bus.Stop@65d6b83b, bus.Stop@d706f19, bus.Stop@30b7c004];0.0;0.0
+R.CAMILO CASTELO BRANCO;[bus.Stop@79efed2d, bus.Stop@2928854b, bus.Stop@27ae2fd0, bus.Stop@29176cc1];0.0;0.0
+AV.NUNO ÁLVARES;[bus.Stop@2f177a4b];0.0;0.0
+R.BELA;[bus.Stop@4278a03f];0.0;0.0
+R.TENENTE VALADIM;[bus.Stop@147ed70f, bus.Stop@61dd025, bus.Stop@124c278f, bus.Stop@15b204a1, bus.Stop@77167fb7, bus.Stop@1fe20588, bus.Stop@6ce139a4];0.0;0.0
+R.AUGUSTO LESSA;[bus.Stop@6973bf95, bus.Stop@2ddc8ecb, bus.Stop@229d10bd, bus.Stop@47542153, bus.Stop@33afa13b, bus.Stop@7a4ccb53];0.0;0.0
+R.DR.JOAQUIM NOGUEIRA SANTOS;[bus.Stop@309e345f, bus.Stop@56a6d5a6, bus.Stop@18ce0030];0.0;0.0
+R.ARAÚJO;[bus.Stop@4445629, bus.Stop@45b9a632, bus.Stop@25d250c6, bus.Stop@4df50bcc];0.0;0.0
+R.DOMINGOS BONTEMPO;[bus.Stop@6b26e945, bus.Stop@63a65a25];0.0;0.0
+R.HEROÍSMO;[bus.Stop@54c562f7, bus.Stop@318ba8c8, bus.Stop@6dbb137d, bus.Stop@3c9d0b9d];0.0;0.0
+R.FONTE VELHA;[bus.Stop@43301423, bus.Stop@2f112965, bus.Stop@1a04f701, bus.Stop@4e91d63f];0.0;0.0
+R.MONSANTO;[bus.Stop@d4342c2, bus.Stop@2bbf180e, bus.Stop@163e4e87, bus.Stop@56de5251, bus.Stop@419c5f1a];0.0;0.0
+R.FONTE CONTUMIL;[bus.Stop@12b0404f];0.0;0.0
+R.SOBREIRO;[bus.Stop@769e7ee8, bus.Stop@5276e6b0, bus.Stop@71b1176b, bus.Stop@6193932a];0.0;0.0
+R.PADRE LUÍS CAMPOS;[bus.Stop@647fd8ce, bus.Stop@159f197, bus.Stop@78aab498, bus.Stop@5dd6264, bus.Stop@1ffe63b9, bus.Stop@51e5fc98];0.0;0.0
+R.PONTE PARADA;[bus.Stop@7c469c48, bus.Stop@12e61fe6, bus.Stop@7ee955a8, bus.Stop@1677d1, bus.Stop@48fa0f47, bus.Stop@6ac13091];0.0;0.0
+R.SÁ BANDEIRA;[bus.Stop@5e316c74, bus.Stop@6d2a209c, bus.Stop@75329a49, bus.Stop@161479c6, bus.Stop@4313f5bc];0.0;0.0
+R.SÃO JOÃO BOSCO;[bus.Stop@7f010382];0.0;0.0
+R.CEDOFEITA;[bus.Stop@1e802ef9, bus.Stop@2b6faea6];0.0;0.0
+R.5 OUTUBRO;[bus.Stop@778d1062, bus.Stop@670002, bus.Stop@1f0f1111, bus.Stop@49c386c8, bus.Stop@56528192, bus.Stop@6e0dec4a, bus.Stop@96def03, bus.Stop@5ccddd20, bus.Stop@1ed1993a, bus.Stop@1f3f4916, bus.Stop@794cb805, bus.Stop@4b5a5ed1, bus.Stop@59d016c9, bus.Stop@3cc2931c, bus.Stop@20d28811, bus.Stop@3967e60c, bus.Stop@60d8c9b7, bus.Stop@48aaecc3, bus.Stop@7c0c77c7];0.0;0.0
+R.PERO ALENQUER;[bus.Stop@7adda9cc];0.0;0.0
+R.CAMPO ALEGRE;[bus.Stop@5cee5251, bus.Stop@433d61fb, bus.Stop@5c909414, bus.Stop@4b14c583, bus.Stop@65466a6a, bus.Stop@4ddced80, bus.Stop@1534f01b, bus.Stop@78e117e3, bus.Stop@2ea227af];0.0;0.0
+R.PADRE JOSÉ P.DUARTE;[bus.Stop@4386f16, bus.Stop@363ee3a2];0.0;0.0
+R.DIONÍSIO SANTOS SILVA;[bus.Stop@4690b489];0.0;0.0
+AV.FERNÃO MAGALHAES;[bus.Stop@79b06cab, bus.Stop@3eb7fc54, bus.Stop@7f552bd3, bus.Stop@3c22fc4c, bus.Stop@460d0a57, bus.Stop@47d90b9e, bus.Stop@1184ab05, bus.Stop@3aefe5e5, bus.Stop@149e0f5d, bus.Stop@1b1473ab, bus.Stop@2f7c2f4f, bus.Stop@6af93788, bus.Stop@ef9296d, bus.Stop@36c88a32, bus.Stop@7880cdf3, bus.Stop@5be6e01c, bus.Stop@1c93084c, bus.Stop@6ef888f6, bus.Stop@10e92f8f, bus.Stop@7ce3cb8e, bus.Stop@78b66d36, bus.Stop@5223e5ee];0.0;0.0
+AV.FRANÇA;[bus.Stop@bef2d72, bus.Stop@69b2283a, bus.Stop@22a637e7, bus.Stop@6fe7aac8, bus.Stop@1d119efb];0.0;0.0
+R.SAGRES;[bus.Stop@659a969b, bus.Stop@76908cc0];0.0;0.0
+AV.MENERES;[bus.Stop@2473d930, bus.Stop@35047d03, bus.Stop@49b0b76];0.0;0.0
+R.DIOGO BOTELHO;[bus.Stop@769f71a9, bus.Stop@4c9f8c13, bus.Stop@5ae50ce6, bus.Stop@6f96c77, bus.Stop@be64738, bus.Stop@3ba9ad43, bus.Stop@49d904ec, bus.Stop@48e4374, bus.Stop@3d680b5a, bus.Stop@4b5d6a01, bus.Stop@4a22f9e2, bus.Stop@3c419631, bus.Stop@418e7838, bus.Stop@61230f6a];0.0;0.0
+LGO.FERREIRA LAPA;[bus.Stop@3c130745, bus.Stop@cd3fee8, bus.Stop@3e2e18f2, bus.Stop@470f1802, bus.Stop@63021689, bus.Stop@703580bf];0.0;0.0
+R.SOUSA AROSO;[bus.Stop@3e92efc3, bus.Stop@1622f1b, bus.Stop@72a7c7e0];0.0;0.0
+R.ESTRADA NOVA;[bus.Stop@2e4b8173, bus.Stop@70e8f8e, bus.Stop@17046283, bus.Stop@5bd03f44, bus.Stop@29626d54, bus.Stop@5a63f509, bus.Stop@6e4784bc, bus.Stop@34b7ac2f];0.0;0.0
+AV.MARECHAL GOMES COSTA;[bus.Stop@e056f20, bus.Stop@4b0b0854, bus.Stop@19bb07ed, bus.Stop@10e41621, bus.Stop@353d0772, bus.Stop@2667f029, bus.Stop@67a20f67, bus.Stop@57c758ac, bus.Stop@a9cd3b1, bus.Stop@13e39c73, bus.Stop@64cd705f];0.0;0.0
+R.A.CASAIS MONTEIRO;[bus.Stop@9225652, bus.Stop@654f0d9c];0.0;0.0
+R.HERÓIS M.ANGOLA;[bus.Stop@6a400542];0.0;0.0
+R.HÍNTZE RIBEIRO;[bus.Stop@6580cfdd, bus.Stop@7e0b85f9];0.0;0.0
+R.FERREIRA CASTRO;[bus.Stop@63355449, bus.Stop@9353778];0.0;0.0
+R.AUGUSTO ROSA;[bus.Stop@6a28ffa4];0.0;0.0
+R.FERNANDES ANJOS;[bus.Stop@48ae9b55];0.0;0.0
+R.CEGONHEIRA;[bus.Stop@1700915, bus.Stop@21de60b4];0.0;0.0
+R.ARRÁBIDA;[bus.Stop@c267ef4, bus.Stop@30ee2816, bus.Stop@31d7b7bf];0.0;0.0
+R.AREIAS;[bus.Stop@635eaaf1];0.0;0.0
+R.BARÃO CORVO;[bus.Stop@5c30a9b0, bus.Stop@1ddf84b8, bus.Stop@1139b2f3, bus.Stop@7a69b07, bus.Stop@5e82df6a, bus.Stop@3f197a46, bus.Stop@636be97c];0.0;0.0
+R.JOSÉ M.CASTRO PORTUGAL;[bus.Stop@50a638b5, bus.Stop@1817d444, bus.Stop@6ca8564a, bus.Stop@50b472aa];0.0;0.0
+R.ASSIS VAZ;[bus.Stop@31368b99];0.0;0.0
+R.AFONSO ALBUQUERQUE;[bus.Stop@1725dc0f, bus.Stop@3911c2a7, bus.Stop@4ac3c60d, bus.Stop@4facf68f, bus.Stop@76508ed1];0.0;0.0
+R.ACTOR MÁRIO VIEGAS;[bus.Stop@41e36e46, bus.Stop@15c43bd9];0.0;0.0
+R.CARMO;[bus.Stop@3d74bf60, bus.Stop@4f209819];0.0;0.0
+URB.VILA D''ESTE;[bus.Stop@15eb5ee5, bus.Stop@2145b572];0.0;0.0
+R.LAGE;[bus.Stop@39529185, bus.Stop@72f926e6];0.0;0.0
+R.CRUZ GUARDEIRAS;[bus.Stop@3daa422a, bus.Stop@31c88ec8, bus.Stop@1cbbffcd, bus.Stop@27ce24aa, bus.Stop@481a996b, bus.Stop@3d51f06e, bus.Stop@7ed7259e];0.0;0.0
+R.LIDADOR;[bus.Stop@28eaa59a, bus.Stop@3427b02d, bus.Stop@647e447, bus.Stop@41fbdac4, bus.Stop@3c407114];0.0;0.0
+R.GEN.HUMBERTO DELGADO;[bus.Stop@35ef1869, bus.Stop@c33b74f, bus.Stop@130161f7, bus.Stop@2c767a52, bus.Stop@619713e5];0.0;0.0
+AV.PAIVA COUCEIRO;[bus.Stop@708f5957, bus.Stop@68999068, bus.Stop@7722c3c3, bus.Stop@2ef3eef9, bus.Stop@243c4f91, bus.Stop@291ae, bus.Stop@61df66b6, bus.Stop@50eac852, bus.Stop@16ec5519, bus.Stop@2f7298b];0.0;0.0
+R.JORGE DIAS;[bus.Stop@188715b5];0.0;0.0
+R.AUGUSTO SIMÕES;[bus.Stop@1ea9f6af, bus.Stop@6a192cfe, bus.Stop@5119fb47, bus.Stop@7193666c, bus.Stop@20deea7f, bus.Stop@3835c46];0.0;0.0
+R.VILARINHA;[bus.Stop@1dde4cb2, bus.Stop@7714e963];0.0;0.0
+R.VASCO SANTANA;[bus.Stop@20ce78ec];0.0;0.0
+AV.JOAO DEUS;[bus.Stop@393671df, bus.Stop@56620197, bus.Stop@6eda5c9, bus.Stop@55b7a4e0, bus.Stop@5f058f00];0.0;0.0
+AV.MARGINAL;[bus.Stop@192d43ce, bus.Stop@72057ecf];0.0;0.0
+R.PASSEIO ALEGRE;[bus.Stop@1afd44cb, bus.Stop@6973b51b, bus.Stop@1ab3a8c8, bus.Stop@43195e57, bus.Stop@333291e3, bus.Stop@479d31f3, bus.Stop@40ef3420, bus.Stop@498d318c, bus.Stop@6e171cd7, bus.Stop@402bba4f, bus.Stop@795cd85e, bus.Stop@59fd97a8];0.0;0.0
+R.SILVA AROSO;[bus.Stop@f5ac9e4];0.0;0.0
+PR.GONÇALVES ZARCO;[bus.Stop@123ef382, bus.Stop@dbf57b3, bus.Stop@384ad17b, bus.Stop@61862a7f];0.0;0.0
+AV.VISCONDE BARREIROS;[bus.Stop@441772e, bus.Stop@7334aada, bus.Stop@1d9b7cce];0.0;0.0
+R.ALEIXO MOTA;[bus.Stop@4d9e68d0];0.0;0.0
+R.MANUEL GONÇALVES LAGE;[bus.Stop@42e99e4a, bus.Stop@14dd9eb7, bus.Stop@52e6fdee, bus.Stop@6c80d78a, bus.Stop@62150f9e, bus.Stop@1a451d4d, bus.Stop@7fa98a66, bus.Stop@15ff3e9e];0.0;0.0
+C.24 AGOSTO;[bus.Stop@5fdcaa40, bus.Stop@6dc17b83];0.0;0.0
+R.LIONESA;[bus.Stop@5e0826e7, bus.Stop@32eff876, bus.Stop@8dbdac1];0.0;0.0
+AV.GIL VICENTE;[bus.Stop@6e20b53a, bus.Stop@71809907, bus.Stop@3ce1e309, bus.Stop@6aba2b86];0.0;0.0
+R.PONTE DO CARRO;[bus.Stop@158da8e, bus.Stop@74e52303];0.0;0.0
+R.D.AMÉLIA M.ALVES;[bus.Stop@47af7f3d, bus.Stop@7c729a55];0.0;0.0
+R.DR.ALBANO SÁ LIMA;[bus.Stop@3bb9a3ff];0.0;0.0
+R.PINTO MOURÃO FERREIRA;[bus.Stop@661972b0];0.0;0.0
+LGO.OUTEIRO VERMOIM;[bus.Stop@5af3afd9];0.0;0.0
+R.ROCHA PEIXOTO;[bus.Stop@323b36e0, bus.Stop@44ebcd03];0.0;0.0
+R.SIMÃO BOLIVAR;[bus.Stop@694abbdc, bus.Stop@2e005c4b];0.0;0.0
+R.TEIXEIRA LOPES;[bus.Stop@4567f35d, bus.Stop@5ffead27, bus.Stop@6356695f];0.0;0.0
+R.SERPA PINTO;[bus.Stop@4f18837a, bus.Stop@359f7cdf, bus.Stop@1fa268de, bus.Stop@4f6ee6e4];0.0;0.0
+R.OLIVEIRA GAIO;[bus.Stop@4466af20, bus.Stop@a514af7];0.0;0.0
+LGO.RAMADA ALTA;[bus.Stop@6b927fb];0.0;0.0
+TV.5 OUTUBRO;[bus.Stop@3e58a80e, bus.Stop@4fb61f4a];0.0;0.0
+R.DELFIM FERREIRA;[bus.Stop@4fb0f2b9];0.0;0.0
+R.BERNARDO SANTARENO;[bus.Stop@79924b];0.0;0.0
+R.PINTOR ANTÓNIO CRUZ;[bus.Stop@7b9a4292];0.0;0.0
+R.CONSTITUIÇÃO;[bus.Stop@4a94ee4, bus.Stop@4cc451f2, bus.Stop@6379eb, bus.Stop@294425a7, bus.Stop@67d48005, bus.Stop@9f116cc, bus.Stop@12468a38, bus.Stop@1aa7ecca, bus.Stop@59309333];0.0;0.0
+R.GENERAL NOTON DE MATOS;[bus.Stop@5876a9af];0.0;0.0
+ESTR.N.105;[bus.Stop@7ec7ffd3, bus.Stop@5b239d7d];0.0;0.0
+ESTR.N.107;[bus.Stop@6572421, bus.Stop@6b81ce95, bus.Stop@2a798d51];0.0;0.0
+R.CORONEL RAÚL PERES;[bus.Stop@6d763516, bus.Stop@52bf72b5];0.0;0.0
+R.MANUEL LARANJEIRA;[bus.Stop@37afeb11, bus.Stop@515aebb0, bus.Stop@dd8ba08, bus.Stop@245b4bdc];0.0;0.0
+R.DUARTE LOPES;[bus.Stop@6c64cb25];0.0;0.0
+RUA ANTERO QUENTAL;[bus.Stop@6ae5aa72];0.0;0.0
+R.S.ROMÃO VERMOIM;[bus.Stop@222545dc, bus.Stop@5c5eefef, bus.Stop@16293aa2];0.0;0.0
+R.PAÇO DE SOUSA;[bus.Stop@5158b42f, bus.Stop@595b007d];0.0;0.0
+R.ESCOLAS;[bus.Stop@72d1ad2e, bus.Stop@2d7275fc, bus.Stop@399f45b1, bus.Stop@38c6f217, bus.Stop@478190fc, bus.Stop@79e2c065, bus.Stop@3a93b025];0.0;0.0
+R.NOVA ALFÂNDEGA;[bus.Stop@35cabb2a, bus.Stop@7e07db1f, bus.Stop@1189dd52, bus.Stop@36bc55de, bus.Stop@564fabc8, bus.Stop@16d04d3d];0.0;0.0
+TV.NOVA DA GIESTA;[bus.Stop@49ec71f8, bus.Stop@1d2adfbe];0.0;0.0
+TV.ESTAÇÃO;[bus.Stop@36902638];0.0;0.0
+IC2 ACESSOS;[bus.Stop@223d2c72];0.0;0.0
+R.PRAIA;[bus.Stop@8f4ea7c];0.0;0.0
+R.DR.ALFREDO MAGALHÃES;[bus.Stop@436813f3, bus.Stop@74fe5c40];0.0;0.0
+R.OLIVEIRA MONTEIRO;[bus.Stop@3febb011, bus.Stop@10e31a9a, bus.Stop@131774fe, bus.Stop@158d2680, bus.Stop@77847718, bus.Stop@7f3b84b8];0.0;0.0
+LGO.ESTAÇÃO;[bus.Stop@57a3af25, bus.Stop@2b662a77];0.0;0.0
+R.DR.ROBERTO FRIAS;[bus.Stop@7f0eb4b4, bus.Stop@5c33f1a9, bus.Stop@1623b78d, bus.Stop@c8c12ac, bus.Stop@6adbc9d, bus.Stop@4550bb58];0.0;0.0
+R.DR.EDUARDO TORRES;[bus.Stop@4ec4f3a0, bus.Stop@223191a6, bus.Stop@49139829, bus.Stop@9597028, bus.Stop@6069db50, bus.Stop@4efbca5a];0.0;0.0
+R.CABEDA;[bus.Stop@1b7cc17c, bus.Stop@59662a0b, bus.Stop@77fbd92c, bus.Stop@67c27493, bus.Stop@1a482e36];0.0;0.0
+R.MORGADO MATEUS;[bus.Stop@72967906];0.0;0.0
+R.CARVALHIDO;[bus.Stop@5b8dfcc1];0.0;0.0
+R.PROF.MOTA PINTO;[bus.Stop@2f9f7dcf, bus.Stop@747ddf94, bus.Stop@35e2d654, bus.Stop@1bd4fdd];0.0;0.0
+LGO.IGREJA PARANHOS;[bus.Stop@55183b20];0.0;0.0

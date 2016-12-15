@@ -25,7 +25,6 @@ Source;Target;Type
 "NEVG";"MLH3";Directed
 "MLH3";"JNN2";Directed
 "JNN2";"CRTO4";Directed
-"CRTO4";"LIEG2";Directed
-"LIEG2";"DIU1";Directed
-"DIU1";"DTR";Directed
-"DTR";"RFAR1";Directed
+"CRTO4";"PING3";Directed
+"PING3";"PORI2";Directed
+"PORI2";"PASS1";Directed

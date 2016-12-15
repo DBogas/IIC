@@ -296,7 +296,7 @@ class MyScanner {
 	return answer;
 	}
 	
-	// group stops by code
+	// group stops by code -> concept of spots
 	static HashMap<String, Spot> groupStopsByCode() throws IOException{
 		HashMap<String, Spot> answer =  new HashMap<String, Spot>();
 		HashMap<String, Stop> src = readStopsFile();
@@ -324,7 +324,6 @@ class MyScanner {
 	}
 	
 	// make edges to spots
-	
 	static HashMap<String,SpotEdge> makeEdgesToSpots() throws IOException{
 		HashMap<String,SpotEdge> answer = new HashMap<String, SpotEdge>();
 		// sources
@@ -358,16 +357,35 @@ class MyScanner {
 		return null;
 	}
 	
+	static HashMap<String,Stop> readStopsFile() throws IOException{
+		HashMap<String,Stop> answer = new HashMap<String, Stop>();
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
+			String line;
+			while((line = br.readLine()) != null){
+				String[] pieces = line.trim().split(",");
+				Stop nova = new Stop(	pieces[0].trim(), 
+										pieces[1].trim(), 
+										pieces[2].trim(),
+										pieces[3].trim());
+				nova.longitude = Float.parseFloat(pieces[4].trim());
+				nova.latitude = Float.parseFloat(pieces[5].trim());
+				answer.put(nova.stopCode,nova);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		String line;
+		//System.out.println(answer.size());
+		return answer;
+	}
 	
 	
 	/*
-	 * Following methods make gephi readable files
+	 * Following methods make gephi readable files realated to the concept of Stop
 	 */
-	/**
-	 * This method takes all the stops we have and makes a csv file
-	 * 
-	 * @throws Exception
-	 */
+	
+	// makes nodes
 	static void makeNodesCSV() throws Exception{
 		// output stuff
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/stops.csv");
@@ -393,12 +411,8 @@ class MyScanner {
 			}
 			
 		}// end of method
-	/**
-	 * method to make a csv file for each line, in each direction
-	 * Line 200 runs in 2 directions, so it will generate 2 files (200_0.csv and 200_1.csv)
-	 * @throws FileNotFoundException if it cant find the source file
-	 * also return a list with all edges. yes, it has repeated edges, thinking about the edge weight kinda thing
-	 */
+	
+	//method to make a csv file for each line, in each direction
 	static HashMap<String, Integer> makeAllLinesCSV() throws FileNotFoundException{
 		HashMap<String, Integer> allEdges = new HashMap<String, Integer>();
 		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
@@ -430,29 +444,7 @@ class MyScanner {
 		
 	}// end of method
 	
-	static HashMap<String,Stop> readStopsFile() throws IOException{
-		HashMap<String,Stop> answer = new HashMap<String, Stop>();
-		try {
-			BufferedReader br = new BufferedReader(new FileReader("AllStops.txt"));
-			String line;
-			while((line = br.readLine()) != null){
-				String[] pieces = line.trim().split(",");
-				Stop nova = new Stop(	pieces[0].trim(), 
-										pieces[1].trim(), 
-										pieces[2].trim(),
-										pieces[3].trim());
-				nova.longitude = Float.parseFloat(pieces[4].trim());
-				nova.latitude = Float.parseFloat(pieces[5].trim());
-				answer.put(nova.stopCode,nova);
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		String line;
-		//System.out.println(answer.size());
-		return answer;
-	}
-	
+	// method to make a csv file with all the edges.
 	static void allEdgesCSV(HashMap<String, Integer> lista ) throws FileNotFoundException{
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/allEdges.csv");
 		file.getParentFile().mkdirs();
@@ -463,14 +455,87 @@ class MyScanner {
 		}
 		writer.close();
 	}
-
+	
+	/*
+	 * Methods related to the concept of Street
+	 */
+	
+	// method to make nodes
+	static void makeStreetNodeCSV() throws IOException{
+		// sources
+		HashMap<String, BusStreet> src = stopsByStreet();
+		//writer
+		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/streetNodes.csv");
+		file.getParentFile().mkdirs();
+		PrintWriter writer = new PrintWriter(file);
+		//write nodes
+		// 1st line
+		writer.println("Id;TotalStops;Longitude;Latitude");
+		for(BusStreet bs : src.values()){
+			writer.println(bs.street+";"+bs.stops+";"+bs.longitude+";"+bs.latitude);
+		}
+		writer.close();
+	}
+	
+	// method to make edges
+	static void makeStreetEdgesCSV() throws IOException{
+		//sources
+		HashMap<String, AddressEdge> src = generateEdgesToStreets();
+		//writer
+		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/streetEdges.csv");
+		file.getParentFile().mkdirs();
+		PrintWriter writer = new PrintWriter(file);
+		//write
+		writer.println("Weight;Source;Target;Type");
+		for(AddressEdge ae : src.values()){
+			writer.println(+ae.weight+";"+ae.src.street+";"+ae.dest.street+";Directed");
+		}
+	}
+	
+	/*
+	 * Mehtods related to the concept of Spot
+	 */
+	
+	// method to make nodes
+	static void makeSpotNodeCSV() throws IOException{
+		//sources
+		HashMap<String,Spot> src = groupStopsByCode();
+		//writer
+		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/spotNodes.csv");
+		file.getParentFile().mkdirs();
+		PrintWriter writer = new PrintWriter(file);
+		//write
+		writer.println("Id;totalStops");
+		for(Spot sp : src.values() ){
+			System.out.println(sp.code+";"+sp.stops.size());
+		}
+	}
+	
+	//method to make edges
+	static void makeSpotEdgesCSV() throws IOException{
+		//sources
+		HashMap<String, SpotEdge> src = makeEdgesToSpots();
+		//writer
+		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/spotEdges.csv");
+		file.getParentFile().mkdirs();
+		PrintWriter writer = new PrintWriter(file);
+		//write
+		writer.println("Source;Target;Weight;Type");
+		for(SpotEdge se : src.values()){
+			writer.println(se.from+";"+se.to+";"+se.weight+";Directed");
+		}
+		
+	}
+	
+	
+	
 	public static void main(String args[]) throws Exception {
 
 		Scanner in = new Scanner(System.in);
 		System.out.println("Insert "
 				+ "1 to refresh data about lines, "
 				+ "2 to refresh data about stops, " 
-				+ "3 to generate csv files"
+				+ "3 to generate csv files, "
 				+ "4 to test whatever."
 				);
 		int choice = in.nextInt();
@@ -485,8 +550,15 @@ class MyScanner {
 			System.out.flush();
 		}
 		else if (choice == 3) {
+			// STOPS
 			makeNodesCSV();
 			allEdgesCSV(makeAllLinesCSV());
+			//STREETS
+			makeStreetNodeCSV();
+			makeStreetEdgesCSV();
+			//SPOTS
+			makeSpotNodeCSV();
+			makeSpotEdgesCSV();
 		}else if(choice == 4){
 			
 			/*HashMap<String, Spot> src = groupStopsByCode();
