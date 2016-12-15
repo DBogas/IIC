@@ -280,18 +280,6 @@ class MyScanner {
 				//System.out.println(" - dest: "+dest.street);
 				String s = src.street;
 				String d = dest.street;
-				/*for(BusStreet b : streets.values()){
-					// ver se serve de rua de partida
-					if(b.stops.contains(bl.LineStops.get(i))){
-						src = b.cloneMe();
-						s = b.street;
-					}
-					// ver se serve de rua de destino
-					else if(b.stops.contains(bl.LineStops.get(i+1))){ 
-						dest = b.cloneMe();
-						d = b.street;
-					}
-				}*/
 				String check =s+"-"+d;
 				if(answer.containsKey(check)){
 					answer.get(check).weight++;
@@ -333,6 +321,41 @@ class MyScanner {
 			}
 		}
 		return answer;
+	}
+	
+	// make edges to spots
+	
+	static HashMap<String,SpotEdge> makeEdgesToSpots() throws IOException{
+		HashMap<String,SpotEdge> answer = new HashMap<String, SpotEdge>();
+		// sources
+		HashMap<String,	Spot> spots = groupStopsByCode();
+		LinkedList<BusLine> lines = readLinesFromFile();
+		// para todas as linhas
+		for(BusLine bl : lines){
+			// para todas as paragens em cada linha
+			for(int i=0; i<bl.LineStops.size()-1;i++){
+				// spots
+				Spot s1 = getSpot(bl.LineStops.get(i));
+				Spot s2 = getSpot(bl.LineStops.get(i+1));
+				// ver se contem edge ou nao
+				if(!answer.containsKey(s1.code+"-"+s2.code)){
+					SpotEdge novo = new SpotEdge(s1, s2);
+					answer.put(novo.name, novo);
+				}
+				else{
+					answer.get(s1.code+"-"+s2.code).weight++;
+				}
+			}// end of inner for
+		}// end of outer for
+		return answer;
+	}
+	
+	static Spot getSpot(String s) throws IOException{
+		HashMap<String, Spot> src = groupStopsByCode();
+		for(Spot spot : src.values()){
+			if(spot.stops.containsKey(s))return spot;
+		}
+		return null;
 	}
 	
 	
@@ -448,6 +471,7 @@ class MyScanner {
 				+ "1 to refresh data about lines, "
 				+ "2 to refresh data about stops, " 
 				+ "3 to generate csv files"
+				+ "4 to test whatever."
 				);
 		int choice = in.nextInt();
 		if (choice == 1) {
@@ -464,15 +488,21 @@ class MyScanner {
 			makeNodesCSV();
 			allEdgesCSV(makeAllLinesCSV());
 		}else if(choice == 4){
-			//getStreet("TSL2");
-			//HashMap<String, AddressEdge> edges = generateEdgesToStreets();
-			//System.out.println(edges.size());
-			HashMap<String, Spot> src = groupStopsByCode();
+			
+			/*HashMap<String, Spot> src = groupStopsByCode();
 			System.out.println("size:"+src.size());
 			for(Spot s : src.values()){
 				s.printSpot();
 				break;
+			}*/
+			
+			HashMap<String, SpotEdge> src = makeEdgesToSpots();
+			for(SpotEdge se : src.values()){
+				se.print();
 			}
+		
+		
 		}
+			
 	}// end main
 }// end class
