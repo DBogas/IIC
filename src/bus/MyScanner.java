@@ -500,6 +500,7 @@ class MyScanner {
 	static void makeSpotNodeCSV() throws IOException{
 		//sources
 		HashMap<String,Spot> src = groupStopsByCode();
+		System.out.println("SIZE: "+src.size());
 		//writer
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/spotNodes.csv");
 		file.getParentFile().mkdirs();
@@ -507,8 +508,9 @@ class MyScanner {
 		//write
 		writer.println("Id;totalStops");
 		for(Spot sp : src.values() ){
-			System.out.println(sp.code+";"+sp.stops.size());
+			writer.println(sp.code+";"+sp.stops.size());
 		}
+		writer.close();
 	}
 	
 	//method to make edges
@@ -551,14 +553,14 @@ class MyScanner {
 		}
 		else if (choice == 3) {
 			// STOPS
-			makeNodesCSV();
-			allEdgesCSV(makeAllLinesCSV());
+			//makeNodesCSV();
+			//allEdgesCSV(makeAllLinesCSV());
 			//STREETS
-			makeStreetNodeCSV();
-			makeStreetEdgesCSV();
+			//makeStreetNodeCSV();
+			//makeStreetEdgesCSV();
 			//SPOTS
 			makeSpotNodeCSV();
-			makeSpotEdgesCSV();
+			//makeSpotEdgesCSV();
 		}else if(choice == 4){
 			
 			/*HashMap<String, Spot> src = groupStopsByCode();
