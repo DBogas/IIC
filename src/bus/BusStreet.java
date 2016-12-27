@@ -13,7 +13,7 @@ public class BusStreet {
 	
 	String street; // this is the street name
 	LinkedList<Stop> stops; // this is the group of stops a street has
-	LinkedList<BusStreet> neighbours; // this is the group of edges (in and out going)
+	LinkedList<BusStreet> neighbours; // this is the group of edges IGNORE THIS ATTRIBUTE
 	float longitude;
 	float latitude;
 	

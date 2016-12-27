@@ -89,8 +89,77 @@ Using the JAVA programming language, and after analising the data, two structure
 	LineStops is the group of stops a certain line serves.
 	
 \end{itemize}
+	After some processing , and some thinkering with gephi,there was a need to group all the stops we had, to facilitate the study. These were grouped by two different attributes. Their address and their code. \\
+	
+The address grouping was simple, as adresses are unique in this network(there aren't two streets with the same name). The structure BusStreet follows:	
+	
+	\begin{itemize}
+		\item Street, which is simply a String.
+		\item stops, which is a list of all the stops in that street.
+		\item longitude
+		\item latitude
+	\end{itemize}
+	
+	In a graph where a street is a node, we also need a group of edges, so we have the structure AddressEdge: 
+	\begin{itemize}
+		\item src , wich is the source street
+		\item dest, the destination street
+		\item weight, represents the number of lines that use this edge
+		\item name
+	\end{itemize}
+	
+	The code grouping requires some thought, as it is related to the direction a bus goes through a line. For instance, there happen to be two stops which codes are TSL1 and TSL2. This happens, because one serves buses that go in a direction, and the other serves buses in the opposite direction. Therefore, as the direction a bus goes in does not interest us, we can group these two stops into only one, and here a new structure arises. Introducing the Spot structure:
+	
+	\begin{itemize}
+		\item code, is generated using the same logic from the example above
+		\item stops, is an hashmap that contains all stops under the code.
+	\end{itemize}
+	
+	Similarly to streets, there is also a need for a structure that represents interactions between Spots, therefore, SpotEdge:
+	
+		\begin{itemize}
+			\item from is the source Spot
+			\item to is the other Spot in the connection
+			\item weight is the number of lines that use this connection
+			\item name
+		\end{itemize}
+	
+	These are the structures used to simplify this study.\\
+	Some files, six to be more precise, were not included in this subsection, as they were generated with JAVA to be used by gephi, and the generating methods will be described next.
 
 \subsection{Data processing}
+	
+	As mentioned before, Gephi was used to study the network. Gephi is a preety powerfull tool, but it requires some form of input. In this particular case .csv files. This subsection describes the methods that process the data (stored in any way described in the previous subsection) and generate the input gephi needs.\\
+	Still on the previous subsection, it was mentioned that there were 6 files left to describe. Three of these are groups of nodes, and the other three, groups of edges. \\
+	
+	The first file to be described is called stops.csv , and it represents every single stop there is in this network. Five columns per stop :
+	
+	\begin{itemize}
+		\item Id , is the code of each stop (the unique attribute).
+		\item Address
+		\item Zone
+		\item name
+		\item latitude
+		\item longitude
+	\end{itemize}
+	
+	To make this file, the method makeNodesCSV was created.
+	It begins by printing "Id;Address;Zone;Name;Longitude;Latitude" in the first line of the output file. Then, for each stop it reads from the allStops.txt file, prints its attributes in the order sugested in the first line. As in the source file, each stop only takes one line.
+	
+	The second file to talk about is called allEdges.csv, with four columns per edge:
+	
+	\begin{itemize}
+		\item Source stop
+		\item Target stop
+		\item type which is going to be directed for every edge in this study
+		\item weight 
+	\end{itemize}
+	
+	The generating method to this file is allEdgesCSV, and is similar to the nodes one.
+	It also begins by printing what each column represents, (in this case "Source;Target;Type;Weight") and then for each edge it receives, prints its attributes in the order required. The source of the edges comes from another method.\\
+	The method makeAllLinesCSV was built with the intent of beeing able to make the .csv files for the edges of all bus lines. This idea was abandoned, but the method was repurposed. Besides making those files, it also returns an hashmap with all the edges it has seen, beeing the source of this second file.\\
+	
+	
 
 
 \section{Results}
