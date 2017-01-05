@@ -311,7 +311,7 @@ class MyScanner {
 		for(Stop s : src.values()){
 			// codigo a verificar e linhas que esse codigo serve
 			String to_check = s.stopCode;
-			LinkedList<String> listaNova = (LinkedList<String>) getLinesServed(s.stopCode);
+			LinkedList<String> linhas = (LinkedList<String>) getLinesServed(to_check);
 			// se precisar de retirar o ultimo char, retira-o
 			if(Character.isDigit(to_check.charAt(to_check.length()-1))){
 				StringBuilder sb = new StringBuilder(to_check);
@@ -323,18 +323,18 @@ class MyScanner {
 				// criar spot e por a paragem la dentro
 				Spot novo =  new Spot(to_check);
 				novo.stops.put(s.stopCode, s);
-				//hashmap do spot com as linhas que serve
-				novo.LinesServed = new HashMap<String, String>();
-				for(String str : listaNova){
-					novo.LinesServed.put(str, str);
+				for(String linha : linhas){
+					if(!novo.LinesServed.containsKey(linha))
+						novo.LinesServed.put(linha, linha);
 				}
 				answer.put(to_check, novo);
 			}
 			// se estiver na hash
 			else{
 				answer.get(to_check).stops.put(s.stopCode, s);
-				for(String sss : listaNova){
-					answer.get(to_check).LinesServed.put(sss, sss);
+				for(String ss : linhas){
+					if(!answer.get(to_check).LinesServed.containsKey(ss))
+						answer.get(to_check).LinesServed.put(ss, ss);
 				}
 			}
 		}
@@ -379,7 +379,10 @@ class MyScanner {
 		List<String> answer = new LinkedList<String>();
 		LinkedList<BusLine> src = readLinesFromFile();
 		for(BusLine bl : src){
-			if(bl.LineStops.contains(targetStop)) answer.add(bl.pubcode);
+			if(bl.LineStops.contains(targetStop)){
+				if(!answer.contains(bl.code.toString()))
+					answer.add(bl.code.toString());
+			}
 		}
 		return answer;
 	}
@@ -539,7 +542,7 @@ class MyScanner {
 		writer.println("Id;totalStops;linesServed");
 		
 		for(Spot sp : src.values() ){
-			writer.println(sp.code+";"+sp.stops.size()+";"+sp.LinesServed.size());
+			writer.println(sp.code+";"+sp.stops.size()+";"+sp.LinesServed.values().size());
 		}
 		writer.close();
 	}
@@ -585,22 +588,28 @@ class MyScanner {
 			System.out.flush();
 		}
 		else if (choice == 3) {
+			// descomentar antes de submeter!
 			// STOPS
 			//makeNodesCSV();
 			//allEdgesCSV(makeAllLinesCSV());
 			//STREETS
-			makeStreetNodeCSV();
-			makeStreetEdgesCSV();
+			//makeStreetNodeCSV();
+			//makeStreetEdgesCSV();
 			//SPOTS
 			makeSpotNodeCSV();
 			makeSpotEdgesCSV();
 		}else if(choice == 4){
 			
-			HashMap<String, SpotEdge> src = makeEdgesToSpots();
+			/*HashMap<String, SpotEdge> src = makeEdgesToSpots();
 			for(SpotEdge se : src.values()){
 				se.print();
-			}
-		
+			}*/
+			
+			List<String> src = getLinesServed("AL1");
+			for(String s : src)
+				System.out.println(s);
+			
+			
 		
 		}
 			

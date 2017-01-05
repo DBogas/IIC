@@ -27,5 +27,8 @@ class BusLine {
 		this.LineStops = new LinkedList<String>();
 	}
 	
+	public void printSelf(){
+		System.out.println("linha: "+this.code+" paragens:"+this.LineStops.size());
+	}
 	
 }
