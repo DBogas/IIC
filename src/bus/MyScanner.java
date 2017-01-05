@@ -302,6 +302,12 @@ class MyScanner {
 	static HashMap<String, Spot> groupStopsByCode() throws IOException{
 		HashMap<String, Spot> answer =  new HashMap<String, Spot>();
 		HashMap<String, Stop> src = readStopsFile();
+		//update individual stops with the stops they serve
+		for(Stop s : src.values()){
+			s.linesServed = (LinkedList<String>) getLinesServed(s.stopCode);
+			s.totalLinesServed = s.linesServed.size();
+		}
+		// do stuff
 		for(Stop s : src.values()){
 			String to_check = s.stopCode;
 			// se precisar de retirar o ultimo char, retira-o
@@ -357,6 +363,15 @@ class MyScanner {
 			if(spot.stops.containsKey(s))return spot;
 		}
 		return null;
+	}
+	
+	static List<String> getLinesServed(String targetStop) throws IOException{
+		List<String> answer = new LinkedList<String>();
+		LinkedList<BusLine> src = readLinesFromFile();
+		for(BusLine bl : src){
+			if(bl.LineStops.contains(targetStop)) answer.add(bl.pubcode);
+		}
+		return answer;
 	}
 	
 	static HashMap<String,Stop> readStopsFile() throws IOException{
@@ -512,6 +527,7 @@ class MyScanner {
 		PrintWriter writer = new PrintWriter(file);
 		//write
 		writer.println("Id;totalStops");
+		
 		for(Spot sp : src.values() ){
 			writer.println(sp.code+";"+sp.stops.size());
 		}

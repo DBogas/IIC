@@ -1,5 +1,7 @@
 package bus;
 
+import java.util.LinkedList;
+
 public class Stop {
 
 	String stopCode;
@@ -8,6 +10,8 @@ public class Stop {
 	String name;
 	float longitude;
 	float latitude;
+	int totalLinesServed;
+	LinkedList<String> linesServed;
 
 	Stop(String code, String address, String zone, String name) {
 		this.stopCode = code;
@@ -16,6 +20,8 @@ public class Stop {
 		this.name = name;
 		this.longitude = 0;
 		this.latitude = 0;
+		this.totalLinesServed=0;
+		this.linesServed = new LinkedList<String>();
 	}
 	
 	void printStop(){

@@ -26,9 +26,9 @@ Then, with all the gathered data, there should be a preliminary data analisys wi
 ver fonte da definição de network e acrescentar aqui
 \end{comment}
 
-A network is a catalog of a system’s components often called nodes or vertices and the direct interactions  between them, called links or edges.
+A network is a catalog of a system\textsc{\char13} s components often called nodes or vertices and the direct interactions  between them, called links or edges.
 Some good examples of networks, are social networks like Facebook and Twitter.
-This article uses networks to represent the services offered by a bus company operating in Oporto, with the intent of answering some questions like : how many bus stops are there, which one has the most lines going through it and how many times do i have to change bus so i can go from one side of the network to the other. 
+This article uses networks to represent the services offered by a bus company operating in Porto, with the intent of answering some questions like : how many bus stops are there, which one has the most lines going through it and how many times do i have to change bus so i can go from one side of the network to the other. 
  
 
 \section{Data Gathering and Processing}
@@ -91,7 +91,7 @@ Using the JAVA programming language, and after analising the data, two structure
 \end{itemize}
 	After some processing , and some thinkering with gephi,there was a need to group all the stops we had, to facilitate the study. These were grouped by two different attributes. Their address and their code. \\
 	
-The address grouping was simple, as adresses are unique in this network(there aren't two streets with the same name). The structure BusStreet follows:	
+The address grouping was simple, as adresses are unique in this network. The structure BusStreet follows:	
 	
 	\begin{itemize}
 		\item Street, which is simply a String.
@@ -102,7 +102,7 @@ The address grouping was simple, as adresses are unique in this network(there ar
 	
 	In a graph where a street is a node, we also need a group of edges, so we have the structure AddressEdge: 
 	\begin{itemize}
-		\item src , wich is the source street
+		\item src , which is the source street
 		\item dest, the destination street
 		\item weight, represents the number of lines that use this edge
 		\item name
@@ -144,7 +144,7 @@ The address grouping was simple, as adresses are unique in this network(there ar
 	\end{itemize}
 	
 	To make this file, the method makeNodesCSV was created.
-	It begins by printing "Id;Address;Zone;Name;Longitude;Latitude" in the first line of the output file. Then, for each stop it reads from the allStops.txt file, prints its attributes in the order sugested in the first line. As in the source file, each stop only takes one line.
+	It begins by printing "Id;Address;Zone;Name;Longitude;Latitude" in the first line of the output file. Then, for each stop it reads from the allStops.txt file, prints its attributes by the order sugested in the first line. As in the source file, each stop only takes one line.
 	
 	The second file to talk about is called allEdges.csv, with four columns per edge:
 	
@@ -163,7 +163,7 @@ The address grouping was simple, as adresses are unique in this network(there ar
 	Now that all the important files and methods have been exposed, we can rely on the previously mentioned Gephi to study the network.\\
 	
 \section{Results}
-	This first image is the very first piece of information that our tool gave us, a visual representation of all the stops in the network(not using any type of grouping), colored by zone.\\
+	This first image is the very first piece of information that our tool gave us, a visual representation of all 2416 stops in the network(not using any type of grouping), colored by zone.\\
 
 \begin{figure}[H]
 	\centering
@@ -177,6 +177,11 @@ The following image is the pallete used to color the network shown above, and it
 	\includegraphics[scale=0.5]{legenda_simples}
 	\caption{A table with all the zones, sorted according to size,displaying each zone's color}
 \end{figure}
+\begin{comment}
+There are still two types of grouping to explore. Using the source files of the address grouping and displaying the graph according to geographical coordinates, the graph generated resembles the one we saw above, but with less nodes and edges. This graph's nodes were also colored, according to the number of stops they have. This tells us that 31.25$%$ of the streets have only one stop, and a quarter of the network has 2 stops. That's normal, but what is not normal is for one street to hold 86 bus stops! This is because we are talking about Estrada da Circunvalação, that is about 17km long. Exploring the Data Laboratory, and looking at the closeness centrality, we see that the. highest value(the node that is closer to all the others) is Estrada da Circunvalação, which seems normal. In fact, this street is so long, that it also tops the harmonic and betweeness centrality columns. The betweeness centrality tells us the number of times this node was a path of a shortest path between two other nodes. The harmonic part, that's still up for research.
+
+ver o que é a harmonic closeness centrality.
+\end{comment}
 
 				
 			
