@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.4)  5 JAN 2017 09:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.4)  5 JAN 2017 15:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -208,26 +208,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--179
 
  []
 
-[7 <./legenda_simples.png (PNG copy)>] (./report.aux) ) 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 183.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 183.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 183.
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.184 Id && totalStops &
+                        & linesServed\\ \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.185 TRD	&& 6 &
+                &	21\\ \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.186 BCM	&& 5 &
+                &	20\\ \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.187 BS	&& 8 &
+               & 18\\ \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.188 AAL	&& 6 &
+                & 17\\ \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.189 CMO	&& 4 &
+                & 17\\ \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no º in font cmr12!
+[7 <./legenda_simples.png (PNG copy)>] [8] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1675 strings out of 493029
- 23804 string characters out of 6136234
+ 1692 strings out of 493029
+ 23978 string characters out of 6136234
  84722 words of memory out of 5000000
- 5212 multiletter control sequences out of 15000+600000
- 6660 words of font info for 24 fonts, out of 8000000 for 9000
+ 5222 multiletter control sequences out of 15000+600000
+ 8841 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,7n,23p,1076b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti12.pfb>
-Output written on report.pdf (8 pages, 348507 bytes).
+</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti12.pfb>
+Output written on report.pdf (9 pages, 350449 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 62 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

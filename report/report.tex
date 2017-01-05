@@ -177,6 +177,26 @@ The following image is the pallete used to color the network shown above, and it
 	\includegraphics[scale=0.5]{legenda_simples}
 	\caption{A table with all the zones, sorted according to size,displaying each zone's color}
 \end{figure}
+
+The second question raised in the Introduction section of this report was "Which Stop has the most lines going through it and how many times?". For this, it's better to group the stops by code, and answer a diferent question : "Which Spot has the most lines going through it?", as a Spot is much more influential than a simple Stop. Te answer to this, is in the table below,extracted from spotNodes.csv were the 5 most populated Spots are represented:
+
+\begin{tabular}{l|l|l}
+Id && totalStops && linesServed\\ \hline
+TRD	&& 6 &&	21\\ \hline
+BCM	&& 5 &&	20\\ \hline
+BS	&& 8 && 18\\ \hline
+AAL	&& 6 && 17\\ \hline
+CMO	&& 4 && 17\\ \hline
+\end{tabular}
+
+Checking the Id's in the AllStops.txt file, we get, by ascending order:
+Carmo,Aliados,Bom Sucesso,Casa da Música in Boavista and Trindade topping the list.
+
+
+
+
+
+
 \begin{comment}
 There are still two types of grouping to explore. Using the source files of the address grouping and displaying the graph according to geographical coordinates, the graph generated resembles the one we saw above, but with less nodes and edges. This graph's nodes were also colored, according to the number of stops they have. This tells us that 31.25$%$ of the streets have only one stop, and a quarter of the network has 2 stops. That's normal, but what is not normal is for one street to hold 86 bus stops! This is because we are talking about Estrada da Circunvalação, that is about 17km long. Exploring the Data Laboratory, and looking at the closeness centrality, we see that the. highest value(the node that is closer to all the others) is Estrada da Circunvalação, which seems normal. In fact, this street is so long, that it also tops the harmonic and betweeness centrality columns. The betweeness centrality tells us the number of times this node was a path of a shortest path between two other nodes. The harmonic part, that's still up for research.
 
