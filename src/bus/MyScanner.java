@@ -309,7 +309,9 @@ class MyScanner {
 		}
 		// do stuff
 		for(Stop s : src.values()){
+			// codigo a verificar e linhas que esse codigo serve
 			String to_check = s.stopCode;
+			LinkedList<String> listaNova = (LinkedList<String>) getLinesServed(s.stopCode);
 			// se precisar de retirar o ultimo char, retira-o
 			if(Character.isDigit(to_check.charAt(to_check.length()-1))){
 				StringBuilder sb = new StringBuilder(to_check);
@@ -321,11 +323,19 @@ class MyScanner {
 				// criar spot e por a paragem la dentro
 				Spot novo =  new Spot(to_check);
 				novo.stops.put(s.stopCode, s);
+				//hashmap do spot com as linhas que serve
+				novo.LinesServed = new HashMap<String, String>();
+				for(String str : listaNova){
+					novo.LinesServed.put(str, str);
+				}
 				answer.put(to_check, novo);
 			}
 			// se estiver na hash
 			else{
 				answer.get(to_check).stops.put(s.stopCode, s);
+				for(String sss : listaNova){
+					answer.get(to_check).LinesServed.put(sss, sss);
+				}
 			}
 		}
 		return answer;
@@ -526,10 +536,10 @@ class MyScanner {
 		file.getParentFile().mkdirs();
 		PrintWriter writer = new PrintWriter(file);
 		//write
-		writer.println("Id;totalStops");
+		writer.println("Id;totalStops;linesServed");
 		
 		for(Spot sp : src.values() ){
-			writer.println(sp.code+";"+sp.stops.size());
+			writer.println(sp.code+";"+sp.stops.size()+";"+sp.LinesServed.size());
 		}
 		writer.close();
 	}
