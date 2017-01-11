@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import sun.awt.image.ImageWatched.Link;
+
 public class LastQuestion extends MyScanner {
 	
 	HashMap<String, Stop> stops;
@@ -40,11 +42,12 @@ public class LastQuestion extends MyScanner {
 	 * @param s
 	 * @throws IOException 
 	 */
-	int go_BFS_on(Stop s) throws IOException{
+	AnswerBFS go_BFS_on(Stop s) throws IOException{
 		//sources
 		HashMap<String, Stop> src_Stops = readStopsFile();
 		HashMap<String,Edge> src_Edges = getAllEdges();
 		int answer = -1;
+		AnswerBFS resp = new AnswerBFS();
 		String dest = "";
 		setAdjacentNodes(s);
 		LinkedList<Stop> list = new LinkedList<Stop>();
@@ -53,6 +56,7 @@ public class LastQuestion extends MyScanner {
 		visitedStops.put(s.stopCode,true);
 		while(!list.isEmpty()){
 			Stop target = list.removeFirst();
+			resp.setSource(s.stopCode);
 			setAdjacentNodes(target);
 			for(Stop check : target.adjacentStops){
 				if(!visitedStops.containsKey(check.stopCode)){
@@ -63,22 +67,43 @@ public class LastQuestion extends MyScanner {
 					if(check.distance_BFS > answer) {
 						answer = check.distance_BFS;
 						dest = check.stopCode;
+						resp.setTarget(dest);
+						resp.setDistance(check.distance_BFS);
 					}
 				}
 			}
+			
+			
 		}// end of while
-		System.out.println("RTE2 para "+dest);
-		return answer;
+		
+		return resp;
 	}// end of bfs
 	
-	/*int test() throws IOException{
-		HashMap<String, Stop> src = readStopsFile();
-		int answer = -100;
-		for(Stop s : src.values()){
-			int i = this.go_BFS_on(s);
-			System.out.println("Paragem: "+s.stopCode+" "+i);
-			answer = Math.max(i, answer);
-		}
-		return answer;
-	}*/
+
+class AnswerDFS{
+	LinkedList<Stop> way;
+	
+	AnswerDFS(){
+		this.way = new LinkedList<Stop>();
+	}
+}
+class AnswerBFS{
+	private String source;
+	private String target;
+	private int distance;
+	
+	AnswerBFS(){
+		this.source = "";
+		this.target = "";
+		this.distance = 0;
+	}
+	
+	String getSource(){return this.source;}
+	String getTarget(){return this.target;}
+	int getDistance(){return this.distance;}
+	
+	void setSource(String s){this.source = s;}
+	void setTarget(String s){this.target = s;}
+	void setDistance(int i){this.distance = i;}
+	}
 }

@@ -22,6 +22,8 @@ import java.util.Set;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import bus.LastQuestion.AnswerBFS;
+
 class MyScanner {
 	
 	
@@ -633,8 +635,8 @@ class MyScanner {
 					ss = s;
 			}
 			LastQuestion lq = new LastQuestion();
-			int test = lq.go_BFS_on(ss);
-			System.out.println("R: "+test);
+			AnswerBFS test = lq.go_BFS_on(ss);
+			System.out.println("R: "+test.getSource() +" to "+test.getTarget());
 		}
 			
 	}// end main
