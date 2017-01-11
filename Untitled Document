@@ -8,5 +8,5 @@ Para chamar os métodos que constroem as folhas de texto (uma com todas as parag
 readURL from:
 http://stackoverflow.com/questions/7467568/parsing-json-from-url
 
-Acecibilidade de uma linha:
-1-com rampa.
+Dijkstra guide:
+http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html

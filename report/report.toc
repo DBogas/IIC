@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Abstract}{1}
+\contentsline {section}{\numberline {2}Introduction}{1}
+\contentsline {section}{\numberline {3}Data Gathering and Processing}{2}
+\contentsline {subsection}{\numberline {3.1}Data source}{2}
+\contentsline {subsection}{\numberline {3.2}Data storing}{2}
+\contentsline {subsection}{\numberline {3.3}Data processing}{5}
+\contentsline {section}{\numberline {4}Results}{6}

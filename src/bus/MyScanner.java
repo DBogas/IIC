@@ -12,10 +12,12 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.Set;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -409,6 +411,30 @@ class MyScanner {
 		//System.out.println(answer.size());
 		return answer;
 	}
+	//an alternative method to read the lines file and get all the edges.
+	static HashMap<String,Edge> getAllEdges() throws IOException{
+		// result
+		HashMap<String,Edge> answer = new HashMap<String,Edge>();
+		// sources
+		HashMap<String, Stop> SRC_Stops = readStopsFile();
+		LinkedList<BusLine> SRC_Lines = readLinesFromFile();
+		for(BusLine bl : SRC_Lines){
+			for(int i=0;i<bl.LineStops.size()-1;i++){
+				String key_2_test = bl.LineStops.get(i)+"-"+bl.LineStops.get(i+1);
+				if(!answer.containsKey(key_2_test)){
+					Stop src = SRC_Stops.get(bl.LineStops.get(i));
+					Stop trgt = SRC_Stops.get(bl.LineStops.get(i+1));
+					Edge novo = new Edge(src,trgt);
+					answer.put(key_2_test, novo);
+				}
+				else{
+					answer.get(key_2_test).weight++;
+				}
+			}
+		}
+		return answer;
+	}
+
 	
 	
 	/*
@@ -599,18 +625,16 @@ class MyScanner {
 			makeSpotNodeCSV();
 			makeSpotEdgesCSV();
 		}else if(choice == 4){
-			
-			/*HashMap<String, SpotEdge> src = makeEdgesToSpots();
-			for(SpotEdge se : src.values()){
-				se.print();
-			}*/
-			
-			List<String> src = getLinesServed("AL1");
-			for(String s : src)
-				System.out.println(s);
-			
-			
-		
+			HashMap<String, Stop> source =  readStopsFile();
+			int answer = Integer.MIN_VALUE;
+			Stop ss = null;
+			for(Stop s : source.values()){
+				if(s.stopCode.equals("RTE2"))
+					ss = s;
+			}
+			LastQuestion lq = new LastQuestion();
+			int test = lq.go_BFS_on(ss);
+			System.out.println("R: "+test);
 		}
 			
 	}// end main

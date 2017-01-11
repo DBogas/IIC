@@ -12,6 +12,8 @@ public class Stop {
 	float latitude;
 	int totalLinesServed;
 	LinkedList<String> linesServed;
+	LinkedList<Stop> adjacentStops;
+	int distance_BFS;
 
 	Stop(String code, String address, String zone, String name) {
 		this.stopCode = code;
@@ -22,6 +24,8 @@ public class Stop {
 		this.latitude = 0;
 		this.totalLinesServed=0;
 		this.linesServed = new LinkedList<String>();
+		this.adjacentStops = new LinkedList<Stop>();
+		this.distance_BFS = 0;
 	}
 	
 	void printStop(){
