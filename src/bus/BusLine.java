@@ -4,7 +4,9 @@ import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 import java.util.List;
-
+/**
+ *along with stop, the first structure made
+ */
 class BusLine {
 	int sentido;
 	int accessibility;

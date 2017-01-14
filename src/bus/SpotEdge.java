@@ -1,7 +1,9 @@
 package bus;
 
 import java.util.LinkedList;
-
+/**
+ * This structure represents an edge in the graph where the stops were grouped by Street
+ */
 public class SpotEdge {
 	Spot from;
 	Spot to;

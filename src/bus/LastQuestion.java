@@ -5,7 +5,10 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 import sun.awt.image.ImageWatched.Link;
-
+/**
+ *structure that answers the last question
+ *in the introduction
+ */
 public class LastQuestion extends MyScanner {
 	
 	HashMap<String, Stop> stops;
@@ -72,22 +75,15 @@ public class LastQuestion extends MyScanner {
 					}
 				}
 			}
-			
-			
 		}// end of while
-		
 		return resp;
 	}// end of bfs
 	
-
-
-class AnswerDFS{
-	LinkedList<Stop> way;
-	
-	AnswerDFS(){
-		this.way = new LinkedList<Stop>();
-	}
-}
+/**
+ *answer when BFS is used
+ *has source, target and distance
+ *relative to the network diameter
+ */
 class AnswerBFS{
 	private String source;
 	private String target;
@@ -107,4 +103,4 @@ class AnswerBFS{
 	void setTarget(String s){this.target = s;}
 	void setDistance(int i){this.distance = i;}
 	}
-}
+}// end of class

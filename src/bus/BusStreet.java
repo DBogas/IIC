@@ -11,9 +11,9 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
  */
 public class BusStreet {
 	
-	String street; // this is the street name
-	LinkedList<Stop> stops; // this is the group of stops a street has
-	LinkedList<BusStreet> neighbours; // this is the group of edges IGNORE THIS ATTRIBUTE
+	String street; 
+	LinkedList<Stop> stops; 
+	LinkedList<BusStreet> neighbours; 
 	float longitude;
 	float latitude;
 	

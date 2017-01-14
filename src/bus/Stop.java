@@ -1,7 +1,10 @@
 package bus;
 
 import java.util.LinkedList;
-
+/**
+ * main source of information
+ * last 4 attributes are derived along the way
+ */
 public class Stop {
 
 	String stopCode;

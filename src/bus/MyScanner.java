@@ -26,11 +26,12 @@ import bus.LastQuestion.AnswerBFS;
 
 class MyScanner {
 	
-	
-	  //@param urlString is the url we want to read the json from
-	  //@return gives us a string with all the un-parsed json
-	  //@throws Exception if it cant connect, for various reasons.
-	 
+	/**
+	 * Method that reads the JSON answers the server gives 
+	 * @param urlString is the url
+	 * @return
+	 * @throws Exception
+	 */
 	static String readUrl(String urlString) throws Exception {
 		BufferedReader reader = null;
 		try {
@@ -142,7 +143,6 @@ class MyScanner {
 	 */
 
 	static void printAllStops(HashMap<String, Stop> AllStops) {
-		//System.out.println(AllStops.size());
 		for (String auxS : AllStops.keySet()) {
 			AllStops.get(auxS).printStop();
 		}
@@ -410,14 +410,11 @@ class MyScanner {
 			e.printStackTrace();
 		}
 		String line;
-		//System.out.println(answer.size());
 		return answer;
 	}
-	//an alternative method to read the lines file and get all the edges.
+	
 	static HashMap<String,Edge> getAllEdges() throws IOException{
-		// result
 		HashMap<String,Edge> answer = new HashMap<String,Edge>();
-		// sources
 		HashMap<String, Stop> SRC_Stops = readStopsFile();
 		LinkedList<BusLine> SRC_Lines = readLinesFromFile();
 		for(BusLine bl : SRC_Lines){
@@ -437,15 +434,7 @@ class MyScanner {
 		return answer;
 	}
 
-	
-	
-	/*
-	 * Following methods make gephi readable files realated to the concept of Stop
-	 */
-	
-	// makes nodes
 	static void makeNodesCSV() throws Exception{
-		// output stuff
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/stops.csv");
 		file.getParentFile().mkdirs();
 		PrintWriter writer = new PrintWriter(file);
@@ -456,21 +445,17 @@ class MyScanner {
 				String line;
 				int i=0;
 			    while(( line = br.readLine()) != null){
-			    // stops
-			    	//if(line != null) {
 			    		String[] aux1 = line.toString().split(",");
 			    		String res = aux1[0].trim()+";"+aux1[1].trim()+";"+aux1[2].trim()+";"+aux1[3].trim()+";"+aux1[4].trim()+";"+aux1[5].trim();	
 			    		writer.println(res);
-			    	//}
 			    }
 			}
 			finally{
 				writer.close();
 			}
 			
-		}// end of method
+		}
 	
-	//method to make a csv file for each line, in each direction
 	static HashMap<String, Integer> makeAllLinesCSV() throws FileNotFoundException{
 		HashMap<String, Integer> allEdges = new HashMap<String, Integer>();
 		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
@@ -486,11 +471,8 @@ class MyScanner {
 		    	for(int i=3; i < brokenLine.length-1;i++){
 		    		String aux = "\""+brokenLine[i]+"\""+";"+"\""+brokenLine[i+1]+"\""+";Directed";
 		    		writer.println(aux);
-		    		// hash it
 		    		if(!allEdges.containsKey(aux))allEdges.put(aux, 1);
-		    		//map.put(key, map.get(key) + 1);
 		    		else allEdges.put(aux, allEdges.get(aux)+1);
-
 		    	}
 		    	writer.close();
 			}
@@ -500,35 +482,28 @@ class MyScanner {
 		}
 		return allEdges;
 		
-	}// end of method
+	}
 	
-	// method to make a csv file with all the edges.
-	static void allEdgesCSV(HashMap<String, Integer> lista ) throws FileNotFoundException{
+	static void allEdgesCSV() throws IOException{
+		HashMap<String,Edge> source = getAllEdges();
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/allEdges.csv");
 		file.getParentFile().mkdirs();
 		PrintWriter writer = new PrintWriter(file);
 		writer.println("Source;Target;Type;Weight");
-		for(String s : lista.keySet()){
-			writer.println(s+";"+lista.get(s));
+		for(Edge e: source.values()){
+			writer.println(e.getSource().stopCode+";"+
+						   e.getTarget().stopCode+";"+
+							"Directed;"+e.weight);
 		}
 		writer.close();
 	}
 	
-	/*
-	 * Methods related to the concept of Street
-	 */
-	
-	// method to make nodes
 	static void makeStreetNodeCSV() throws IOException{
 		System.out.println("Entering makeStreetNodeCSV");
-		// sources
 		HashMap<String, BusStreet> src = stopsByStreet();
-		//writer
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/streetNodes.csv");
 		file.getParentFile().mkdirs();
 		PrintWriter writer = new PrintWriter(file);
-		//write nodes
-		// 1st line
 		writer.println("Id;TotalStops;Longitude;Latitude");
 		for(BusStreet bs : src.values()){
 			writer.println(bs.street+";"+bs.stops.size()+";"+bs.longitude+";"+bs.latitude);
@@ -536,61 +511,44 @@ class MyScanner {
 		writer.close();
 	}
 	
-	// method to make edges
 	static void makeStreetEdgesCSV() throws IOException{
 		System.out.println("Entering makeStreetEdgesCSV");
-		//sources
 		HashMap<String, AddressEdge> src = generateEdgesToStreets();
-		//writer
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/streetEdges.csv");
 		file.getParentFile().mkdirs();
 		PrintWriter writer = new PrintWriter(file);
-		//write
 		writer.println("Weight;Source;Target;Type");
 		for(AddressEdge ae : src.values()){
 			writer.println(+ae.weight+";"+ae.src.street+";"+ae.dest.street+";Directed");
 		}
 		writer.close();
 	}
-	
-	/*
-	 * Mehtods related to the concept of Spot
-	 */
-	
-	// method to make nodes
+
 	static void makeSpotNodeCSV() throws IOException{
 		System.out.println("Entering makeSpotNodeCSV");
-		//sources
 		HashMap<String,Spot> src = groupStopsByCode();
-		//writer
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/spotNodes.csv");
 		file.getParentFile().mkdirs();
 		PrintWriter writer = new PrintWriter(file);
-		//write
 		writer.println("Id;totalStops;linesServed");
-		
 		for(Spot sp : src.values() ){
 			writer.println(sp.code+";"+sp.stops.size()+";"+sp.LinesServed.values().size());
 		}
 		writer.close();
 	}
 	
-	//method to make edges
+	
 	static void makeSpotEdgesCSV() throws IOException{
 		System.out.println("Entering makeSpotEdgesCSV");
-		//sources
 		HashMap<String, SpotEdge> src = makeEdgesToSpots();
-		//writer
 		File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/spotEdges.csv");
 		file.getParentFile().mkdirs();
 		PrintWriter writer = new PrintWriter(file);
-		//write
 		writer.println("Source;Target;Weight;Type");
 		for(SpotEdge se : src.values()){
 			writer.println(se.from.code+";"+se.to.code+";"+se.weight+";Directed");
 		}
 		writer.close();
-		
 	}
 	
 	
@@ -616,13 +574,12 @@ class MyScanner {
 			System.out.flush();
 		}
 		else if (choice == 3) {
-			// descomentar antes de submeter!
 			// STOPS
-			//makeNodesCSV();
-			//allEdgesCSV(makeAllLinesCSV());
+			makeNodesCSV();
+			allEdgesCSV();
 			//STREETS
-			//makeStreetNodeCSV();
-			//makeStreetEdgesCSV();
+			makeStreetNodeCSV();
+			makeStreetEdgesCSV();
 			//SPOTS
 			makeSpotNodeCSV();
 			makeSpotEdgesCSV();

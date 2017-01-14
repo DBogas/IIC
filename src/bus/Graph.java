@@ -1,5 +1,7 @@
 package bus;
-
+/**
+ * Simple representation of a graph, for the LastQuestion structure
+ */
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;

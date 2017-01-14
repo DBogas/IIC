@@ -2,7 +2,9 @@ package bus;
 
 import java.util.HashMap;
 import java.util.LinkedList;
-
+/**
+ *representing a Spot
+ */
 public class Spot {
 	
 	String code;

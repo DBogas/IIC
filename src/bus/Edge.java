@@ -1,10 +1,13 @@
 package bus;
-
+/**
+ * This represents an edge in the graph where no grouping occurred
+ */
 public class Edge {
 	private Stop source;
 	private Stop target;
 	private String desc;
 	int weight;
+	
 	Edge(Stop s, Stop t){
 		this.source = s;
 		this.target = t;

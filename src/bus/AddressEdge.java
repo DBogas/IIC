@@ -1,10 +1,12 @@
 package bus;
-
+/**
+ * an edge in a graph where the stops were grouped by Street
+ */
 public class AddressEdge {
 	BusStreet src;
 	BusStreet dest;
 	int weight;
-	String nome; // ex: Av.Aliados-Trindade
+	String nome;
 	
 	AddressEdge(BusStreet a, BusStreet b){
 		this.src = a;
