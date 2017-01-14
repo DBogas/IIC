@@ -27,9 +27,6 @@ Then, with all the gathered data, there should be a preliminary data analisys wi
 
 
 \section{Introduction}
-\begin{comment}
-ver fonte da definição de network e acrescentar aqui
-\end{comment}
 
 A network is a catalog of a system\textsc{\char13} s components often called nodes or vertices and the direct interactions  between them, called links or edges.
 Some good examples of networks, are social networks like Facebook and Twitter.
@@ -56,79 +53,18 @@ Each stop is represented in a single line by a stop code, an address, a zone, a 
 
 All of this information can be refreshed, as there are methods that do so.
 
-There is the need for some structures in which to represent all this data we have, so it can be easily used to answer some of the questions raised above.
+There is the need for some structures in which to represent all this data we have, so it can be easily used to answer some of the questions raised above. These were made in the JAVA programming language and are described in the apendix for this report.\\
 
-Using the JAVA programming language, and after analising the data, two structures came up as obvious:
-\begin{itemize}
-\item Stop, composed by:
-	\begin{itemize}
-	\item a stopCode
-	\item an address
-	\item a zone
-	\item a name
-	\item a longitude
-	\item a latitude
-	\end{itemize}
-	The stopCode is the ID of a stop,as it is unique.
-	Zones in this network are parts of the city, this will be clear on the visual part 		of this study.
+	In quick fashion ,the information was grouped in three ways:\\
 	
-\item BusLine, composed by:
-	\begin{itemize}
-	\item direction
-	\item code
-	\item description
-	\item pubcode
-	\item LineStops
-	\end{itemize}
+	The normal way, where the information was read from the text file, put into structures and handled like that.\\
 	
-	\begin{comment}
-	aqui talvez seja preciso dar o exemplo	
-	\end{comment}
-	The direction tells us which way a bus goes trough the line.
-	\begin{comment}
-	aqui tb comvem dar exemplo	
-	\end{comment}
-	The code and pubcode are different things. The pubCode is, as the name sugests, 			public, and it is how we humans distinguish lines from one another. 
-	The code variable however, is the server way to distinguish bus lines.
-	The description is a sentence that indicates were the line begins and were it ends.
-	LineStops is the group of stops a certain line serves.
+	 By streets, where the stops were grouped by street, each street was a node and the interactions between streets were the edges.\\
+	 
+	 And by code, where the streets were grouped by code, in a structure called Spot.\\
 	
-\end{itemize}
-	After some processing , and some thinkering with gephi,there was a need to group all the stops we had, to facilitate the study. These were grouped by two different attributes. Their address and their code. \\
 	
-The address grouping was simple, as adresses are unique in this network. The structure BusStreet follows:	
-	
-	\begin{itemize}
-		\item Street, which is simply a String.
-		\item stops, which is a list of all the stops in that street.
-		\item longitude
-		\item latitude
-	\end{itemize}
-	
-	In a graph where a street is a node, we also need a group of edges, so we have the structure AddressEdge: 
-	\begin{itemize}
-		\item src , which is the source street
-		\item dest, the destination street
-		\item weight, represents the number of lines that use this edge
-		\item name
-	\end{itemize}
-	
-	The code grouping requires some thought, as it is related to the direction a bus goes through a line. For instance, there happen to be two stops which codes are TSL1 and TSL2. This happens, because one serves buses that go in a direction, and the other serves buses in the opposite direction. Therefore, as the direction a bus goes in does not interest us, we can group these two stops into only one, and here a new structure arises. Introducing the Spot structure:
-	
-	\begin{itemize}
-		\item code, is generated using the same logic from the example above
-		\item stops, is an hashmap that contains all stops under the code.
-	\end{itemize}
-	
-	Similarly to streets, there is also a need for a structure that represents interactions between Spots, therefore, SpotEdge:
-	
-		\begin{itemize}
-			\item from is the source Spot
-			\item to is the other Spot in the connection
-			\item weight is the number of lines that use this connection
-			\item name
-		\end{itemize}
-	
+
 	These are the structures used to simplify this study.\\
 	Some files, six to be more precise, were not included in this subsection, as they were generated with JAVA to be used by gephi, and the generating methods will be described next.
 
@@ -198,16 +134,6 @@ Checking the Id's in the AllStops.txt file, we get, by ascending order:
 Carmo,Aliados,Bom Sucesso,Casa da Música in Boavista and Trindade topping the list.
 
 
-
-
-
-
-\begin{comment}
-There are still two types of grouping to explore. Using the source files of the address grouping and displaying the graph according to geographical coordinates, the graph generated resembles the one we saw above, but with less nodes and edges. This graph's nodes were also colored, according to the number of stops they have. This tells us that 31.25$%$ of the streets have only one stop, and a quarter of the network has 2 stops. That's normal, but what is not normal is for one street to hold 86 bus stops! This is because we are talking about Estrada da Circunvalação, that is about 17km long. Exploring the Data Laboratory, and looking at the closeness centrality, we see that the. highest value(the node that is closer to all the others) is Estrada da Circunvalação, which seems normal. In fact, this street is so long, that it also tops the harmonic and betweeness centrality columns. The betweeness centrality tells us the number of times this node was a path of a shortest path between two other nodes. The harmonic part, that's still up for research.
-
-ver o que é a harmonic closeness centrality.
-\end{comment}
-
 \section{References}
 
 network definition:
@@ -215,6 +141,9 @@ Albert-László Barabasi, Network Science.
 
 circunvalaçao:
 https://pt.wikipedia.org/wiki/EN12	
+
+Structure used to facilitate this study:
+apendix.pdf
 			
 
 			

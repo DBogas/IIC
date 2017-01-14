@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\title{Apendix for STCP network study report}
+\author{Diogo Bogas}
+\date{12 December 2016}
+
+\begin{document}
+\maketitle
+
+\section{Data Structures}
+
+In this particular section, all the data structures used while crunching the data together will be described by chronological order.
+the first piece of information retrieved from the STCP website, was about the lines, so the structure BusLine follows:
+\begin{itemize}
+\item sentido
+\item accessibility
+\item code
+\item description
+\item pubcode
+\item LineStops
+\end{itemize}
+Sentido is an integer that can take the values 0 or 1 and represents the direction a bus goes through a line. For example, the 207 line can go from Campanhã to Mercado da Foz, and from Mercado da Foz to Campanhã.\\
+Accessibility is an integer that dictates the what special access conditions a bus line has. It can have wheel chair access, baby stroler access for example. Its a variable that was born when the information was beeing gathered, but ended up remaining in the structure.\\
+Code is the server way to tell bus lines from each other.\\
+Description is a String that tells us what appears in front of a bus that if going through a line.\\
+PubCode is the people's way to tell lines from one another.\\
+And lineStops is a List of Strings that represents the Stops that compose a line.\\
+
+After knowing each line's composing Stops, a list of all the stops was constructed, and the info for each stop was stored locally. The JAVA structure to represent a Stop is:
+
+\begin{enumerate}
+	\item stopCode, the ID of a Stop.
+	\item address.
+	\item zone, the part of the city a Stop belongs to.
+	\item name, the way people know which stop is which.
+	\item longitude.
+	\item latitude.
+	\item totalLinesServed, a number.
+	\item linesServed, a list of the lines served.
+	\item adjacentStops, the stops it can connect to.
+	\item distanceBFS, an auxiliary variable to a BFS method.
+\end{enumerate}
+\newpage
+	The last four variables are derived, and are used as auxiliary variables to some methods. In a graph, a Stop is a node. The edges are the interactions between nodes:
+	
+\begin{enumerate}
+	\item source;
+	\item target;
+	\item desc;
+	\item weight;
+\end{enumerate}
+
+Source and Target define the edge, as the network is a directed graph. Desc is a String composed by both stopCodes, source + - + target.
+The weight variable represents the number of lines that use that edge. 
+
+
+When grouping the information by street, the nodes of the graph(streets themselves) were represented by the BusStreet structure:
+
+\begin{itemize}
+	\item street
+	\item stops, a list of all the stops in that street
+	\item  neighbours
+	\item longitude;
+	\item latitude;
+\end{itemize}
+
+	The neighbours attribute was supposed to represent the streets adjacent to a particular street, but ended up not beeing used. The edges in this type of grouping are reresented by AdressEdge:
+	
+	\begin{itemize}
+	\item src
+	\item dest
+	\item weight
+	\item nome
+	\end{itemize}
+	
+	The graph is directed still, weight is the number of lines that use that particular interaction and nome is a way to diferentiate the edges, and is derived from the source and target streets.
+	
+	The final way to group the stops is by code, so the Spot edge was created:
+	
+	\begin{itemize}
+	\item code
+	\item stops
+	\item LinesServed
+	\end{itemize}
+	
+Code is the way to tell Spots apart, and it's derivarion is described in the main document.\\
+Stops is a list of stops the Spot has in itself.\\
+LinesServed is a list with all the lines that go through that Spot.\\
+
+The edges in this type of grouping are represented by the SpotEdge structure:
+\begin{itemize}
+\item from
+\item to
+\item weight
+\item name
+\end{itemize}
+
+From and to are the source and target Spots, weight and name, as the other types of edges are the number of lines that use the edge and a way to distinguish the edges respectively.
+
+This ends this appendix.
+
+\end{document}

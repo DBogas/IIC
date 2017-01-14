@@ -80,6 +80,7 @@ public class LastQuestion extends MyScanner {
 	}// end of bfs
 	
 
+
 class AnswerDFS{
 	LinkedList<Stop> way;
 	

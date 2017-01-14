@@ -7,7 +7,6 @@ public class SpotEdge {
 	Spot to;
 	int weight;
 	String name;
-	//LinkedList<BusLine> lines;
 	
 	SpotEdge(Spot f, Spot t){
 		this.from = f;
