@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.4)  14 JAN 2017 21:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.4)  14 JAN 2017 23:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,149 +477,92 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `report.toc'.
 
  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 79.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
- [3]
-Overfull \hbox (30.83315pt too wide) in paragraph at lines 99--105
-\OT1/cmr/m/n/12 method, which in the first line of the file writes "Id;TotalSto
-ps;Longitude;Latitude",
+
+Overfull \hbox (131.4997pt too wide) in paragraph at lines 74--76
+\OT1/cmr/m/n/12 Stops.txt file and works from there. In the first line it print
+s Id;Address;Zone;Name;Longitude;Latitude,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--105
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
-
- []
-
-<simple_network.png, id=24, 1027.84pt x 1027.84pt>
+<simple_network.png, id=17, 1027.84pt x 1027.84pt>
 File: simple_network.png Graphic file (type png)
  <use simple_network.png>
-Package pdftex.def Info: simple_network.png used on input line 111.
+Package pdftex.def Info: simple_network.png used on input line 85.
 (pdftex.def)             Requested size: 205.56436pt x 205.56436pt.
 
-[5 <./simple_network.png>]
-<legenda_simples.png, id=30, 288.07625pt x 338.26375pt>
+[3] [4 <./simple_network.png>]
+<legenda_simples.png, id=26, 288.07625pt x 338.26375pt>
 File: legenda_simples.png Graphic file (type png)
 
 <use legenda_simples.png>
-Package pdftex.def Info: legenda_simples.png used on input line 118.
+Package pdftex.def Info: legenda_simples.png used on input line 92.
 (pdftex.def)             Requested size: 144.03777pt x 169.13145pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--120
+Underfull \hbox (badness 10000) in paragraph at lines 89--94
 
  []
 
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.125 Id && totalStops &
-                        & linesServed\\ \hline
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
 
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.126 TRD	&& 6 &
-                &	21\\ \hline
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 98.
 
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.127 BCM	&& 5 &
-                &	20\\ \hline
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.128 BS	&& 8 &
-               & 18\\ \hline
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.129 AAL	&& 6 &
-                & 17\\ \hline
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.130 CMO	&& 4 &
-                & 17\\ \hline
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-[6 <./legenda_simples.png (PNG copy)>] [7] (./report.aux) ) 
+[5 <./legenda_simples.png (PNG copy)>] [6] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 1978 strings out of 493029
- 26257 string characters out of 6136234
+ 1961 strings out of 493029
+ 25965 string characters out of 6136234
  87846 words of memory out of 5000000
- 5489 multiletter control sequences out of 15000+600000
+ 5475 multiletter control sequences out of 15000+600000
  8841 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,7n,23p,1076b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,7n,23p,575b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti12.pfb>
-Output written on report.pdf (8 pages, 349616 bytes).
+blic/amsfonts/cm/cmti12.pfb>
+Output written on report.pdf (7 pages, 341096 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

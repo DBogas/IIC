@@ -455,34 +455,7 @@ class MyScanner {
 			}
 			
 		}
-	
-	static HashMap<String, Integer> makeAllLinesCSV() throws FileNotFoundException{
-		HashMap<String, Integer> allEdges = new HashMap<String, Integer>();
-		BufferedReader br = new BufferedReader(new FileReader("AllLines.txt"));
-		String line;
-		try{
-			while((line = br.readLine()) != null){
-		    	String[] brokenLine = line.split(",");
-		    	String fileName = brokenLine[0]+"_"+brokenLine[1]+".csv";
-		    	File file = new File("/home/diogo/workspace/iic/webcrawler/gephi_src/lines/"+fileName);
-				file.getParentFile().mkdirs();
-				PrintWriter writer = new PrintWriter(file);
-		    	writer.println("Source;Target;Type");
-		    	for(int i=3; i < brokenLine.length-1;i++){
-		    		String aux = "\""+brokenLine[i]+"\""+";"+"\""+brokenLine[i+1]+"\""+";Directed";
-		    		writer.println(aux);
-		    		if(!allEdges.containsKey(aux))allEdges.put(aux, 1);
-		    		else allEdges.put(aux, allEdges.get(aux)+1);
-		    	}
-		    	writer.close();
-			}
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
-		return allEdges;
-		
-	}
+
 	
 	static void allEdgesCSV() throws IOException{
 		HashMap<String,Edge> source = getAllEdges();
