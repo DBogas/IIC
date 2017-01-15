@@ -76,8 +76,61 @@ public class LastQuestion extends MyScanner {
 				}
 			}
 		}// end of while
+		resp.distances = distances;
 		return resp;
 	}// end of bfs
+	
+	
+	class Dijkstra{
+		
+		AnswerDijkstra shortestPathBetween(Stop source,Stop target) throws IOException{
+		//
+		HashMap<String, Stop> allNodes = readStopsFile();
+		HashMap<String, Edge> allEdges = getAllEdges();
+		AnswerDijkstra resp = new AnswerDijkstra();
+		// 
+		HashMap<String, Integer> distances = go_BFS_on(source).distances;
+		HashMap<String, String> predecessors = new HashMap<String, String>();
+		LinkedList<String> visitedStops = new LinkedList<String>();
+		//
+		for(Integer i : distances.values())
+			i = Integer.MAX_VALUE;
+		distances.put(source.stopCode, 0);
+		//
+		for(Stop s : allNodes.values()){
+			Stop next = allNodes.get(getNext(distances,visitedStops));
+			
+		}
+		
+		
+		
+		
+		
+		return resp;
+		}
+		
+		String getNext(HashMap<String, Integer> distances,LinkedList<String> visitedStops ){
+			String resp = null;
+			int i = Integer.MAX_VALUE;
+			for(String test : distances.keySet()){
+				int ii = distances.get(test);
+				if(!visitedStops.contains(test) && ii < i){
+					i = ii;
+					resp = test; 
+				}
+			}
+			return resp;
+		}
+		
+		class AnswerDijkstra{
+			LinkedList<Stop> path;
+			public AnswerDijkstra() {
+				this.path = new LinkedList<Stop>();
+			}
+		}
+	}
+	
+	
 	
 /**
  *answer when BFS is used
@@ -88,11 +141,13 @@ class AnswerBFS{
 	private String source;
 	private String target;
 	private int distance;
+	HashMap<String,Integer> distances;
 	
 	AnswerBFS(){
 		this.source = "";
 		this.target = "";
 		this.distance = 0;
+		this.distances = new HashMap<String, Integer>();
 	}
 	
 	String getSource(){return this.source;}

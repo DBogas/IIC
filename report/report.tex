@@ -66,12 +66,12 @@ There is the need for some structures in which to represent all this data we hav
 	Some files, six to be more precise, were not included in this subsection, as they were generated with JAVA to be used by gephi.
 	These files are described in the apendix, the generating methods come in the next subsection.
 
-\subsection{Data processing}
+\subsection{Data processing and input creation}
 	
 	As mentioned before, Gephi was used to study the network. Gephi is a preety powerfull tool, but it requires some form of input. In this particular case .csv files. This subsection describes the methods that process the data (stored in any way described in the previous subsection) and generate the input gephi needs.\\
 	Still on the previous subsection, it was mentioned that there were 6 files left to describe. Three of these are groups of nodes, and the other three, groups of edges.\\
 	
-	The method that creates the .csv file for ungrouped Stops reads the  AllStops.txt file and works from there. In the first line it prints Id;Address;Zone;Name;Longitude;Latitude, and then, for each Stop it reads, prints the attributes in the desired order.\\
+	The method that creates the .csv file for ungrouped Stops reads the  AllStops.txt file and works from there. In the first line it prints Id;Address;Zone\\;Name;Longitude;Latitude, and then, for each Stop it reads, prints the attributes in the desired order.\\
 	For the edges, something similar is done, but now, the data comes from a method that reads the AllLines.txt file and returns us all the edges in an HashMap. Each edge had represented it's source, target, type and weight.
 	
 	
@@ -95,7 +95,7 @@ The following image is the pallete used to color the network shown above, and it
 
 The second question raised in the Introduction section of this report was "Which Stop has the most lines going through it and how many times?". For this, it's better to group the stops by code, and answer a diferent question : "Which Spot has the most lines going through it?", as a Spot is much more influential than a simple Stop. Te answer to this, is in the table below,extracted from spotNodes.csv were the 5 most populated Spots are represented:
 
-\begin{table}[]
+\begin{table}[h]
 \centering
 \begin{tabular}{lll}
 Id  & totalStops & linesServed \\
@@ -110,8 +110,29 @@ CMO & 4          & 17
 Checking the Id's in the AllStops.txt file, we get, by ascending order:
 Carmo,Aliados,Bom Sucesso,Casa da Música in Boavista and Trindade topping the list.
 
+Analising the nodes, with help from Gephi, we now look to the betweeness centrality. Betweeness measures how many times a given stop acts as a bridge in the shortest path between two other nodes. The next table shows, the "top 10" realative to betweeness:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+Nome 		 				&& Zona && Betweeness\\
+TRINDADE	 				&&	C1  && 1145449.8813840807\\			
+GRACIOSA  	 				&&	C1	&& 771297.5117531752\\		
+BOAVISTA CEMITÉRIO 			&&	C1	&& 754319.6087318071\\				
+MOREIRA SÁ					&&  C1 	&& 736031.847507471\\		
+ASPRELA 					&&	C6	&& 678387.0286322387\\	
+AV.ALIADOS 					&&	C1	&& 644478.7719011271\\
+TRINDADE 					&&  C1	&& 612273.6268018036\\
+IPO (CIRCUNVAL.) 			&&  C6 	&& 611095.6146827459\\
+AREOSA 						&&  C6 	&& 601167.8506726616\\
+BOAVISTA-CASA DA MÚSICA		&& 	C1	&& 583327.9338578992 	
+\end{tabular}
+\end{table}
+
+There is a very noticeable pattern, most of the Stops shown above, belong to C1 zone, the center of the network.
+
 \section{Conclusion}
-	The results that we obtained colide with the reality.It was expected that the centre of Porto was the most busy zone of the entire network, and proof of that, is that C1 is the biggest zone. The network goes as far as Ermesinde, and the Stop with the biggest eccentricity also comes from there. The prior knowledge i had about the service this company provides, and the city itself, helped me as a "sanity check" as the data was processed. This study also allowed me to get a deeper understanding of Graph theory , and it's applications in real life situations.
+	The results that we obtained colide with the reality.It was expected that the centre of Porto was the most busy zone of the entire network, and proof of that, is that C1 is the biggest zone,and most of it's Stops have the biggest Betweeness in the entire graph. The prior knowledge i had about the service this company provides, and the city itself, helped me as a "sanity check" as the data was processed. This study also allowed me to get a deeper understanding of Graph theory , and it's applications in real life situations.
 \section{References}
 
 network definition:
