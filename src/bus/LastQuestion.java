@@ -97,8 +97,10 @@ public class LastQuestion extends MyScanner {
 			i = Integer.MAX_VALUE;
 		distances.put(source.stopCode, 0);
 		//
-		for(Stop s : allNodes.values()){
+		while(!allNodes.isEmpty()){
 			Stop next = allNodes.get(getNext(distances,visitedStops));
+			visitedStops.add(next.stopCode);
+			allNodes.remove(next);
 			
 		}
 		

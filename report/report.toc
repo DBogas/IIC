@@ -1,9 +1,8 @@
-\contentsline {section}{\numberline {1}Abstract}{1}
-\contentsline {section}{\numberline {2}Introduction}{1}
-\contentsline {section}{\numberline {3}Data Gathering and Processing}{2}
-\contentsline {subsection}{\numberline {3.1}Data source}{2}
-\contentsline {subsection}{\numberline {3.2}Data storing}{2}
-\contentsline {subsection}{\numberline {3.3}Data processing and input creation}{3}
-\contentsline {section}{\numberline {4}Results}{3}
-\contentsline {section}{\numberline {5}Conclusion}{6}
-\contentsline {section}{\numberline {6}References}{7}
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Data Gathering and Processing}{1}
+\contentsline {subsection}{\numberline {2.1}Data source}{1}
+\contentsline {subsection}{\numberline {2.2}Data storing}{1}
+\contentsline {subsection}{\numberline {2.3}Data processing and input creation}{2}
+\contentsline {section}{\numberline {3}Results}{2}
+\contentsline {section}{\numberline {4}Conclusion}{4}
+\contentsline {section}{\numberline {5}References}{5}
