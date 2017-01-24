@@ -42,7 +42,7 @@ Then, with all the gathered data, there should be a preliminary data analisys wi
 
 A network is a catalog of a system\textsc{\char13}s components often called nodes or vertexes and the direct interactions between them, called links or edges.
 Some good examples of networks, are social networks like Facebook and Twitter.
-This article uses networks to represent the services offered by a bus company operating in Porto, with the intent of answering some questions like : how many bus stops are there, which street has the most lines going through it and how many times do i have to change bus so i can go from one side of the network to the other. 
+This article uses networks to represent the services offered by a bus company operating in Porto, with the intent of answering some questions like : how many bus stops are there, which street has the most stops in it and what stops are the most "central". 
  
 
 \section{Data Gathering and Processing}
@@ -235,8 +235,21 @@ The second question raised in the Introduction section of this report was "Which
 Checking the Id's in the AllStops.txt file, we get, by ascending order:
 Carmo,Aliados,Bom Sucesso,Casa da Música in Boavista and Trindade topping the list.Keep in mind that line 200 in direction 0 and 200 in direction 1 are two differetn lines.
 
+In terms of streets, we want to know what is the street that holds the most stops. Checking the streetNodes.csv file and sorting by descending order the totalStops column, its verified that Estrada da circunvalação holds 86 stops. After some fact checking, it was verified that this street is 17 km long, which justifies a 64 stops difference to the 2nd street in this ranking. Follows the top 5:
+\begin{center}
+\begin{tabular}[h]{|l|ll|}
+\hline
+Street && Total Stops\\
+ESTR.CIRCUNVALAÇÃO && 86\\
+R.D.AFONSO HENRIQUES && 32\\
+AV.BOAVISTA	&& 30\\
+R.S.VICENTE	&& 23\\
+R.COSTA CABRAL && 22\\
+\hline
+\end{tabular}
+\end{center} 
 Analising the nodes, with help from Gephi, we now look to the betweeness centrality. Betweeness measures how many times a given stop acts as a bridge in the shortest path between two other nodes. The next table shows, the "top 10" relative to betweeness:\\
-\begin{tabular}[h]{|l|l|l|}
+\begin{tabular}[h]{|l|ll|}
 \hline
 	Nome 				&& Betweeness\\
 	Trindade-C1 		&& 1145449.881\\%3840807\\	
