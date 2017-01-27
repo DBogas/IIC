@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[utf8]{inputenc}
-\usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.5cm, right=1.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{float}
@@ -35,11 +35,10 @@
 \section{Abstract}
 
 This theme aims to do an initial analisys of the complex network that represents all the bus lines belonging to STCP. The student will start by creating the network, with automatic data extraction from sources like the website stcp.pt.
-Then, with all the gathered data, there should be a preliminary data analisys with focus on node centrality, degree distribution and charateristic patterns.
+Then, with all the gathered data, there should be a preliminary data analisys with focus on node centrality, degree distribution and charateristic patterns.\\
 
 \begin{multicols}{2}
 \section{Introduction}
-
 A network is a catalog of a system\textsc{\char13}s components often called nodes or vertexes and the direct interactions between them, called links or edges[1].
 Some good examples of networks, are social networks like Facebook and Twitter.
 This article uses networks to represent the services offered by a bus company operating in Porto, with the intent of answering some questions like : how many bus stops are there, which street has the most stops in it and what stops are the most "central". 
@@ -93,10 +92,9 @@ After knowing each line's composing stops, a list of all the stops was construct
 	\item totalLinesServed, a number.
 	\item linesServed, a list of the lines served.
 	\item adjacentStops, the stops it can connect to.
-	\item distanceBFS, an auxiliary variable to a BFS method.
 \end{enumerate}
 
-The last four variables are derived, and are used as auxiliary variables to some methods.\\
+The last three variables are derived, and are used as auxiliary variables to some methods.\\
 Thinking of this network as a graph, we already have the nodes in form of stops. Now we need to derive the edges. The edges are derived from the lines, taking into account the order each line goes through the stops it serves.The Edge structure used here is as follows:
 \begin{enumerate}
 	\item source;
@@ -107,16 +105,15 @@ Thinking of this network as a graph, we already have the nodes in form of stops.
 
 Source and Target define the edge, as the network is a directed graph. Desc is a String composed by both source and target stopcodes and the weight variable represents the number of lines that use that edge. 
 
-To make this a more complete study, the stops were grouped by 2 characteristics, the first being their address. In this case, each street was a node, and an edge represents a trip between stops in two different streets. The node is represented by the BusStreet structure:
+To make this a more complete study, the stops were grouped by 2 characteristics, the first being their address. In this case, each street was a node, and an edge represents a trip between the streets of two stops. The node is represented by the BusStreet structure:
 \begin{itemize}
 	\item street
 	\item stops, a list of all the stops in that street
-	\item neighbours
 	\item longitude;
 	\item latitude;
 \end{itemize}
 
-The neighbours attribute was supposed to represent the streets adjacent to a particular street, but ended up not being used. The edges in this type of grouping are represented by AdressEdge:
+The edges in this type of grouping are represented by AdressEdge:
 	
 \begin{itemize}
 	\item src
@@ -146,7 +143,7 @@ Code is the way to tell Spots apart,stops is a list of stops the Spot has in its
 \end{itemize}
 
 "from" and "to" are the source and target Spots, weight and name, as the other types of edges are the number of lines that use the edge and a way to distinguish the edges respectively.\\
-Some files, six to be more precise, were not included in this subsection, as they were generated with JAVA to be used by gephi.These files are described next subsection as the respective in the apendix, the generating methods come in the next subsection.
+Some files, six to be more precise, were not included in this subsection, as they were generated with JAVA to be used by gephi.These files are described in the next subsection as the respective generating methods.
 
 \subsection{Data processing and input creation}
 	
@@ -179,10 +176,25 @@ The first file to be described is called stops.csv , and it represents every sin
 	
 	The generating method to this file is allEdgesCSV, and is similar to the nodes one.
 	It also begins by printing what each column represents, (in this case "Source;Target;Type;Weight") and then for each edge it receives, prints its attributes in the order required. The source of the edges is an HashMap that comes from the getAllEdges method.\\
-
-    Because the stops were also grouped by address, we need two more files for that, the node file for that grouping is called streetNodes, and the edges file is called streetEdges.\\
-    The first is generated by the makeStreetNodeCSV method, which in the first line of the file writes "Id;TotalStops;Longitude;Latitude", and in each subsequent line writes each streetNode's values. \\
-	The second file for this type of grouping  is generated by makeStreetEdgesCSV, and this file holds, for each edge, the weight, source, target and type.The weight in this particular case represents how many bus lines use that particular edge.\\
+	% paragens por rua aqui
+    Because the stops were also grouped by address, we need two more files for that, the node file for that grouping is called streetNodes:\\
+    \begin{itemize}
+    \item Id
+    \item totalStops
+    \item longitude
+    \item latitude
+    \end{itemize}
+    
+    This first file is generated by the makeStreetNodeCSV method, which in the first line of the file writes "Id;TotalStops;Longitude;Latitude", and in each subsequent line writes each streetNode's values. \\
+   And the edges file is called streetEdges:\\
+   \begin{itemize}
+   \item weight
+   \item source 
+   \item target 
+   \item type
+   \end{itemize}
+    The second file for this type of grouping  is generated by makeStreetEdgesCSV, and this file holds, for each edge, the weight, source, target and type.The weight in this particular case represents how many bus lines use that particular edge.\\
+    
 	%paragens por code aqui
 	The last type of grouping is by code prefix. This allows us to group spots that are near each other (and potentially have a similar name ) in a single structure we call Spot:
 \begin{itemize}
@@ -266,7 +278,7 @@ Analising the nodes, with help from Gephi, we now look to the betweeness central
 \end{tabular}
 
 
-There is a very noticeable pattern, most of the Stops shown above, belong to C1 zone, the center of the network.
+There is a very noticeable pattern here, most of the Stops shown above, belong to C1 zone, the center of the network.
 
 \section{Conclusion}
 	The results that we obtained colide with the reality.It was expected that the centre of Porto was the most busy zone of the entire network, and proof of that, is that C1 is the biggest zone,and most of it's Stops have the biggest Betweeness in the entire graph. The prior knowledge i had about the service this company provides, and the city itself, helped me as a "sanity check" as the data was processed. This study also allowed me to get a deeper understanding of Graph theory , and it's applications in real life situations.
