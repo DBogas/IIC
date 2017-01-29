@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.4)  26 JAN 2017 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.4)  29 JAN 2017 00:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -537,35 +537,47 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks22
 )
-(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty) (./report.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count127
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen131
+\enit@toks=\toks23
+\enit@inbox=\box54
+\enitdp@description=\count128
+) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
-\scratchdimen=\dimen131
-\scratchbox=\box54
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count130
-\MPscratchDim=\dimen132
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count129
+\scratchdimen=\dimen132
+\scratchbox=\box55
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen133
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -648,119 +660,145 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+LaTeX Warning: Citation `boccaletti2006complex' on page 1 undefined on input li
+ne 55.
 
- []
+
+LaTeX Warning: Citation `van2007xmlhttprequest' on page 1 undefined on input li
+ne 58.
+
+
+LaTeX Warning: Citation `crockford2006application' on page 1 undefined on input
+ line 60.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+LaTeX Warning: Citation `vargiu2012exploiting' on page 2 undefined on input lin
+e 82.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--95
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 70.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--83
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 125.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 125.
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--167
-\OT1/cmr/m/n/12 "Id;Address;Zone;Name;Longitude;Latitude" in
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 177--181
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
+\OT1/cmr/m/n/12 "Id;Address;Zone;Name;Longitude;Latitude" in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--236
 []\OT1/cmr/m/n/12 The gen-er-at-ing method to this file is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--181
+Underfull \hbox (badness 10000) in paragraph at lines 231--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--190
+Underfull \hbox (badness 10000) in paragraph at lines 242--245
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 274--278
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-
- []
-
-[4] <simple_network.png, id=21, 1027.84pt x 1027.84pt>
+<simple_network.png, id=22, 1027.84pt x 1027.84pt>
 File: simple_network.png Graphic file (type png)
-
-<use simple_network.png>
-Package pdftex.def Info: simple_network.png used on input line 224.
+ <use simple_network.png>
+Package pdftex.def Info: simple_network.png used on input line 281.
 (pdftex.def)             Requested size: 205.56436pt x 205.56436pt.
 
-<legenda_simples.png, id=23, 288.07625pt x 338.26375pt>
+<legenda_simples.png, id=24, 288.07625pt x 338.26375pt>
 File: legenda_simples.png Graphic file (type png)
 
 <use legenda_simples.png>
-Package pdftex.def Info: legenda_simples.png used on input line 230.
+Package pdftex.def Info: legenda_simples.png used on input line 287.
 (pdftex.def)             Requested size: 144.03777pt x 169.13145pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--232
+Underfull \hbox (badness 10000) in paragraph at lines 284--289
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 236.
+(Font)              <12> on input line 292.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 236.
+(Font)              <8> on input line 292.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 236.
-[5 <./simple_network.png> <./legenda_simples.png (PNG copy)>] [6] (./report.aux
-) ) 
+(Font)              <6> on input line 292.
+[5 <./simple_network.png>] [6 <./legenda_simples.png (PNG copy)>]
+No file report.bbl.
+[7] (./report.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4025 strings out of 493029
- 60335 string characters out of 6136234
- 146203 words of memory out of 5000000
- 7495 multiletter control sequences out of 15000+600000
- 9142 words of font info for 32 fonts, out of 8000000 for 9000
+ 4501 strings out of 493029
+ 67435 string characters out of 6136234
+ 249199 words of memory out of 5000000
+ 7963 multiletter control sequences out of 15000+600000
+ 9148 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,39p,542b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (6 pages, 385014 bytes).
+ 38i,10n,39p,542b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti12.pfb>
+Output written on report.pdf (7 pages, 385565 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
