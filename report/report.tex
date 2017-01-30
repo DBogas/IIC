@@ -18,7 +18,8 @@
 \usepackage{scalefnt}
 \usepackage{lipsum}
 \usepackage{enumitem}
-\setlist{nosep} 
+\setlist{nosep}
+
 
 \title{Analysis of the STCP transport network}
 \author{Diogo Bogas \\ 
@@ -52,7 +53,7 @@ Keywords: transport network, complex networks
 \begin{multicols}{2}
 \section{Introduction}
 % complex networks definition, example and source
-In the real world, lots of information can be represented by complex networks. Some examples are chemical systems, neural networks, the Internet and the World Wide Web\cite{boccaletti2006complex}.To better understand the initial phase of this study, i introduce here two fundamental concepts.\\
+In the real world, lots of information can be represented by complex networks. Some examples are chemical systems, neural networks, the Internet and the World Wide Web \cite{boccaletti2006complex}.To better understand the initial phase of this study, i introduce here two fundamental concepts.\\
 %definition of xmlhttp requests and source
 The first one is XMLHttpRequests. The XMLHttpRequest is an interface that allows scripts to perform HTTP client functionality, such as submitting form data or loading data from a remote Web site\cite{van2007xmlhttprequest}.
 %definition of JSON and source
@@ -269,8 +270,8 @@ From and to are the source and target Spots, weight and name, as the other types
 	
 \section{Results}
 	To better understand the results obtained, i'm introducing the final two concepts.
-	The first one is betweeness centrality. Betweeness measures how many times a cenrtain node acts as a bridge on the shortest path between two other nodes. On another words, it tells us how "central" each node is.\\
-	The last concept is excentricity. This represents the longest shortest path that can be measured starting at a certain node.	\\
+	The first one is betweeness centrality. Betweeness measures how many times a cenrtain node acts as a bridge on the shortest path between two other nodes. On another words, it tells us how "central" each node is \cite{freeman1977set}.\\
+	The last concept is excentricity. This represents the longest shortest path that can be measured starting at a certain node\cite{Hage199557}.\\
 	This first image is the very first piece of information that our tool gave us, a visual representation of all 2416 stops in the network(not using any type of grouping), colored by zone. All of these stops interact between them a total of 2823 times to create 142 lines. Using the GeoLayout i got:\\
 
 \begin{figure}[H]
@@ -452,7 +453,7 @@ R.Boa Hora & 25\\
 [2] https://pt.wikipedia.org/wiki/EN12
 \end{comment}
 
-\bibliographystyle{acm}	
+\bibliographystyle{acm}
 \bibliography{report}
 \end{multicols}	
 \end{document}

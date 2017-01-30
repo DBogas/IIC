@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+
+\bibitem{boccaletti2006complex}
+{\sc Boccaletti, S., Latora, V., Moreno, Y., Chavez, M., and Hwang, D.-U.}
+\newblock Complex networks: Structure and dynamics.
+\newblock {\em Physics reports 424}, 4 (2006), 175--308.
+
+\bibitem{crockford2006application}
+{\sc Crockford, D.}
+\newblock The application/json media type for javascript object notation
+  (json).
+
+\bibitem{freeman1977set}
+{\sc Freeman, L.~C.}
+\newblock A set of measures of centrality based on betweenness.
+\newblock {\em Sociometry\/} (1977), 35--41.
+
+\bibitem{Hage199557}
+{\sc Hage, P., and Harary, F.}
+\newblock Eccentricity and centrality in networks.
+\newblock {\em Social Networks 17}, 1 (1995), 57 -- 63.
+
+\bibitem{van2007xmlhttprequest}
+{\sc Van~Kesteren, A., and Jackson, D.}
+\newblock The xmlhttprequest object.
+\newblock {\em World Wide Web Consortium, Working Draft
+  WD-XMLHttpRequest-20070618\/} (2007).
+
+\bibitem{vargiu2012exploiting}
+{\sc Vargiu, E., and Urru, M.}
+\newblock Exploiting web scraping in a collaborative filtering-based approach
+  to web advertising.
+\newblock {\em Artificial Intelligence Research 2}, 1 (2012), 44.
+
+\end{thebibliography}
