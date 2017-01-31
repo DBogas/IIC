@@ -270,8 +270,8 @@ From and to are the source and target Spots, weight and name, as the other types
 	
 \section{Results}
 	To better understand the results obtained, i'm introducing the final two concepts.
-	The first one is betweeness centrality. Betweeness measures how many times a cenrtain node acts as a bridge on the shortest path between two other nodes. On another words, it tells us how "central" each node is \cite{freeman1977set}.\\
-	The last concept is excentricity. This represents the longest shortest path that can be measured starting at a certain node\cite{Hage199557}.\\
+	The first one is betweenness centrality. Betweenness measures how many times a cenrtain node acts as a bridge on the shortest path between two other nodes. On another words, it tells us how "central" each node is \cite{freeman1977set}.\\
+	The last concept is eccentricity. This represents the longest shortest path that can be measured starting at a certain node\cite{Hage199557}.\\
 	This first image is the very first piece of information that our tool gave us, a visual representation of all 2416 stops in the network(not using any type of grouping), colored by zone. All of these stops interact between them a total of 2823 times to create 142 lines. Using the GeoLayout i got:\\
 
 \begin{figure}[H]
@@ -286,10 +286,10 @@ The following image is the palette used to color the network shown above, and it
 	\caption{A table with all the zones, sorted according to size,displaying each zone's color}
 \end{figure}
 
-Here is displayed the top 10 in terms of excentricity:\\
+Here is displayed the top 10 in terms of eccentricity:\\
 \begin{tabular}[h]{|l|l|}
 \hline
-\em{Stop} & \em{Excentricity}\\
+\em{Stop} & \em{Eccentricity}\\
 \hline
 Rio Tinto (Estação) & 136.0	\\
 Cabine & 135.0\\
@@ -305,13 +305,13 @@ Bicheiros & 132.0\\
 \end{tabular}\\
 % sim eu ainda vou explicitar como calculei as duas pontas do caminho
 % aqui exponho a excentricidade para o grafo ""simples
-The eccentricity table was extracted from Gephi's data laboratory, and we now know the stop that has the largest excentricity, or in another words, one end of the network diameter. But, what about the other end of that shortest path? It's relatively easy to discover as the diameter of a network can be calculated using a Breath First Search. The other end's stop is named Cabine. In this case the two stops on top of the table are the farthest away from each other.Although, this is not allways true to all networks.\\
-% aqui falo da betweeness para este grafo
-In terms of Betweeness centrality, the most "central" nodes are the following:
+The eccentricity table was extracted from Gephi's data laboratory, and we now know the stop that has the largest eccentricity, or in another words, one end of the network diameter. But, what about the other end of that shortest path? It's relatively easy to discover as the diameter of a network can be calculated using a Breath First Search. The other end's stop is named Cabine. In this case the two stops on top of the table are the farthest away from each other.Although, this is not allways true to all networks.\\
+% aqui falo da betweenness para este grafo
+In terms of Betweenness centrality, the most "central" nodes are the following:
 \begin{center}
 \begin{tabular}[h]{|l|l|l|}
 \hline
-\em{Zone} & \em{name} & \em{Betweeness}\\
+\em{Zone} & \em{name} & \em{Betweenness}\\
 \hline
 C1   & Trindade	& 1145449.881\\
 C1	 & Graciosa	& 771297.511\\
@@ -327,7 +327,7 @@ C1	 & Boavista-Casa da Música	& 583327.933\\
 \end{tabular}
 \end{center}
 
-There is a pattern that relates betweeness and the zone each stop belongs to. Looking to the table above,  most stops there belong to zones C1 and C6. This happens because C1 is the center of the city, and C6 contains lots of stops near Universities.\\
+There is a pattern that relates betweenness and the zone each stop belongs to. Looking to the table above,  most stops there belong to zones C1 and C6. This happens because C1 is the center of the city, and C6 contains lots of stops near Universities.\\
 One question the reader can raise is: "Which Stop has the most lines going through it and how many times?". For this, it's better to group the stops by code, and answer a different question : "Which Spot has the most lines going through it?", as a Spot is much more influential than a simple Stop. The answer to this, is in the table below,extracted from spotNodes.csv where the 5 most populated Spots are represented:
 % degree distribution to spots
 \begin{center}
@@ -343,12 +343,12 @@ One question the reader can raise is: "Which Stop has the most lines going throu
 \hline
 \end{tabular}
 \end{center}
-% betweeness to spots
-The Betweeness top ten spots are in the following table:
+% betweenness to spots
+The Betweenness top ten spots are in the following table:
 \begin{center}
 \begin{tabular}[h]{|l|r|}
 \hline
-\em{Zone} & \em{Betweeness}\\
+\em{Zone} & \em{Betweenness}\\
 \hline
 Asprela & 186589.726494106\\
 Areosa & 169476.566820944\\
@@ -363,7 +363,7 @@ S.Roque & 134205.67288033\\
 \hline
 \end{tabular}
 \end{center}
-% excentricity to spots
+% eccentricity to spots
 The most eccentric Spots are:\\
 \begin{center}
 \begin{tabular}[h]{|c|c|}
@@ -401,12 +401,12 @@ R.Costa Cabral & 22\\
 \end{tabular}
 \end{center} 
 
-% Betweeness
-Analising betweeness in this case, only serves to validate what was exposed about streets before about the degreee distribution:\\
+% Betweenness
+Analising betweenness in this case, only serves to validate what was exposed about streets before about the degreee distribution:\\
 \begin{center}
 \begin{tabular}[h]{|l|r|}
 \hline
-\em{Street} & \em{Betweeness}\\
+\em{Street} & \em{Betweenness}\\
 \hline
 Estr.Circunvalação	& 144958.4586 \\
 R.D.Afonso Henriques &	84015.0718\\
@@ -423,8 +423,8 @@ Av.Fernão Magalhães &	33811.9214\\
 \end{tabular}
 \end{center}
 
-% excentricity to Streets
-In terms of excentricity i got this table, that ends up representing the streets that are the farthest away from the "center of the network":
+% eccentricity to Streets
+In terms of eccentricity i got this table, that ends up representing the streets that are the farthest away from the "center of the network":
 \begin{center}
 \begin{tabular}[h]{|l|l|}
 \hline
@@ -447,7 +447,7 @@ R.Boa Hora & 25\\
 
 
 \section{Conclusion}
-	The results that we obtained colide with the reality.It was expected that the centre of Porto was the most busy zone of the entire network, and proof of that, is that C1 is the biggest zone,and most of it's Stops have the biggest Betweeness in the entire graph. The prior knowledge i had about the service this company provides, and the city itself, helped me as a "sanity check" as the data was processed. This study also allowed me to get a deeper understanding of Graph theory , and it's applications in real life situations.
+	The results that we obtained colide with the reality.It was expected that the centre of Porto was the most busy zone of the entire network, and proof of that, is that C1 is the biggest zone,and most of it's Stops have the biggest Betweenness in the entire graph. The prior knowledge i had about the service this company provides, and the city itself, helped me as a "sanity check" as the data was processed. This study also allowed me to get a deeper understanding of Graph theory , and it's applications in real life situations.
 
 \begin{comment}
 \section{References}
