@@ -14,5 +14,6 @@ There are also .csv files for gephi usage, these are alse generated with java.
 
 .csv files exist for no grouping, grouping by street and by code.
 
-final commit anytime soon, i hope.
+Results obtained from using this project, should be viewed through Gephy, assuming this still works.
 
+Last updated: July 2018
