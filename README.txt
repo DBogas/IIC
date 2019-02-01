@@ -1,5 +1,10 @@
 This is the README file for this project.
 
+(1st of February 2019, edit)
+ATTENTION:
+The language used in development was java!
+Github says javascript because i generated tousands of json objects, which count as javascript code.
+
 I aim to study the physical components of the STCP Bus and Tram Network.
 Both Day and Night networks were studied together.
 
